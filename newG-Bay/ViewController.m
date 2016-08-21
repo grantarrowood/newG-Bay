@@ -1,6 +1,6 @@
 //
-//  ViewController.m
-//  newG-Bay
+//  ARCameraViewController.m
+//  G-Bay
 //
 //  Created by Grant Arrowood on 8/20/16.
 //  Copyright © 2016 Grant Arrowood. All rights reserved.
@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

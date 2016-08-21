@@ -10,11 +10,34 @@
 		9CA60ACE1D693CA30081A5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60ACD1D693CA30081A5B5 /* main.m */; };
 		9CA60AD11D693CA30081A5B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60AD01D693CA30081A5B5 /* AppDelegate.m */; };
 		9CA60AD41D693CA30081A5B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60AD31D693CA30081A5B5 /* ViewController.m */; };
-		9CA60AD71D693CA30081A5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60AD51D693CA30081A5B5 /* Main.storyboard */; };
 		9CA60AD91D693CA30081A5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60AD81D693CA30081A5B5 /* Assets.xcassets */; };
 		9CA60ADC1D693CA30081A5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60ADA1D693CA30081A5B5 /* LaunchScreen.storyboard */; };
 		9CA60AE71D693CA30081A5B5 /* newG_BayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60AE61D693CA30081A5B5 /* newG_BayTests.m */; };
 		9CA60AF21D693CA30081A5B5 /* newG_BayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60AF11D693CA30081A5B5 /* newG_BayUITests.m */; };
+		9CA60B031D693CBC0081A5B5 /* ARCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B001D693CBC0081A5B5 /* ARCameraViewController.m */; };
+		9CA60B041D693CBC0081A5B5 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B021D693CBC0081A5B5 /* DetailsViewController.m */; };
+		9CA60B061D693CE20081A5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60B051D693CE20081A5B5 /* Main.storyboard */; };
+		9CA60B1F1D693DB60081A5B5 /* ARController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B0B1D693DB60081A5B5 /* ARController.m */; };
+		9CA60B201D693DB60081A5B5 /* ARObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B0D1D693DB60081A5B5 /* ARObject.m */; };
+		9CA60B211D693DB60081A5B5 /* ARObject.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60B0E1D693DB60081A5B5 /* ARObject.xib */; };
+		9CA60B221D693DB60081A5B5 /* ar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60B111D693DB60081A5B5 /* ar_icon.png */; };
+		9CA60B231D693DB60081A5B5 /* ar_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60B121D693DB60081A5B5 /* ar_overlay.png */; };
+		9CA60B241D693DB60081A5B5 /* ar_overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60B131D693DB60081A5B5 /* ar_overlay@2x.png */; };
+		9CA60B251D693DB60081A5B5 /* Radar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60B141D693DB60081A5B5 /* Radar.png */; };
+		9CA60B261D693DB60081A5B5 /* RadarMV.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60B151D693DB60081A5B5 /* RadarMV.png */; };
+		9CA60B271D693DB60081A5B5 /* ARRadar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B181D693DB60081A5B5 /* ARRadar.m */; };
+		9CA60B281D693DB60081A5B5 /* LocationMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B1A1D693DB60081A5B5 /* LocationMath.m */; };
+		9CA60B291D693DB60081A5B5 /* PRARManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B1C1D693DB60081A5B5 /* PRARManager.m */; };
+		9CA60B2A1D693DB60081A5B5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60B1D1D693DB60081A5B5 /* LICENSE */; };
+		9CA60B2B1D693DB60081A5B5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B1E1D693DB60081A5B5 /* README.md */; };
+		9CA60B341D693E640081A5B5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B2C1D693E640081A5B5 /* AVFoundation.framework */; };
+		9CA60B351D693E640081A5B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B2D1D693E640081A5B5 /* CoreLocation.framework */; };
+		9CA60B361D693E640081A5B5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B2E1D693E640081A5B5 /* CoreMotion.framework */; };
+		9CA60B371D693E640081A5B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B2F1D693E640081A5B5 /* Foundation.framework */; };
+		9CA60B381D693E640081A5B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B301D693E640081A5B5 /* MapKit.framework */; };
+		9CA60B391D693E640081A5B5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B311D693E640081A5B5 /* MobileCoreServices.framework */; };
+		9CA60B3A1D693E640081A5B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B321D693E640081A5B5 /* QuartzCore.framework */; };
+		9CA60B3B1D693E640081A5B5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B331D693E640081A5B5 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +64,6 @@
 		9CA60AD01D693CA30081A5B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9CA60AD21D693CA30081A5B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9CA60AD31D693CA30081A5B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9CA60AD61D693CA30081A5B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CA60AD81D693CA30081A5B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CA60ADB1D693CA30081A5B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CA60ADD1D693CA30081A5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +73,38 @@
 		9CA60AED1D693CA30081A5B5 /* newG-BayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "newG-BayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA60AF11D693CA30081A5B5 /* newG_BayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = newG_BayUITests.m; sourceTree = "<group>"; };
 		9CA60AF31D693CA30081A5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CA60AFF1D693CBC0081A5B5 /* ARCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCameraViewController.h; sourceTree = "<group>"; };
+		9CA60B001D693CBC0081A5B5 /* ARCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCameraViewController.m; sourceTree = "<group>"; };
+		9CA60B011D693CBC0081A5B5 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		9CA60B021D693CBC0081A5B5 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		9CA60B051D693CE20081A5B5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9CA60B0A1D693DB60081A5B5 /* ARController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARController.h; sourceTree = "<group>"; };
+		9CA60B0B1D693DB60081A5B5 /* ARController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARController.m; sourceTree = "<group>"; };
+		9CA60B0C1D693DB60081A5B5 /* ARObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARObject.h; sourceTree = "<group>"; };
+		9CA60B0D1D693DB60081A5B5 /* ARObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARObject.m; sourceTree = "<group>"; };
+		9CA60B0E1D693DB60081A5B5 /* ARObject.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARObject.xib; sourceTree = "<group>"; };
+		9CA60B0F1D693DB60081A5B5 /* ARSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSettings.h; sourceTree = "<group>"; };
+		9CA60B111D693DB60081A5B5 /* ar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ar_icon.png; sourceTree = "<group>"; };
+		9CA60B121D693DB60081A5B5 /* ar_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ar_overlay.png; sourceTree = "<group>"; };
+		9CA60B131D693DB60081A5B5 /* ar_overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ar_overlay@2x.png"; sourceTree = "<group>"; };
+		9CA60B141D693DB60081A5B5 /* Radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Radar.png; sourceTree = "<group>"; };
+		9CA60B151D693DB60081A5B5 /* RadarMV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RadarMV.png; sourceTree = "<group>"; };
+		9CA60B171D693DB60081A5B5 /* ARRadar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARRadar.h; sourceTree = "<group>"; };
+		9CA60B181D693DB60081A5B5 /* ARRadar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARRadar.m; sourceTree = "<group>"; };
+		9CA60B191D693DB60081A5B5 /* LocationMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMath.h; sourceTree = "<group>"; };
+		9CA60B1A1D693DB60081A5B5 /* LocationMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMath.m; sourceTree = "<group>"; };
+		9CA60B1B1D693DB60081A5B5 /* PRARManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRARManager.h; sourceTree = "<group>"; };
+		9CA60B1C1D693DB60081A5B5 /* PRARManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRARManager.m; sourceTree = "<group>"; };
+		9CA60B1D1D693DB60081A5B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9CA60B1E1D693DB60081A5B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9CA60B2C1D693E640081A5B5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9CA60B2D1D693E640081A5B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9CA60B2E1D693E640081A5B5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		9CA60B2F1D693E640081A5B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9CA60B301D693E640081A5B5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9CA60B311D693E640081A5B5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9CA60B321D693E640081A5B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9CA60B331D693E640081A5B5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +112,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA60B341D693E640081A5B5 /* AVFoundation.framework in Frameworks */,
+				9CA60B351D693E640081A5B5 /* CoreLocation.framework in Frameworks */,
+				9CA60B361D693E640081A5B5 /* CoreMotion.framework in Frameworks */,
+				9CA60B371D693E640081A5B5 /* Foundation.framework in Frameworks */,
+				9CA60B381D693E640081A5B5 /* MapKit.framework in Frameworks */,
+				9CA60B391D693E640081A5B5 /* MobileCoreServices.framework in Frameworks */,
+				9CA60B3A1D693E640081A5B5 /* QuartzCore.framework in Frameworks */,
+				9CA60B3B1D693E640081A5B5 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +167,12 @@
 				9CA60AD01D693CA30081A5B5 /* AppDelegate.m */,
 				9CA60AD21D693CA30081A5B5 /* ViewController.h */,
 				9CA60AD31D693CA30081A5B5 /* ViewController.m */,
-				9CA60AD51D693CA30081A5B5 /* Main.storyboard */,
+				9CA60AFF1D693CBC0081A5B5 /* ARCameraViewController.h */,
+				9CA60B001D693CBC0081A5B5 /* ARCameraViewController.m */,
+				9CA60B011D693CBC0081A5B5 /* DetailsViewController.h */,
+				9CA60B021D693CBC0081A5B5 /* DetailsViewController.m */,
+				9CA60B071D693DB60081A5B5 /* PRAugmentedReality */,
+				9CA60B051D693CE20081A5B5 /* Main.storyboard */,
 				9CA60AD81D693CA30081A5B5 /* Assets.xcassets */,
 				9CA60ADA1D693CA30081A5B5 /* LaunchScreen.storyboard */,
 				9CA60ADD1D693CA30081A5B5 /* Info.plist */,
@@ -117,6 +184,14 @@
 		9CA60ACC1D693CA30081A5B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CA60B2C1D693E640081A5B5 /* AVFoundation.framework */,
+				9CA60B2D1D693E640081A5B5 /* CoreLocation.framework */,
+				9CA60B2E1D693E640081A5B5 /* CoreMotion.framework */,
+				9CA60B2F1D693E640081A5B5 /* Foundation.framework */,
+				9CA60B301D693E640081A5B5 /* MapKit.framework */,
+				9CA60B311D693E640081A5B5 /* MobileCoreServices.framework */,
+				9CA60B321D693E640081A5B5 /* QuartzCore.framework */,
+				9CA60B331D693E640081A5B5 /* SystemConfiguration.framework */,
 				9CA60ACD1D693CA30081A5B5 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +213,64 @@
 				9CA60AF31D693CA30081A5B5 /* Info.plist */,
 			);
 			path = "newG-BayUITests";
+			sourceTree = "<group>";
+		};
+		9CA60B071D693DB60081A5B5 /* PRAugmentedReality */ = {
+			isa = PBXGroup;
+			children = (
+				9CA60B081D693DB60081A5B5 /* Classes */,
+				9CA60B1D1D693DB60081A5B5 /* LICENSE */,
+				9CA60B1E1D693DB60081A5B5 /* README.md */,
+			);
+			path = PRAugmentedReality;
+			sourceTree = "<group>";
+		};
+		9CA60B081D693DB60081A5B5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9CA60B091D693DB60081A5B5 /* AR */,
+				9CA60B0F1D693DB60081A5B5 /* ARSettings.h */,
+				9CA60B101D693DB60081A5B5 /* Graphics */,
+				9CA60B161D693DB60081A5B5 /* Location */,
+				9CA60B1B1D693DB60081A5B5 /* PRARManager.h */,
+				9CA60B1C1D693DB60081A5B5 /* PRARManager.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9CA60B091D693DB60081A5B5 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				9CA60B0A1D693DB60081A5B5 /* ARController.h */,
+				9CA60B0B1D693DB60081A5B5 /* ARController.m */,
+				9CA60B0C1D693DB60081A5B5 /* ARObject.h */,
+				9CA60B0D1D693DB60081A5B5 /* ARObject.m */,
+				9CA60B0E1D693DB60081A5B5 /* ARObject.xib */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		9CA60B101D693DB60081A5B5 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				9CA60B111D693DB60081A5B5 /* ar_icon.png */,
+				9CA60B121D693DB60081A5B5 /* ar_overlay.png */,
+				9CA60B131D693DB60081A5B5 /* ar_overlay@2x.png */,
+				9CA60B141D693DB60081A5B5 /* Radar.png */,
+				9CA60B151D693DB60081A5B5 /* RadarMV.png */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		9CA60B161D693DB60081A5B5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				9CA60B171D693DB60081A5B5 /* ARRadar.h */,
+				9CA60B181D693DB60081A5B5 /* ARRadar.m */,
+				9CA60B191D693DB60081A5B5 /* LocationMath.h */,
+				9CA60B1A1D693DB60081A5B5 /* LocationMath.m */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +340,7 @@
 				TargetAttributes = {
 					9CA60AC81D693CA30081A5B5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4VLU4CB777;
 					};
 					9CA60AE11D693CA30081A5B5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -245,7 +379,14 @@
 			files = (
 				9CA60ADC1D693CA30081A5B5 /* LaunchScreen.storyboard in Resources */,
 				9CA60AD91D693CA30081A5B5 /* Assets.xcassets in Resources */,
-				9CA60AD71D693CA30081A5B5 /* Main.storyboard in Resources */,
+				9CA60B061D693CE20081A5B5 /* Main.storyboard in Resources */,
+				9CA60B221D693DB60081A5B5 /* ar_icon.png in Resources */,
+				9CA60B2A1D693DB60081A5B5 /* LICENSE in Resources */,
+				9CA60B241D693DB60081A5B5 /* ar_overlay@2x.png in Resources */,
+				9CA60B211D693DB60081A5B5 /* ARObject.xib in Resources */,
+				9CA60B261D693DB60081A5B5 /* RadarMV.png in Resources */,
+				9CA60B251D693DB60081A5B5 /* Radar.png in Resources */,
+				9CA60B231D693DB60081A5B5 /* ar_overlay.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,8 +411,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA60B1F1D693DB60081A5B5 /* ARController.m in Sources */,
+				9CA60B271D693DB60081A5B5 /* ARRadar.m in Sources */,
+				9CA60B281D693DB60081A5B5 /* LocationMath.m in Sources */,
 				9CA60AD41D693CA30081A5B5 /* ViewController.m in Sources */,
+				9CA60B291D693DB60081A5B5 /* PRARManager.m in Sources */,
+				9CA60B201D693DB60081A5B5 /* ARObject.m in Sources */,
+				9CA60B041D693CBC0081A5B5 /* DetailsViewController.m in Sources */,
 				9CA60AD11D693CA30081A5B5 /* AppDelegate.m in Sources */,
+				9CA60B031D693CBC0081A5B5 /* ARCameraViewController.m in Sources */,
+				9CA60B2B1D693DB60081A5B5 /* README.md in Sources */,
 				9CA60ACE1D693CA30081A5B5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,14 +457,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9CA60AD51D693CA30081A5B5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9CA60AD61D693CA30081A5B5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9CA60ADA1D693CA30081A5B5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -345,7 +486,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: grant.arrowood@mac.com (Z34C94WM6D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: grant.arrowood@mac.com (Z34C94WM6D)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -367,6 +510,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -389,7 +533,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: grant.arrowood@mac.com (Z34C94WM6D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: grant.arrowood@mac.com (Z34C94WM6D)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -404,6 +550,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -413,10 +560,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/newG-Bay",
+					"$(PROJECT_DIR)/newG-Bay/Sdk/Aws",
+					"$(PROJECT_DIR)/newG-Bay/Sdk/Aws/extras",
+					"$(PROJECT_DIR)/newG-Bay/Sdk/Google",
+				);
 				INFOPLIST_FILE = "newG-Bay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.newGBay.newG-Bay";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/newG-Bay",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gbay.newG-Bay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -424,10 +585,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/newG-Bay",
+					"$(PROJECT_DIR)/newG-Bay/Sdk/Aws",
+					"$(PROJECT_DIR)/newG-Bay/Sdk/Aws/extras",
+					"$(PROJECT_DIR)/newG-Bay/Sdk/Google",
+				);
 				INFOPLIST_FILE = "newG-Bay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.newGBay.newG-Bay";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/newG-Bay",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gbay.newG-Bay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -496,6 +671,7 @@
 				9CA60AF81D693CA30081A5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CA60AF91D693CA30081A5B5 /* Build configuration list for PBXNativeTarget "newG-BayTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +680,7 @@
 				9CA60AFB1D693CA30081A5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CA60AFC1D693CA30081A5B5 /* Build configuration list for PBXNativeTarget "newG-BayUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +689,7 @@
 				9CA60AFE1D693CA30081A5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
