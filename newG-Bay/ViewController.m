@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+@import FirebaseAuth;
 
 @interface ViewController ()
+{
+    CLLocationManager *locationManager;
+    CLLocation *currentLocationNow;
+}
 
 @end
 
@@ -16,6 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager requestWhenInUseAuthorization];
+    [locationManager startUpdatingLocation];
 }
 
 
@@ -23,5 +33,58 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+    CLLocation *currentLocation = newLocation;
+    
+    if (currentLocation != nil) {
+        currentLocationNow = currentLocation;
+    }
+}
+
+
+
+- (IBAction)loginAction:(id)sender {
+
+    [[FIRAuth auth] signInWithEmail:@"grant@arrowood.com"
+                           password:@"abcd1234"
+                         completion:^(FIRUser *user, NSError *error) {
+                             
+                             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                             int i = [defaults integerForKey:@"tillNextToken"];
+                             if (i == 2) {
+                                 i = 0;
+                                     [self addObject:@{@"userId": user.uid, @"didFind": @"false", @"latitude": [NSString stringWithFormat:@"%f", currentLocationNow.coordinate.latitude-.000062], @"longitude": [NSString stringWithFormat:@"%f", currentLocationNow.coordinate.longitude-.00007], @"objectId": @"0"} withObjectId:0];
+
+                             } else {
+                                 i += 1;
+                             }
+                             
+                             [defaults setInteger:i forKey:@"tillNextToken"];
+                             
+                             [defaults synchronize];
+                            NSLog(@"PASSED");
+                         }];
+
+
+}
+- (void)addObject:(NSDictionary *)data withObjectId:(NSString *)objectId {
+    NSMutableDictionary *mdata = [data mutableCopy];
+    FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/tokens"];
+    [[ref childByAutoId] setValue:mdata];
+}
+
+
 
 @end

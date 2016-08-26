@@ -66,31 +66,58 @@ CATransform3DMake(CGFloat m11, CGFloat m12, CGFloat m13, CGFloat m14,
     
     int x_pos = 0;
     ARObject *arObject;
-    
     for (NSDictionary *arObjectData in arData) {
-        NSNumber *ar_id = @([arObjectData[@"id"] intValue]);
-        arObject = [[ARObject alloc] initWithId:ar_id.intValue
-                                           title:arObjectData[@"title"]
-                                     coordinates:CLLocationCoordinate2DMake([arObjectData[@"lat"] doubleValue],
-                                                                            [arObjectData[@"lon"] doubleValue])
-                              andCurrentLocation:newLocation];
-        
-        x_pos = [locationMath getARObjectXPosition:arObject]-arObject.view.frame.size.width;
-        
-        geoobjectOverlays[ar_id] = arObject;
-        geoobjectPositions[ar_id] = @(x_pos);
-        geoobjectVerts[ar_id] = @1;
+        if(arObjectData[@"title"] == nil)
+        {
+            NSNumber *ar_id = @([arObjectData[@"id"] intValue]);
+            arObject = [[ARObject alloc] initWithId:ar_id.intValue
+                                              title:@"Token"
+                                        coordinates:CLLocationCoordinate2DMake([arObjectData[@"lat"] doubleValue],
+                                                                               [arObjectData[@"lon"] doubleValue])
+                                    currentLocation:newLocation
+                                         descrption:nil
+                                          condition:nil
+                                              price:nil
+                                           imageUrl:nil
+                                        andCategory:nil
+                        ];
+            
+            x_pos = [locationMath getARObjectXPosition:arObject]-arObject.view.frame.size.width;
+            
+            geoobjectOverlays[ar_id] = arObject;
+            geoobjectPositions[ar_id] = @(x_pos);
+            geoobjectVerts[ar_id] = @1;
+
+        } else {
+            NSNumber *ar_id = @([arObjectData[@"id"] intValue]);
+            arObject = [[ARObject alloc] initWithId:ar_id.intValue
+                                              title:arObjectData[@"title"]
+                                        coordinates:CLLocationCoordinate2DMake([arObjectData[@"lat"] doubleValue],
+                                                                               [arObjectData[@"lon"] doubleValue])
+                                    currentLocation:newLocation
+                                         descrption:arObjectData[@"description"]
+                                          condition:arObjectData[@"condition"]
+                                              price:arObjectData[@"price"]
+                                           imageUrl:arObjectData[@"imageUrl"]
+                                        andCategory:arObjectData[@"category"]
+                        ];
+            
+            x_pos = [locationMath getARObjectXPosition:arObject]-arObject.view.frame.size.width;
+            
+            geoobjectOverlays[ar_id] = arObject;
+            geoobjectPositions[ar_id] = @(x_pos);
+            geoobjectVerts[ar_id] = @1;
+
+        }
     }
+    
     
     [self setupDataForAR];
     
     return geoobjectOverlays;
 }
 
--(void)prarDidSelectObjectWithId:(int)the_id at:(CLLocationCoordinate2D)locCoordinates andTitle:(NSString *)title
-{
-    
-}
+
 
 -(NSArray*)createRadarSpots
 {    

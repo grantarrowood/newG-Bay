@@ -7,10 +7,12 @@
 //
 
 #import "ARCameraViewController.h"
+#import "Constants.h"
 #define NUMBER_OF_POINTS    10
 
-
 @interface ARCameraViewController ()
+@property (strong, nonatomic) NSMutableArray<FIRDataSnapshot *> *objects;
+@property (strong, nonatomic) NSMutableArray<FIRDataSnapshot *> *tokens;
 
 @end
 
@@ -19,6 +21,7 @@
     CLLocationManager *locationManager;
     CLLocation *currentLocationNow;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -27,9 +30,24 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager requestWhenInUseAuthorization];
     [locationManager startUpdatingLocation];
-    [PRARManager sharedManagerWithSize:self.view.frame.size andDelegate:self];
-    [[PRARManager sharedManager] startARWithData:[self getDummyData] forLocation:currentLocationNow.coordinate];
-    
+    _objects = [[NSMutableArray alloc] init];
+    _tokens = [[NSMutableArray alloc] init];
+    FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/objects"];
+    FIRDatabaseReference  *ref2 = [[FIRDatabase database] referenceWithPath:@"/tokens"];
+    [ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        [_objects addObject:snapshot];
+        [ref2 observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            [_tokens addObject:snapshot];
+            [PRARManager sharedManagerWithSize:self.view.frame.size andDelegate:self];
+            [[PRARManager sharedManager] startARWithData:[self getDummyData] forLocation:currentLocationNow.coordinate];
+            
+        } withCancelBlock:^(NSError * _Nonnull error) {
+            NSLog(@"%@", error.localizedDescription);
+        }];
+
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
 }
 
 -(void) viewDidDisappear:(BOOL)animated
@@ -69,14 +87,56 @@
 
 -(NSArray*)getDummyData
 {
-    NSMutableArray *points = [NSMutableArray arrayWithCapacity:NUMBER_OF_POINTS];
+    NSMutableArray *points = [NSMutableArray array];
     
     srand48(time(0));
-    for (int i=0; i<NUMBER_OF_POINTS; i++)
+    for (int i=0; i<_objects.count; i++)
     {
-        CLLocationCoordinate2D pointCoordinates = [self getRandomLocation];
-        NSDictionary *point = [self createPointWithId:i at:pointCoordinates];
-        [points addObject:point];
+        FIRDataSnapshot *objectSnapshot = _objects[i];
+        NSMutableDictionary *object = objectSnapshot.value;
+        for (id key in object) {
+            id anObject = [object objectForKey:key];
+            /* Do something with anObject. */
+            NSString *objectIdString = anObject[@"objectId"];
+            NSMutableString *description = anObject[@"description"];
+            NSString *condition = anObject[@"condition"];
+            NSNumber *price = anObject[@"price"];
+            NSString *category = anObject[@"category"];
+            NSString *imageUrl = anObject[@"imageUrl"];
+            NSString *title = anObject[ObjectFieldstitle];
+            NSString *latitude = anObject[ObjectFieldslatitude];
+            NSString *longitude = anObject[ObjectFieldslongitude];
+            
+            double lat = latitude.floatValue;
+            double lon = longitude.floatValue;
+            int objectId = objectIdString.intValue;
+            CLLocationCoordinate2D pointCoordinates;
+            pointCoordinates.latitude = lat;
+            pointCoordinates.longitude = lon;
+            NSDictionary *point = [self createPointWithId:objectId at:pointCoordinates andTitle:title descrition:description condidtion:condition price:price category:category imageUrl:imageUrl];
+            [points addObject:point];
+        }
+    }
+    for (int i=0; i<_tokens.count; i++) {
+        FIRDataSnapshot *tokenSnapshot = _tokens[i];
+        NSMutableDictionary *token = tokenSnapshot.value;
+        for (id key in token) {
+            id anObject = [token objectForKey:key];
+            /* Do something with anObject. */
+            NSString *objectIdString = anObject[@"objectId"];
+            NSString *didFind = anObject[@"didFind"];
+            NSString *latitude = anObject[ObjectFieldslatitude];
+            NSString *longitude = anObject[ObjectFieldslongitude];
+            
+            double lat = latitude.floatValue;
+            double lon = longitude.floatValue;
+            int objectId = objectIdString.intValue;
+            CLLocationCoordinate2D pointCoordinates;
+            pointCoordinates.latitude = lat;
+            pointCoordinates.longitude = lon;
+            NSDictionary *point = [self createPointWithId:objectId at:pointCoordinates andTitle:nil descrition:nil condidtion:nil price:nil category:nil imageUrl:nil];
+            [points addObject:point];
+        }
     }
     
     return [NSArray arrayWithArray:points];
@@ -96,14 +156,42 @@
 }
 
 // Creates the Data for an AR Object at a given location
--(NSDictionary*)createPointWithId:(int)the_id at:(CLLocationCoordinate2D)locCoordinates
+-(NSDictionary*)createPointWithId:(int)the_id at:(CLLocationCoordinate2D)locCoordinates andTitle:(NSString *)title descrition:(NSMutableString *)description condidtion:(NSString *)condition price:(NSNumber *)price category:(NSString *)category imageUrl:(NSString *)imageUrl
 {
-    NSDictionary *point = @{
-                            @"id" : @(the_id),
-                            @"title" : [NSString stringWithFormat:@"Place Num %d", the_id],
-                            @"lon" : @(locCoordinates.longitude),
-                            @"lat" : @(locCoordinates.latitude)
-                            };
+    NSDictionary *point;
+    if ((imageUrl == nil) && ((title != nil))) {
+        point = @{
+                                @"id" : @(the_id),
+                                @"description" : description,
+                                @"condition" : condition,
+                                @"price" : price,
+                                @"category" : category,
+                                @"title" : title,
+                                @"imageUrl" : @"",
+                                @"lon" : @(locCoordinates.longitude),
+                                @"lat" : @(locCoordinates.latitude)
+                                };
+    } else if (title == nil) {
+        point = @{
+                                @"id" : @(the_id),
+                                @"didFind" : @"false",
+                                @"lon" : @(locCoordinates.longitude),
+                                @"lat" : @(locCoordinates.latitude)
+                                };
+    } else {
+        point = @{
+                  @"id" : @(the_id),
+                  @"description" : description,
+                  @"condition" : condition,
+                  @"price" : price,
+                  @"category" : category,
+                  @"title" : title,
+                  @"imageUrl" : imageUrl,
+                  @"lon" : @(locCoordinates.longitude),
+                  @"lat" : @(locCoordinates.latitude)
+                  };
+    }
+    
     return point;
 }
 

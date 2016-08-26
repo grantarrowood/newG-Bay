@@ -9,14 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "PRARManager.h"
 #import <CoreLocation/CoreLocation.h>
+#import <Firebase/Firebase.h>
 
 @interface ARCameraViewController : UIViewController <PRARManagerDelegate, CLLocationManagerDelegate>
 
 
 
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
-
-
-
 
 @end

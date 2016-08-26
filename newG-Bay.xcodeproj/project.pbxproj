@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C9EA0661D6A778E00D76334 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0651D6A778E00D76334 /* CreateAccountViewController.m */; };
+		9C9EA0691D6A7BB700D76334 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0681D6A7BB700D76334 /* MainViewController.m */; };
+		9C9EA06D1D6B1EC800D76334 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */; };
+		9C9EA0701D6B983300D76334 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA06F1D6B983300D76334 /* Constants.m */; };
+		9C9EA0731D6BAE8A00D76334 /* NewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0721D6BAE8A00D76334 /* NewItemViewController.m */; };
+		9C9EA0951D6D185100D76334 /* YourItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0941D6D185100D76334 /* YourItemTableViewController.m */; };
+		9C9EA0981D6FAC9900D76334 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9EA0971D6FAC9900D76334 /* Photos.framework */; };
 		9CA60ACE1D693CA30081A5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60ACD1D693CA30081A5B5 /* main.m */; };
 		9CA60AD11D693CA30081A5B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60AD01D693CA30081A5B5 /* AppDelegate.m */; };
 		9CA60AD41D693CA30081A5B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60AD31D693CA30081A5B5 /* ViewController.m */; };
@@ -38,6 +45,7 @@
 		9CA60B391D693E640081A5B5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B311D693E640081A5B5 /* MobileCoreServices.framework */; };
 		9CA60B3A1D693E640081A5B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B321D693E640081A5B5 /* QuartzCore.framework */; };
 		9CA60B3B1D693E640081A5B5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B331D693E640081A5B5 /* SystemConfiguration.framework */; };
+		B619A451BB72B8DB9CA1FCCD /* libPods-newG-Bay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 027B56D3FA2FBD8E524860D0 /* libPods-newG-Bay.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +66,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		027B56D3FA2FBD8E524860D0 /* libPods-newG-Bay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-newG-Bay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44D22E76E375D619D2A2A36D /* Pods-newG-Bay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newG-Bay.release.xcconfig"; path = "Pods/Target Support Files/Pods-newG-Bay/Pods-newG-Bay.release.xcconfig"; sourceTree = "<group>"; };
+		632DF3EE1FF1A079E6933B54 /* Pods-newG-Bay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newG-Bay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-newG-Bay/Pods-newG-Bay.debug.xcconfig"; sourceTree = "<group>"; };
+		9C9EA0641D6A778E00D76334 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
+		9C9EA0651D6A778E00D76334 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
+		9C9EA0671D6A7BB700D76334 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9C9EA0681D6A7BB700D76334 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C9EA06E1D6B983300D76334 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9C9EA06F1D6B983300D76334 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		9C9EA0711D6BAE8A00D76334 /* NewItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewItemViewController.h; sourceTree = "<group>"; };
+		9C9EA0721D6BAE8A00D76334 /* NewItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewItemViewController.m; sourceTree = "<group>"; };
+		9C9EA0931D6D185100D76334 /* YourItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourItemTableViewController.h; sourceTree = "<group>"; };
+		9C9EA0941D6D185100D76334 /* YourItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourItemTableViewController.m; sourceTree = "<group>"; };
+		9C9EA0961D6F9AFA00D76334 /* newG-Bay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "newG-Bay.entitlements"; sourceTree = "<group>"; };
+		9C9EA0971D6FAC9900D76334 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		9CA60AC91D693CA30081A5B5 /* newG-Bay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "newG-Bay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA60ACD1D693CA30081A5B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CA60ACF1D693CA30081A5B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9EA0981D6FAC9900D76334 /* Photos.framework in Frameworks */,
 				9CA60B341D693E640081A5B5 /* AVFoundation.framework in Frameworks */,
 				9CA60B351D693E640081A5B5 /* CoreLocation.framework in Frameworks */,
 				9CA60B361D693E640081A5B5 /* CoreMotion.framework in Frameworks */,
@@ -120,6 +145,7 @@
 				9CA60B391D693E640081A5B5 /* MobileCoreServices.framework in Frameworks */,
 				9CA60B3A1D693E640081A5B5 /* QuartzCore.framework in Frameworks */,
 				9CA60B3B1D693E640081A5B5 /* SystemConfiguration.framework in Frameworks */,
+				B619A451BB72B8DB9CA1FCCD /* libPods-newG-Bay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +166,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5253D968B8921061990CFFDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C9EA0971D6FAC9900D76334 /* Photos.framework */,
+				027B56D3FA2FBD8E524860D0 /* libPods-newG-Bay.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BC8517CA364791F20D2F356 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				632DF3EE1FF1A079E6933B54 /* Pods-newG-Bay.debug.xcconfig */,
+				44D22E76E375D619D2A2A36D /* Pods-newG-Bay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9CA60AC01D693CA30081A5B5 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +191,8 @@
 				9CA60AE51D693CA30081A5B5 /* newG-BayTests */,
 				9CA60AF01D693CA30081A5B5 /* newG-BayUITests */,
 				9CA60ACA1D693CA30081A5B5 /* Products */,
+				6BC8517CA364791F20D2F356 /* Pods */,
+				5253D968B8921061990CFFDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,18 +209,30 @@
 		9CA60ACB1D693CA30081A5B5 /* newG-Bay */ = {
 			isa = PBXGroup;
 			children = (
+				9C9EA0961D6F9AFA00D76334 /* newG-Bay.entitlements */,
 				9CA60ACF1D693CA30081A5B5 /* AppDelegate.h */,
 				9CA60AD01D693CA30081A5B5 /* AppDelegate.m */,
+				9C9EA06E1D6B983300D76334 /* Constants.h */,
+				9C9EA06F1D6B983300D76334 /* Constants.m */,
 				9CA60AD21D693CA30081A5B5 /* ViewController.h */,
 				9CA60AD31D693CA30081A5B5 /* ViewController.m */,
+				9C9EA0641D6A778E00D76334 /* CreateAccountViewController.h */,
+				9C9EA0651D6A778E00D76334 /* CreateAccountViewController.m */,
+				9C9EA0671D6A7BB700D76334 /* MainViewController.h */,
+				9C9EA0681D6A7BB700D76334 /* MainViewController.m */,
 				9CA60AFF1D693CBC0081A5B5 /* ARCameraViewController.h */,
 				9CA60B001D693CBC0081A5B5 /* ARCameraViewController.m */,
 				9CA60B011D693CBC0081A5B5 /* DetailsViewController.h */,
 				9CA60B021D693CBC0081A5B5 /* DetailsViewController.m */,
+				9C9EA0711D6BAE8A00D76334 /* NewItemViewController.h */,
+				9C9EA0721D6BAE8A00D76334 /* NewItemViewController.m */,
+				9C9EA0931D6D185100D76334 /* YourItemTableViewController.h */,
+				9C9EA0941D6D185100D76334 /* YourItemTableViewController.m */,
 				9CA60B071D693DB60081A5B5 /* PRAugmentedReality */,
 				9CA60B051D693CE20081A5B5 /* Main.storyboard */,
 				9CA60AD81D693CA30081A5B5 /* Assets.xcassets */,
 				9CA60ADA1D693CA30081A5B5 /* LaunchScreen.storyboard */,
+				9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */,
 				9CA60ADD1D693CA30081A5B5 /* Info.plist */,
 				9CA60ACC1D693CA30081A5B5 /* Supporting Files */,
 			);
@@ -280,9 +338,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CA60AF61D693CA30081A5B5 /* Build configuration list for PBXNativeTarget "newG-Bay" */;
 			buildPhases = (
+				9DC090AC063F4EC3809EBD16 /* [CP] Check Pods Manifest.lock */,
 				9CA60AC51D693CA30081A5B5 /* Sources */,
 				9CA60AC61D693CA30081A5B5 /* Frameworks */,
 				9CA60AC71D693CA30081A5B5 /* Resources */,
+				54B6A099732CE676D62B1540 /* [CP] Embed Pods Frameworks */,
+				96B39893EA5CE5F51731508B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,6 +402,11 @@
 					9CA60AC81D693CA30081A5B5 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 4VLU4CB777;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					9CA60AE11D693CA30081A5B5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -383,6 +449,7 @@
 				9CA60B221D693DB60081A5B5 /* ar_icon.png in Resources */,
 				9CA60B2A1D693DB60081A5B5 /* LICENSE in Resources */,
 				9CA60B241D693DB60081A5B5 /* ar_overlay@2x.png in Resources */,
+				9C9EA06D1D6B1EC800D76334 /* GoogleService-Info.plist in Resources */,
 				9CA60B211D693DB60081A5B5 /* ARObject.xib in Resources */,
 				9CA60B261D693DB60081A5B5 /* RadarMV.png in Resources */,
 				9CA60B251D693DB60081A5B5 /* Radar.png in Resources */,
@@ -406,6 +473,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54B6A099732CE676D62B1540 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-newG-Bay/Pods-newG-Bay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96B39893EA5CE5F51731508B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-newG-Bay/Pods-newG-Bay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC090AC063F4EC3809EBD16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9CA60AC51D693CA30081A5B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -415,11 +530,16 @@
 				9CA60B271D693DB60081A5B5 /* ARRadar.m in Sources */,
 				9CA60B281D693DB60081A5B5 /* LocationMath.m in Sources */,
 				9CA60AD41D693CA30081A5B5 /* ViewController.m in Sources */,
+				9C9EA0691D6A7BB700D76334 /* MainViewController.m in Sources */,
+				9C9EA0701D6B983300D76334 /* Constants.m in Sources */,
+				9C9EA0731D6BAE8A00D76334 /* NewItemViewController.m in Sources */,
 				9CA60B291D693DB60081A5B5 /* PRARManager.m in Sources */,
 				9CA60B201D693DB60081A5B5 /* ARObject.m in Sources */,
 				9CA60B041D693CBC0081A5B5 /* DetailsViewController.m in Sources */,
 				9CA60AD11D693CA30081A5B5 /* AppDelegate.m in Sources */,
+				9C9EA0661D6A778E00D76334 /* CreateAccountViewController.m in Sources */,
 				9CA60B031D693CBC0081A5B5 /* ARCameraViewController.m in Sources */,
+				9C9EA0951D6D185100D76334 /* YourItemTableViewController.m in Sources */,
 				9CA60B2B1D693DB60081A5B5 /* README.md in Sources */,
 				9CA60ACE1D693CA30081A5B5 /* main.m in Sources */,
 			);
@@ -558,8 +678,10 @@
 		};
 		9CA60AF71D693CA30081A5B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 632DF3EE1FF1A079E6933B54 /* Pods-newG-Bay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "newG-Bay/newG-Bay.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -583,8 +705,10 @@
 		};
 		9CA60AF81D693CA30081A5B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44D22E76E375D619D2A2A36D /* Pods-newG-Bay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "newG-Bay/newG-Bay.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

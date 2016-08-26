@@ -117,10 +117,6 @@ static dispatch_once_t onceToken;
                                                    repeats:YES];
 }
 
--(void)prarDidSelectObjectWithId:(int)the_id at:(CLLocationCoordinate2D)locCoordinates andTitle:(NSString *)title
-{
-    
-}
 
 #pragma mark - Main Initialization
 

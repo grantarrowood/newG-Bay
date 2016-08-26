@@ -29,6 +29,8 @@
 
 
 @interface ARObject ()
+@property (strong, nonatomic) NSMutableArray<FIRDataSnapshot *> *users;
+
 
 @end
 
@@ -40,29 +42,102 @@
 - (IBAction)didTouchObject:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     DetailsViewController *viewController = (DetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
-    viewController.theid = arId;
-    viewController.title = arTitle;
-    viewController.locationLat = lat;
-    viewController.locationLon = lon;
-    
-    [self presentViewController:viewController animated:YES completion:nil];
+    if (arDescription == nil) {
+        
+        //User database add .25 to their balance
+        FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/users"];
+        [[ref child:[FIRAuth auth].currentUser.uid] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            NSMutableDictionary *user = snapshot.value;
+            NSString *balance = user[@"Gbalance"];
+            NSString *firstName = user[@"firstName"];
+            double balanceNum = balance.doubleValue + .25;
+            viewController.GBalanceText = [NSString stringWithFormat:@"Your total G-Money Balance is now $%.2f.", balanceNum];
+            viewController.ishidden = false;
+            [self addObject:@{@"Gbalance": [NSString stringWithFormat:@"%.2f", balanceNum], @"firstName": firstName} withUserId:[FIRAuth auth].currentUser];
+            [self presentViewController:viewController animated:YES completion:nil];
+        } withCancelBlock:^(NSError * _Nonnull error) {
+            NSLog(@"%@", error.localizedDescription);
+        }];
 
+        
+        
+        
+    } else {
+        viewController.theid = arId;
+        viewController.title = arTitle;
+        viewController.locationLat = lat;
+        viewController.locationLon = lon;
+        viewController.dataDescription = arDescription;
+        viewController.price = arPrice;
+        viewController.category = arCategory;
+        viewController.condition = arCondition;
+        [self presentViewController:viewController animated:YES completion:nil];
+
+    }
+    
+
+}
+
+- (void)addObject:(NSDictionary *)data withUserId:(FIRUser *)user {
+    NSMutableDictionary *mdata = [data mutableCopy];
+    FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/users"];
+    [[ref child:user.uid] setValue:mdata];
 }
 
 - (id)initWithId:(int)newId
            title:(NSString*)newTitle
      coordinates:(CLLocationCoordinate2D)newCoordinates
-andCurrentLocation:(CLLocationCoordinate2D)currLoc
+ currentLocation:(CLLocationCoordinate2D)currLoc
+      descrption:(NSString*)newDescrition
+condition:(NSString*)newCondition
+price:(NSNumber*)newPrice
+imageUrl:(NSString *)newImageUrl
+andCategory:(NSString*)newCategory
 {
     self = [super init];
     if (self) {
-        arId = newId;
         
-        arTitle = [[NSString alloc] initWithString:newTitle];
         
-        lat = newCoordinates.latitude;
-        lon = newCoordinates.longitude;
+        if (newDescrition == nil) {
+            arId = newId;
+            arTitle = [[NSString alloc] initWithString:newTitle];
+            lat = newCoordinates.latitude;
+            lon = newCoordinates.longitude;
+        } else {
+            arId = newId;
+            
+            arTitle = [[NSString alloc] initWithString:newTitle];
+            
+            lat = newCoordinates.latitude;
+            lon = newCoordinates.longitude;
+            arDescription = [[NSMutableString alloc] initWithString:newDescrition];
+            arCondition = [[NSString alloc] initWithString:newCondition];
+            arCategory = [[NSString alloc] initWithString:newCategory];
+            arPrice = newPrice;
+            
+            if (newImageUrl == @"") {
+                
+            } else {
+                FIRStorage *storage = [FIRStorage storage];
+                // Create a storage reference from our storage service
+                FIRStorageReference *storageRef = [storage referenceForURL:newImageUrl];
+                
+                [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+                    if (error != nil) {
+                        // Uh-oh, an error occurred!
+                        NSLog(@"Error Downloading: %@", error);
+                    } else {
+                        _arImage.image = [UIImage imageWithData:data];
+                    }
+                }];
+            }
 
+        }
+        
+        
+        
+        
+        // Get a reference to the storage service, using the default Firebase App
         distance = @([self calculateDistanceFrom:currLoc]);
         
         [self.view setTag:newId];
@@ -70,18 +145,6 @@ andCurrentLocation:(CLLocationCoordinate2D)currLoc
     return self;
 }
 
-//-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-//    DetailsViewController *viewController = (DetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
-//    viewController.theid = arId;
-//    viewController.title = arTitle;
-////    viewController.location.latitude = lat;
-////    viewController.location.longitude = lon;
-//    
-//    [self presentViewController:viewController animated:YES completion:nil];
-//    
-//}
 
 
 

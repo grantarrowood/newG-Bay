@@ -29,7 +29,9 @@
 
 #import "ARSettings.h"
 #import "DetailsViewController.h"
-
+#import <Firebase/Firebase.h>
+@import FirebaseDatabase;
+@import FirebaseAuth;
 
 
 @interface ARObject : UIViewController
@@ -37,6 +39,10 @@
     
     // ARObject main components
     NSString *arTitle;
+    NSMutableString *arDescription;
+    NSString *arCondition;
+    NSNumber *arPrice;
+    NSString *arCategory;
     
     int arId;
     double lat;
@@ -50,12 +56,20 @@
 
 @property (nonatomic, strong) NSString *arTitle;
 @property (nonatomic, strong) NSNumber *distance;
+@property (weak, nonatomic) IBOutlet UIImageView *arImage;
+
+
 - (IBAction)didTouchObject:(id)sender;
 
 - (id)initWithId:(int)newId
            title:(NSString*)newTitle
      coordinates:(CLLocationCoordinate2D)newCoordinates
-andCurrentLocation:(CLLocationCoordinate2D)currLoc;
+ currentLocation:(CLLocationCoordinate2D)currLoc
+      descrption:(NSString*)newDescrition
+       condition:(NSString*)newCondition
+           price:(NSNumber*)newPrice
+        imageUrl:(NSString *)newImageUrl
+     andCategory:(NSString*)newCategory;
 
 - (NSDictionary*)getARObjectData;
 

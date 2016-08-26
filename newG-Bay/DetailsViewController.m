@@ -17,8 +17,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    CLLocation *location = [[CLLocation alloc]
+                            initWithLatitude:_locationLat
+                            longitude:_locationLon];
+    
+    CLGeocoder* geocoder = [[CLGeocoder alloc] init];
+    [geocoder
+     reverseGeocodeLocation:location
+     completionHandler:^(NSArray *placemarks, NSError *error) {
+         
+         CLPlacemark *placemark = [placemarks lastObject];
+         NSString *address = [NSString stringWithFormat:@"%@ %@ %@, %@", placemark.subThoroughfare, placemark.thoroughfare, placemark.locality, placemark.administrativeArea];
+         self.addressLabel.text = address;
+     }];
+    
+    
     self.titleLabel.text = self.title;
-    self.locationLabel.text = [NSString stringWithFormat:@"%f, %f", self.locationLat, self.locationLon];
+    self.descriptionLabel.text = self.dataDescription;
+    self.priceLabel.text = [NSString stringWithFormat:@"$%@", self.price];
+    self.conditionLabel.text = self.condition;
+    self.categoryLabel.text = self.category;
+    self.foundTokenView.hidden = _ishidden;
+    self.totalGBalance.text = self.GBalanceText;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
