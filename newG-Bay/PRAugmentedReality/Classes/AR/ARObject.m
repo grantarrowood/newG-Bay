@@ -54,6 +54,8 @@
             viewController.GBalanceText = [NSString stringWithFormat:@"Your total G-Money Balance is now $%.2f.", balanceNum];
             viewController.ishidden = false;
             [self addObject:@{@"Gbalance": [NSString stringWithFormat:@"%.2f", balanceNum], @"firstName": firstName} withUserId:[FIRAuth auth].currentUser];
+            [self addObject:@{}];
+            
             [self presentViewController:viewController animated:YES completion:nil];
         } withCancelBlock:^(NSError * _Nonnull error) {
             NSLog(@"%@", error.localizedDescription);
@@ -63,6 +65,7 @@
         
         
     } else {
+        viewController.ishidden = true;
         viewController.theid = arId;
         viewController.title = arTitle;
         viewController.locationLat = lat;
@@ -78,10 +81,15 @@
 
 }
 
-- (void)addObject:(NSDictionary *)data withUserId:(FIRUser *)user {
+- (void)addObject:(NSDictionary *)data withUserId:(FIRUser *)user{
     NSMutableDictionary *mdata = [data mutableCopy];
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/users"];
     [[ref child:user.uid] setValue:mdata];
+}
+- (void)addObject:(NSDictionary *)data{
+    NSMutableDictionary *mdata = [data mutableCopy];
+    FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/tokens"];
+   [[ref child:stringId] setValue:mdata];
 }
 
 - (id)initWithId:(int)newId
@@ -143,6 +151,28 @@ andCategory:(NSString*)newCategory
         [self.view setTag:newId];
     }
     return self;
+}
+
+- (id)initWithId:(NSString *)newId
+           title:(NSString*)newTitle
+     coordinates:(CLLocationCoordinate2D)newCoordinates
+ currentLocation:(CLLocationCoordinate2D)currLoc
+{
+    self = [super init];
+    if (self) {
+        
+            stringId = newId;
+            arTitle = [[NSString alloc] initWithString:newTitle];
+            lat = newCoordinates.latitude;
+            lon = newCoordinates.longitude;
+        
+        // Get a reference to the storage service, using the default Firebase App
+        distance = @([self calculateDistanceFrom:currLoc]);
+        
+        [self.view setTag:newId];
+    }
+    return self;
+
 }
 
 

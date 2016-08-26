@@ -110,6 +110,7 @@
         pointCoordinates.longitude = lon;
         destViewController.locationLat = pointCoordinates.latitude;
         destViewController.locationLon = pointCoordinates.longitude;
+        destViewController.ishidden = true;
 
         
     }

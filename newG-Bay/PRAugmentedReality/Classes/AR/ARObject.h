@@ -45,6 +45,7 @@
     NSString *arCategory;
     
     int arId;
+    NSString *stringId;
     double lat;
     double lon;
     NSNumber *distance;
@@ -70,6 +71,11 @@
            price:(NSNumber*)newPrice
         imageUrl:(NSString *)newImageUrl
      andCategory:(NSString*)newCategory;
+
+- (id)initWithId:(NSString *)newId
+           title:(NSString*)newTitle
+     coordinates:(CLLocationCoordinate2D)newCoordinates
+ currentLocation:(CLLocationCoordinate2D)currLoc;
 
 - (NSDictionary*)getARObjectData;
 

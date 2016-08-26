@@ -123,19 +123,18 @@
         for (id key in token) {
             id anObject = [token objectForKey:key];
             /* Do something with anObject. */
-            NSString *objectIdString = anObject[@"objectId"];
-            NSString *didFind = anObject[@"didFind"];
+            NSString *objectIdString = key;
             NSString *latitude = anObject[ObjectFieldslatitude];
             NSString *longitude = anObject[ObjectFieldslongitude];
             
             double lat = latitude.floatValue;
             double lon = longitude.floatValue;
-            int objectId = objectIdString.intValue;
             CLLocationCoordinate2D pointCoordinates;
             pointCoordinates.latitude = lat;
             pointCoordinates.longitude = lon;
-            NSDictionary *point = [self createPointWithId:objectId at:pointCoordinates andTitle:nil descrition:nil condidtion:nil price:nil category:nil imageUrl:nil];
+            NSDictionary *point = [self createPointWithId:objectIdString at:pointCoordinates];
             [points addObject:point];
+           
         }
     }
     
@@ -159,7 +158,7 @@
 -(NSDictionary*)createPointWithId:(int)the_id at:(CLLocationCoordinate2D)locCoordinates andTitle:(NSString *)title descrition:(NSMutableString *)description condidtion:(NSString *)condition price:(NSNumber *)price category:(NSString *)category imageUrl:(NSString *)imageUrl
 {
     NSDictionary *point;
-    if ((imageUrl == nil) && ((title != nil))) {
+    if (imageUrl == nil) {
         point = @{
                                 @"id" : @(the_id),
                                 @"description" : description,
@@ -168,13 +167,6 @@
                                 @"category" : category,
                                 @"title" : title,
                                 @"imageUrl" : @"",
-                                @"lon" : @(locCoordinates.longitude),
-                                @"lat" : @(locCoordinates.latitude)
-                                };
-    } else if (title == nil) {
-        point = @{
-                                @"id" : @(the_id),
-                                @"didFind" : @"false",
                                 @"lon" : @(locCoordinates.longitude),
                                 @"lat" : @(locCoordinates.latitude)
                                 };
@@ -192,6 +184,16 @@
                   };
     }
     
+    return point;
+}
+-(NSDictionary*)createPointWithId:(NSString *)the_id at:(CLLocationCoordinate2D)locCoordinates{
+    NSDictionary *point;
+
+        point = @{
+                  @"id" : the_id,
+                  @"lon" : @(locCoordinates.longitude),
+                  @"lat" : @(locCoordinates.latitude)
+                  };
     return point;
 }
 

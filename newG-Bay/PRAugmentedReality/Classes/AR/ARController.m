@@ -69,17 +69,12 @@ CATransform3DMake(CGFloat m11, CGFloat m12, CGFloat m13, CGFloat m14,
     for (NSDictionary *arObjectData in arData) {
         if(arObjectData[@"title"] == nil)
         {
-            NSNumber *ar_id = @([arObjectData[@"id"] intValue]);
-            arObject = [[ARObject alloc] initWithId:ar_id.intValue
+            NSString *ar_id = arObjectData[@"id"];
+            arObject = [[ARObject alloc] initWithId:arObjectData[@"id"]
                                               title:@"Token"
-                                        coordinates:CLLocationCoordinate2DMake([arObjectData[@"lat"] doubleValue],
-                                                                               [arObjectData[@"lon"] doubleValue])
+                                    coordinates:CLLocationCoordinate2DMake([arObjectData[@"lat"] doubleValue],
+                                                                           [arObjectData[@"lon"] doubleValue])
                                     currentLocation:newLocation
-                                         descrption:nil
-                                          condition:nil
-                                              price:nil
-                                           imageUrl:nil
-                                        andCategory:nil
                         ];
             
             x_pos = [locationMath getARObjectXPosition:arObject]-arObject.view.frame.size.width;

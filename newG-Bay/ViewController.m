@@ -65,7 +65,7 @@
                              int i = [defaults integerForKey:@"tillNextToken"];
                              if (i == 2) {
                                  i = 0;
-                                     [self addObject:@{@"userId": user.uid, @"didFind": @"false", @"latitude": [NSString stringWithFormat:@"%f", currentLocationNow.coordinate.latitude-.000062], @"longitude": [NSString stringWithFormat:@"%f", currentLocationNow.coordinate.longitude-.00007], @"objectId": @"0"} withObjectId:0];
+                                     [self addObject:@{@"userId": user.uid, @"latitude": [NSString stringWithFormat:@"%f", currentLocationNow.coordinate.latitude-.000062], @"longitude": [NSString stringWithFormat:@"%f", currentLocationNow.coordinate.longitude-.00007]}];
 
                              } else {
                                  i += 1;
@@ -79,7 +79,7 @@
 
 
 }
-- (void)addObject:(NSDictionary *)data withObjectId:(NSString *)objectId {
+- (void)addObject:(NSDictionary *)data {
     NSMutableDictionary *mdata = [data mutableCopy];
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/tokens"];
     [[ref childByAutoId] setValue:mdata];
