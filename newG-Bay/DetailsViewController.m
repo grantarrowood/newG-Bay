@@ -37,7 +37,7 @@
     self.priceLabel.text = [NSString stringWithFormat:@"$%@", self.price];
     self.conditionLabel.text = self.condition;
     self.categoryLabel.text = self.category;
-    self.foundTokenView.hidden = _ishidden;
+    self.foundTokenView.hidden = self.ishidden;
     self.totalGBalance.text = self.GBalanceText;
     
     

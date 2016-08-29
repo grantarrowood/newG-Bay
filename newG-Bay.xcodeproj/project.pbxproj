@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C113C2B1D73E132009FA8F2 /* MyCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C113C2A1D73E132009FA8F2 /* MyCustomAnnotation.m */; };
+		9C113C2F1D74E4C6009FA8F2 /* pinAnnotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C113C2E1D74E4C6009FA8F2 /* pinAnnotation.png */; };
+		9C97E4321D70DA1C00C74DD6 /* AllItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C97E4311D70DA1C00C74DD6 /* AllItemsTableViewController.m */; };
+		9C97E4361D70DC1D00C74DD6 /* ItemMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C97E4351D70DC1D00C74DD6 /* ItemMapViewController.m */; };
+		9C97E47E1D726C6C00C74DD6 /* newG-Bay.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 9C97E47D1D726C6C00C74DD6 /* newG-Bay.entitlements */; };
+		9C97E4801D726CBD00C74DD6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C97E47F1D726CBD00C74DD6 /* MapKit.framework */; };
 		9C9EA0661D6A778E00D76334 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0651D6A778E00D76334 /* CreateAccountViewController.m */; };
 		9C9EA0691D6A7BB700D76334 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0681D6A7BB700D76334 /* MainViewController.m */; };
 		9C9EA06D1D6B1EC800D76334 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */; };
@@ -36,12 +42,10 @@
 		9CA60B281D693DB60081A5B5 /* LocationMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B1A1D693DB60081A5B5 /* LocationMath.m */; };
 		9CA60B291D693DB60081A5B5 /* PRARManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B1C1D693DB60081A5B5 /* PRARManager.m */; };
 		9CA60B2A1D693DB60081A5B5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9CA60B1D1D693DB60081A5B5 /* LICENSE */; };
-		9CA60B2B1D693DB60081A5B5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60B1E1D693DB60081A5B5 /* README.md */; };
 		9CA60B341D693E640081A5B5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B2C1D693E640081A5B5 /* AVFoundation.framework */; };
 		9CA60B351D693E640081A5B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B2D1D693E640081A5B5 /* CoreLocation.framework */; };
 		9CA60B361D693E640081A5B5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B2E1D693E640081A5B5 /* CoreMotion.framework */; };
 		9CA60B371D693E640081A5B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B2F1D693E640081A5B5 /* Foundation.framework */; };
-		9CA60B381D693E640081A5B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B301D693E640081A5B5 /* MapKit.framework */; };
 		9CA60B391D693E640081A5B5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B311D693E640081A5B5 /* MobileCoreServices.framework */; };
 		9CA60B3A1D693E640081A5B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B321D693E640081A5B5 /* QuartzCore.framework */; };
 		9CA60B3B1D693E640081A5B5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA60B331D693E640081A5B5 /* SystemConfiguration.framework */; };
@@ -69,6 +73,16 @@
 		027B56D3FA2FBD8E524860D0 /* libPods-newG-Bay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-newG-Bay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D22E76E375D619D2A2A36D /* Pods-newG-Bay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newG-Bay.release.xcconfig"; path = "Pods/Target Support Files/Pods-newG-Bay/Pods-newG-Bay.release.xcconfig"; sourceTree = "<group>"; };
 		632DF3EE1FF1A079E6933B54 /* Pods-newG-Bay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newG-Bay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-newG-Bay/Pods-newG-Bay.debug.xcconfig"; sourceTree = "<group>"; };
+		9C113C291D73E132009FA8F2 /* MyCustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomAnnotation.h; sourceTree = "<group>"; };
+		9C113C2A1D73E132009FA8F2 /* MyCustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomAnnotation.m; sourceTree = "<group>"; };
+		9C113C2E1D74E4C6009FA8F2 /* pinAnnotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinAnnotation.png; sourceTree = "<group>"; };
+		9C97E4311D70DA1C00C74DD6 /* AllItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllItemsTableViewController.m; sourceTree = "<group>"; };
+		9C97E4331D70DA3B00C74DD6 /* AllItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllItemsTableViewController.h; sourceTree = "<group>"; };
+		9C97E4341D70DC1D00C74DD6 /* ItemMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemMapViewController.h; sourceTree = "<group>"; };
+		9C97E4351D70DC1D00C74DD6 /* ItemMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemMapViewController.m; sourceTree = "<group>"; };
+		9C97E47B1D7269EC00C74DD6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C97E47D1D726C6C00C74DD6 /* newG-Bay.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "newG-Bay.entitlements"; sourceTree = "<group>"; };
+		9C97E47F1D726CBD00C74DD6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9C9EA0641D6A778E00D76334 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
 		9C9EA0651D6A778E00D76334 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		9C9EA0671D6A7BB700D76334 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -80,7 +94,6 @@
 		9C9EA0721D6BAE8A00D76334 /* NewItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewItemViewController.m; sourceTree = "<group>"; };
 		9C9EA0931D6D185100D76334 /* YourItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourItemTableViewController.h; sourceTree = "<group>"; };
 		9C9EA0941D6D185100D76334 /* YourItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourItemTableViewController.m; sourceTree = "<group>"; };
-		9C9EA0961D6F9AFA00D76334 /* newG-Bay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "newG-Bay.entitlements"; sourceTree = "<group>"; };
 		9C9EA0971D6FAC9900D76334 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		9CA60AC91D693CA30081A5B5 /* newG-Bay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "newG-Bay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA60ACD1D693CA30081A5B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,7 +103,6 @@
 		9CA60AD31D693CA30081A5B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9CA60AD81D693CA30081A5B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CA60ADB1D693CA30081A5B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9CA60ADD1D693CA30081A5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CA60AE21D693CA30081A5B5 /* newG-BayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "newG-BayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA60AE61D693CA30081A5B5 /* newG_BayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = newG_BayTests.m; sourceTree = "<group>"; };
 		9CA60AE81D693CA30081A5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,12 +132,10 @@
 		9CA60B1B1D693DB60081A5B5 /* PRARManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRARManager.h; sourceTree = "<group>"; };
 		9CA60B1C1D693DB60081A5B5 /* PRARManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRARManager.m; sourceTree = "<group>"; };
 		9CA60B1D1D693DB60081A5B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		9CA60B1E1D693DB60081A5B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9CA60B2C1D693E640081A5B5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9CA60B2D1D693E640081A5B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9CA60B2E1D693E640081A5B5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		9CA60B2F1D693E640081A5B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9CA60B301D693E640081A5B5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9CA60B311D693E640081A5B5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9CA60B321D693E640081A5B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9CA60B331D693E640081A5B5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -138,10 +148,10 @@
 			files = (
 				9C9EA0981D6FAC9900D76334 /* Photos.framework in Frameworks */,
 				9CA60B341D693E640081A5B5 /* AVFoundation.framework in Frameworks */,
+				9C97E4801D726CBD00C74DD6 /* MapKit.framework in Frameworks */,
 				9CA60B351D693E640081A5B5 /* CoreLocation.framework in Frameworks */,
 				9CA60B361D693E640081A5B5 /* CoreMotion.framework in Frameworks */,
 				9CA60B371D693E640081A5B5 /* Foundation.framework in Frameworks */,
-				9CA60B381D693E640081A5B5 /* MapKit.framework in Frameworks */,
 				9CA60B391D693E640081A5B5 /* MobileCoreServices.framework in Frameworks */,
 				9CA60B3A1D693E640081A5B5 /* QuartzCore.framework in Frameworks */,
 				9CA60B3B1D693E640081A5B5 /* SystemConfiguration.framework in Frameworks */,
@@ -169,6 +179,7 @@
 		5253D968B8921061990CFFDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C97E47F1D726CBD00C74DD6 /* MapKit.framework */,
 				9C9EA0971D6FAC9900D76334 /* Photos.framework */,
 				027B56D3FA2FBD8E524860D0 /* libPods-newG-Bay.a */,
 			);
@@ -209,7 +220,7 @@
 		9CA60ACB1D693CA30081A5B5 /* newG-Bay */ = {
 			isa = PBXGroup;
 			children = (
-				9C9EA0961D6F9AFA00D76334 /* newG-Bay.entitlements */,
+				9C97E47D1D726C6C00C74DD6 /* newG-Bay.entitlements */,
 				9CA60ACF1D693CA30081A5B5 /* AppDelegate.h */,
 				9CA60AD01D693CA30081A5B5 /* AppDelegate.m */,
 				9C9EA06E1D6B983300D76334 /* Constants.h */,
@@ -228,12 +239,18 @@
 				9C9EA0721D6BAE8A00D76334 /* NewItemViewController.m */,
 				9C9EA0931D6D185100D76334 /* YourItemTableViewController.h */,
 				9C9EA0941D6D185100D76334 /* YourItemTableViewController.m */,
+				9C97E4331D70DA3B00C74DD6 /* AllItemsTableViewController.h */,
+				9C97E4311D70DA1C00C74DD6 /* AllItemsTableViewController.m */,
+				9C97E4341D70DC1D00C74DD6 /* ItemMapViewController.h */,
+				9C97E4351D70DC1D00C74DD6 /* ItemMapViewController.m */,
+				9C113C291D73E132009FA8F2 /* MyCustomAnnotation.h */,
+				9C113C2A1D73E132009FA8F2 /* MyCustomAnnotation.m */,
 				9CA60B071D693DB60081A5B5 /* PRAugmentedReality */,
 				9CA60B051D693CE20081A5B5 /* Main.storyboard */,
 				9CA60AD81D693CA30081A5B5 /* Assets.xcassets */,
 				9CA60ADA1D693CA30081A5B5 /* LaunchScreen.storyboard */,
 				9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */,
-				9CA60ADD1D693CA30081A5B5 /* Info.plist */,
+				9C97E47B1D7269EC00C74DD6 /* Info.plist */,
 				9CA60ACC1D693CA30081A5B5 /* Supporting Files */,
 			);
 			path = "newG-Bay";
@@ -242,11 +259,11 @@
 		9CA60ACC1D693CA30081A5B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C113C2E1D74E4C6009FA8F2 /* pinAnnotation.png */,
 				9CA60B2C1D693E640081A5B5 /* AVFoundation.framework */,
 				9CA60B2D1D693E640081A5B5 /* CoreLocation.framework */,
 				9CA60B2E1D693E640081A5B5 /* CoreMotion.framework */,
 				9CA60B2F1D693E640081A5B5 /* Foundation.framework */,
-				9CA60B301D693E640081A5B5 /* MapKit.framework */,
 				9CA60B311D693E640081A5B5 /* MobileCoreServices.framework */,
 				9CA60B321D693E640081A5B5 /* QuartzCore.framework */,
 				9CA60B331D693E640081A5B5 /* SystemConfiguration.framework */,
@@ -278,7 +295,6 @@
 			children = (
 				9CA60B081D693DB60081A5B5 /* Classes */,
 				9CA60B1D1D693DB60081A5B5 /* LICENSE */,
-				9CA60B1E1D693DB60081A5B5 /* README.md */,
 			);
 			path = PRAugmentedReality;
 			sourceTree = "<group>";
@@ -406,6 +422,9 @@
 							com.apple.Keychain = {
 								enabled = 1;
 							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 						};
 					};
 					9CA60AE11D693CA30081A5B5 = {
@@ -443,11 +462,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C113C2F1D74E4C6009FA8F2 /* pinAnnotation.png in Resources */,
 				9CA60ADC1D693CA30081A5B5 /* LaunchScreen.storyboard in Resources */,
 				9CA60AD91D693CA30081A5B5 /* Assets.xcassets in Resources */,
 				9CA60B061D693CE20081A5B5 /* Main.storyboard in Resources */,
 				9CA60B221D693DB60081A5B5 /* ar_icon.png in Resources */,
 				9CA60B2A1D693DB60081A5B5 /* LICENSE in Resources */,
+				9C97E47E1D726C6C00C74DD6 /* newG-Bay.entitlements in Resources */,
 				9CA60B241D693DB60081A5B5 /* ar_overlay@2x.png in Resources */,
 				9C9EA06D1D6B1EC800D76334 /* GoogleService-Info.plist in Resources */,
 				9CA60B211D693DB60081A5B5 /* ARObject.xib in Resources */,
@@ -528,8 +549,11 @@
 			files = (
 				9CA60B1F1D693DB60081A5B5 /* ARController.m in Sources */,
 				9CA60B271D693DB60081A5B5 /* ARRadar.m in Sources */,
+				9C97E4361D70DC1D00C74DD6 /* ItemMapViewController.m in Sources */,
 				9CA60B281D693DB60081A5B5 /* LocationMath.m in Sources */,
 				9CA60AD41D693CA30081A5B5 /* ViewController.m in Sources */,
+				9C113C2B1D73E132009FA8F2 /* MyCustomAnnotation.m in Sources */,
+				9C97E4321D70DA1C00C74DD6 /* AllItemsTableViewController.m in Sources */,
 				9C9EA0691D6A7BB700D76334 /* MainViewController.m in Sources */,
 				9C9EA0701D6B983300D76334 /* Constants.m in Sources */,
 				9C9EA0731D6BAE8A00D76334 /* NewItemViewController.m in Sources */,
@@ -540,7 +564,6 @@
 				9C9EA0661D6A778E00D76334 /* CreateAccountViewController.m in Sources */,
 				9CA60B031D693CBC0081A5B5 /* ARCameraViewController.m in Sources */,
 				9C9EA0951D6D185100D76334 /* YourItemTableViewController.m in Sources */,
-				9CA60B2B1D693DB60081A5B5 /* README.md in Sources */,
 				9CA60ACE1D693CA30081A5B5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,6 +707,7 @@
 				CODE_SIGN_ENTITLEMENTS = "newG-Bay/newG-Bay.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/newG-Bay",
@@ -711,6 +735,7 @@
 				CODE_SIGN_ENTITLEMENTS = "newG-Bay/newG-Bay.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/newG-Bay",
@@ -786,7 +811,7 @@
 				9CA60AF51D693CA30081A5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		9CA60AF61D693CA30081A5B5 /* Build configuration list for PBXNativeTarget "newG-Bay" */ = {
 			isa = XCConfigurationList;
@@ -795,7 +820,7 @@
 				9CA60AF81D693CA30081A5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		9CA60AF91D693CA30081A5B5 /* Build configuration list for PBXNativeTarget "newG-BayTests" */ = {
 			isa = XCConfigurationList;
@@ -804,7 +829,7 @@
 				9CA60AFB1D693CA30081A5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		9CA60AFC1D693CA30081A5B5 /* Build configuration list for PBXNativeTarget "newG-BayUITests" */ = {
 			isa = XCConfigurationList;
@@ -813,7 +838,7 @@
 				9CA60AFE1D693CA30081A5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

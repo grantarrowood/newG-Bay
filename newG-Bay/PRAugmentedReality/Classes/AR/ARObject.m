@@ -60,10 +60,6 @@
         } withCancelBlock:^(NSError * _Nonnull error) {
             NSLog(@"%@", error.localizedDescription);
         }];
-
-        
-        
-        
     } else {
         viewController.ishidden = true;
         viewController.theid = arId;
