@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C113C2B1D73E132009FA8F2 /* MyCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C113C2A1D73E132009FA8F2 /* MyCustomAnnotation.m */; };
 		9C113C2F1D74E4C6009FA8F2 /* pinAnnotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C113C2E1D74E4C6009FA8F2 /* pinAnnotation.png */; };
+		9C113C3B1D7502C4009FA8F2 /* backgroundLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C113C3A1D7502C4009FA8F2 /* backgroundLogin.png */; };
 		9C97E4321D70DA1C00C74DD6 /* AllItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C97E4311D70DA1C00C74DD6 /* AllItemsTableViewController.m */; };
 		9C97E4361D70DC1D00C74DD6 /* ItemMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C97E4351D70DC1D00C74DD6 /* ItemMapViewController.m */; };
 		9C97E47E1D726C6C00C74DD6 /* newG-Bay.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 9C97E47D1D726C6C00C74DD6 /* newG-Bay.entitlements */; };
@@ -76,6 +77,7 @@
 		9C113C291D73E132009FA8F2 /* MyCustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomAnnotation.h; sourceTree = "<group>"; };
 		9C113C2A1D73E132009FA8F2 /* MyCustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomAnnotation.m; sourceTree = "<group>"; };
 		9C113C2E1D74E4C6009FA8F2 /* pinAnnotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinAnnotation.png; sourceTree = "<group>"; };
+		9C113C3A1D7502C4009FA8F2 /* backgroundLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundLogin.png; sourceTree = "<group>"; };
 		9C97E4311D70DA1C00C74DD6 /* AllItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllItemsTableViewController.m; sourceTree = "<group>"; };
 		9C97E4331D70DA3B00C74DD6 /* AllItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllItemsTableViewController.h; sourceTree = "<group>"; };
 		9C97E4341D70DC1D00C74DD6 /* ItemMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemMapViewController.h; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		9CA60ACC1D693CA30081A5B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C113C3A1D7502C4009FA8F2 /* backgroundLogin.png */,
 				9C113C2E1D74E4C6009FA8F2 /* pinAnnotation.png */,
 				9CA60B2C1D693E640081A5B5 /* AVFoundation.framework */,
 				9CA60B2D1D693E640081A5B5 /* CoreLocation.framework */,
@@ -464,6 +467,7 @@
 			files = (
 				9C113C2F1D74E4C6009FA8F2 /* pinAnnotation.png in Resources */,
 				9CA60ADC1D693CA30081A5B5 /* LaunchScreen.storyboard in Resources */,
+				9C113C3B1D7502C4009FA8F2 /* backgroundLogin.png in Resources */,
 				9CA60AD91D693CA30081A5B5 /* Assets.xcassets in Resources */,
 				9CA60B061D693CE20081A5B5 /* Main.storyboard in Resources */,
 				9CA60B221D693DB60081A5B5 /* ar_icon.png in Resources */,
