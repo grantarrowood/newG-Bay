@@ -17,6 +17,7 @@
 @property (nonatomic, strong) SWBufferedToast *loginToast;
 @property (nonatomic, strong) SWBufferedToast *registerToast;
 @property (nonatomic) bool isRegistering;
+@property (nonatomic) bool isError;
 
 
 
@@ -24,9 +25,6 @@
 @property (nonatomic, readonly) UIColor *ectoplasmGreen;
 @property (nonatomic, readonly) UIColor *candyCaneRed;
 @property (nonatomic, readonly) UIColor *jarringBlue;
-
-
-- (IBAction)loginAction:(id)sender;
 
 @end
 

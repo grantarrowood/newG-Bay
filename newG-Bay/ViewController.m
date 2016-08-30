@@ -28,6 +28,11 @@
     [locationManager startUpdatingLocation];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self.loginToast appear];
+}
+
 
 
 #pragma mark - nice colours.
@@ -114,6 +119,7 @@
         [self.plainToast dismiss];
         [self.loginToast appear];
         self.isRegistering = false;
+        self.isError = false;
     }
 }
 
@@ -122,6 +128,7 @@
     if (toast == self.loginToast) {
         [self.loginToast dismiss];
         self.isRegistering = true;
+        self.isError = false;
     }
 }
 
@@ -130,6 +137,7 @@
     if (toast == self.registerToast) {
         [self.registerToast dismiss];
         self.isRegistering = false;
+        self.isError = false;
     }
 }
 -(void)didBeginContinue:(SWBufferedToast *)toast
@@ -146,12 +154,12 @@
         //Returns the values the user entered for their username and password. You should probably attempt a login at this point.
         [self.loginToast beginLoading];
         //Once you have authed with your api you can dismiss the toast by calling
-        [[FIRAuth auth] signInWithEmail:username
-                               password:password
+        [[FIRAuth auth] signInWithEmail:@"grant@arrowood.com"
+                               password:@"abcd1234"
                              completion:^(FIRUser *user, NSError *error) {
                                  if (error) {
+                                     self.isError = true;
                                      [self.loginToast dismiss];
-                                     [self.plainToast appear];
                                  } else {
                                      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                                      int i = [defaults integerForKey:@"tillNextToken"];
@@ -205,6 +213,10 @@
     } else if (toast == self.registerToast)
     {
         [self.loginToast appear];
+    } else if ((toast == self.loginToast) && (_isError))
+    {
+        [self.plainToast appear];
+
     }
 }
 
@@ -234,11 +246,6 @@
     }
 }
 
-
-
-- (IBAction)loginAction:(id)sender {
-    [self.loginToast appear];
-}
 - (void)addObject:(NSDictionary *)data {
     NSMutableDictionary *mdata = [data mutableCopy];
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/tokens"];

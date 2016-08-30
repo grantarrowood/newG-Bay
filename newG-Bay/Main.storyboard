@@ -5,54 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Create Account View Controller-->
-        <scene sceneID="Zws-ct-7Pf">
-            <objects>
-                <viewController id="wyW-Do-ukf" customClass="CreateAccountViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Khs-lA-hTR"/>
-                        <viewControllerLayoutGuide type="bottom" id="cLO-I1-LNu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I6z-g2-jFu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADT-h7-sO7">
-                                <rect key="frame" x="193" y="285" width="46" height="30"/>
-                                <state key="normal" title="Create"/>
-                                <connections>
-                                    <action selector="createAction:" destination="wyW-Do-ukf" eventType="touchUpInside" id="JiU-sm-g4d"/>
-                                    <segue destination="wkN-sY-dEZ" kind="presentation" id="x9f-HW-cqZ"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AR7-Tn-GBj">
-                                <rect key="frame" x="122" y="114" width="188" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZqA-AF-gnt">
-                                <rect key="frame" x="122" y="172" width="188" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bB8-zg-V1N">
-                                <rect key="frame" x="122" y="229" width="188" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="emailTextField" destination="AR7-Tn-GBj" id="ta1-0q-4Bt"/>
-                        <outlet property="firstNameTextField" destination="bB8-zg-V1N" id="HdZ-c0-VuB"/>
-                        <outlet property="passwordTextField" destination="ZqA-AF-gnt" id="EPR-4d-Glf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i5s-DF-77Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="301" y="-331"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -65,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundLogin.png" translatesAutoresizingMaskIntoConstraints="NO" id="tsb-hC-JJe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundLogin.png" translatesAutoresizingMaskIntoConstraints="NO" id="tsb-hC-JJe">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqt-5K-uqy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqt-5K-uqy">
                                 <rect key="frame" x="281" y="200" width="38" height="30"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,7 +29,7 @@
                                     <action selector="loginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="coh-GB-z5w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89U-Xf-07a">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89U-Xf-07a">
                                 <rect key="frame" x="263" y="248" width="75" height="30"/>
                                 <state key="normal" title="View Items">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,10 +37,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tsb-hC-JJe" secondAttribute="trailing" id="9r5-Cy-BMG"/>
+                            <constraint firstItem="tsb-hC-JJe" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="RLy-bk-ZrD"/>
+                            <constraint firstItem="tsb-hC-JJe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="U67-rz-aDw"/>
+                            <constraint firstItem="tsb-hC-JJe" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="ixf-o8-bCV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vqt-5K-uqy"/>
+                                <exclude reference="89U-Xf-07a"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <segue destination="wkN-sY-dEZ" kind="presentation" identifier="toMainView" id="Ass-B7-FyX"/>
-                        <segue destination="wyW-Do-ukf" kind="presentation" identifier="goRegister" id="avK-6g-1D9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

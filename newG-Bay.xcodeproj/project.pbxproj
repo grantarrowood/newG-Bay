@@ -14,7 +14,6 @@
 		9C97E4361D70DC1D00C74DD6 /* ItemMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C97E4351D70DC1D00C74DD6 /* ItemMapViewController.m */; };
 		9C97E47E1D726C6C00C74DD6 /* newG-Bay.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 9C97E47D1D726C6C00C74DD6 /* newG-Bay.entitlements */; };
 		9C97E4801D726CBD00C74DD6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C97E47F1D726CBD00C74DD6 /* MapKit.framework */; };
-		9C9EA0661D6A778E00D76334 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0651D6A778E00D76334 /* CreateAccountViewController.m */; };
 		9C9EA0691D6A7BB700D76334 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0681D6A7BB700D76334 /* MainViewController.m */; };
 		9C9EA06D1D6B1EC800D76334 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */; };
 		9C9EA0701D6B983300D76334 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA06F1D6B983300D76334 /* Constants.m */; };
@@ -85,8 +84,6 @@
 		9C97E47B1D7269EC00C74DD6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C97E47D1D726C6C00C74DD6 /* newG-Bay.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "newG-Bay.entitlements"; sourceTree = "<group>"; };
 		9C97E47F1D726CBD00C74DD6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		9C9EA0641D6A778E00D76334 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
-		9C9EA0651D6A778E00D76334 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		9C9EA0671D6A7BB700D76334 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		9C9EA0681D6A7BB700D76334 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -229,8 +226,6 @@
 				9C9EA06F1D6B983300D76334 /* Constants.m */,
 				9CA60AD21D693CA30081A5B5 /* ViewController.h */,
 				9CA60AD31D693CA30081A5B5 /* ViewController.m */,
-				9C9EA0641D6A778E00D76334 /* CreateAccountViewController.h */,
-				9C9EA0651D6A778E00D76334 /* CreateAccountViewController.m */,
 				9C9EA0671D6A7BB700D76334 /* MainViewController.h */,
 				9C9EA0681D6A7BB700D76334 /* MainViewController.m */,
 				9CA60AFF1D693CBC0081A5B5 /* ARCameraViewController.h */,
@@ -565,7 +560,6 @@
 				9CA60B201D693DB60081A5B5 /* ARObject.m in Sources */,
 				9CA60B041D693CBC0081A5B5 /* DetailsViewController.m in Sources */,
 				9CA60AD11D693CA30081A5B5 /* AppDelegate.m in Sources */,
-				9C9EA0661D6A778E00D76334 /* CreateAccountViewController.m in Sources */,
 				9CA60B031D693CBC0081A5B5 /* ARCameraViewController.m in Sources */,
 				9C9EA0951D6D185100D76334 /* YourItemTableViewController.m in Sources */,
 				9CA60ACE1D693CA30081A5B5 /* main.m in Sources */,
