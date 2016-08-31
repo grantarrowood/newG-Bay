@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "LeftMenuViewController.h"
 @import FirebaseAuth;
 
 @interface MainViewController ()
@@ -17,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO];
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -34,6 +38,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - SlideNavigationController Methods -
+
+- (BOOL)slideNavigationControllerShouldDisplayLeftMenu
+{
+    return YES;
+}
+
+- (BOOL)slideNavigationControllerShouldDisplayRightMenu
+{
+    return YES;
+}
+
 
 - (IBAction)logOutAction:(id)sender {
     NSError *error;

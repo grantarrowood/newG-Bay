@@ -26,6 +26,14 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager requestWhenInUseAuthorization];
     [locationManager startUpdatingLocation];
+    
+    NSError *error;
+    [[FIRAuth auth] signOut:&error];
+    if (!error) {
+        NSLog(@"PASSED");
+        // Sign-out succeeded
+    }
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -33,6 +41,11 @@
     [self.loginToast appear];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES];
+
+}
 
 
 #pragma mark - nice colours.
@@ -143,6 +156,7 @@
 -(void)didBeginContinue:(SWBufferedToast *)toast
 {
     [self.loginToast dismiss];
+    NSLog(@"%@", [FIRAuth auth].currentUser.uid);
     [self performSegueWithIdentifier:@"toMainView" sender:self];
 }
 
@@ -175,7 +189,7 @@
                                      
                                      [defaults synchronize];
                                      [self.loginToast dismiss];
-                                     NSLog(@"PASSED");
+                                     NSLog(@"%@", [FIRAuth auth].currentUser.uid);
                                      [self performSegueWithIdentifier:@"toMainView" sender:self];
                                  }
                                  

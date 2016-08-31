@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EIv-E0-VUB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Left Menu View Controller-->
+        <scene sceneID="eZe-Nl-1tg">
+            <objects>
+                <viewController storyboardIdentifier="LeftMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hpp-tQ-sVk" customClass="LeftMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vtx-1h-kCm"/>
+                        <viewControllerLayoutGuide type="bottom" id="BjD-Ez-iFM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kq8-d6-ely">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="91a-bH-Hwc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leftMenuCell" id="lhv-yF-LkJ">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lhv-yF-LkJ" id="KRh-kQ-ew9">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hpp-tQ-sVk" id="amZ-nz-Z1v"/>
+                                    <outlet property="delegate" destination="hpp-tQ-sVk" id="szS-LN-8MP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="91a-bH-Hwc" secondAttribute="trailing" id="PsI-z5-8Mu"/>
+                            <constraint firstItem="91a-bH-Hwc" firstAttribute="bottom" secondItem="BjD-Ez-iFM" secondAttribute="top" id="ST2-M3-tJb"/>
+                            <constraint firstItem="91a-bH-Hwc" firstAttribute="leading" secondItem="Kq8-d6-ely" secondAttribute="leading" id="e7Z-ct-h95"/>
+                            <constraint firstItem="91a-bH-Hwc" firstAttribute="top" secondItem="Kq8-d6-ely" secondAttribute="top" id="kXd-RF-se9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="91a-bH-Hwc" id="7cM-UV-g1A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9P-al-gch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1851" y="-2062"/>
+        </scene>
+        <!--Slide Navigation Controller-->
+        <scene sceneID="JMW-JS-J4c">
+            <objects>
+                <navigationController id="EIv-E0-VUB" customClass="SlideNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="47K-ef-r64">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="bOh-5u-nIy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFj-JR-phz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1843" y="-1314"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -50,46 +115,19 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Nh3-4l-y5T"/>
                     <connections>
-                        <segue destination="wkN-sY-dEZ" kind="presentation" identifier="toMainView" id="Ass-B7-FyX"/>
+                        <segue destination="wkN-sY-dEZ" kind="show" identifier="toMainView" id="Ass-B7-FyX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="317" y="345"/>
+            <point key="canvasLocation" x="-1043" y="-1314"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="d1L-zB-jCR">
-            <objects>
-                <tableViewController id="pXr-t1-CQQ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Djb-CW-JXk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZKY-6r-WyK">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZKY-6r-WyK" id="K6m-Kh-CeY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="pXr-t1-CQQ" id="0xA-BO-3fh"/>
-                            <outlet property="delegate" destination="pXr-t1-CQQ" id="CBd-Cq-xEd"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OPf-gR-aoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1037" y="350"/>
-        </scene>
-        <!--Item Map View Controller-->
+        <!--Item Map-->
         <scene sceneID="nbJ-Pw-TZU">
             <objects>
-                <viewController storyboardIdentifier="ItemMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i0K-rq-yym" customClass="ItemMapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemMapViewController" title="Item Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i0K-rq-yym" customClass="ItemMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bMg-96-d4w"/>
                         <viewControllerLayoutGuide type="bottom" id="fh1-A7-HNv"/>
@@ -113,17 +151,17 @@
                     </view>
                     <connections>
                         <outlet property="mappedView" destination="x3m-3d-2sD" id="HyN-Se-gqc"/>
-                        <segue destination="2un-Ge-NIf" kind="presentation" identifier="infoDetails" id="bfD-2t-qlf"/>
+                        <segue destination="2un-Ge-NIf" kind="show" identifier="infoDetails" id="bfD-2t-qlf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bby-6B-uFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="1029"/>
+            <point key="canvasLocation" x="-1327" y="212"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Item Details-->
         <scene sceneID="Jp5-0J-V7d">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2un-Ge-NIf" customClass="DetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" title="Item Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2un-Ge-NIf" customClass="DetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ndn-C9-7GR"/>
                         <viewControllerLayoutGuide type="bottom" id="ZEh-Om-8Dv"/>
@@ -211,7 +249,7 @@
                                         <rect key="frame" x="49" y="37" width="46" height="30"/>
                                         <state key="normal" title="Return"/>
                                         <connections>
-                                            <segue destination="wkN-sY-dEZ" kind="presentation" id="ylD-2P-yNq"/>
+                                            <segue destination="wkN-sY-dEZ" kind="show" id="ylD-2P-yNq"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your total is now $1!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BQ-Hv-K8o">
@@ -246,12 +284,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RiS-eA-X6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="1724"/>
+            <point key="canvasLocation" x="-1765" y="1156"/>
         </scene>
-        <!--New Item View Controller-->
+        <!--New Item-->
         <scene sceneID="tcq-Tk-d41">
             <objects>
-                <viewController id="381-oe-Sz3" customClass="NewItemViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddItemsViewController" title="New Item" useStoryboardIdentifierAsRestorationIdentifier="YES" id="381-oe-Sz3" customClass="NewItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Gs-7P-11D"/>
                         <viewControllerLayoutGuide type="bottom" id="VrN-7l-Ojw"/>
@@ -314,7 +352,7 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitItemAction:" destination="381-oe-Sz3" eventType="touchUpInside" id="sDj-h0-3L1"/>
-                                    <segue destination="wkN-sY-dEZ" kind="presentation" id="fMl-qc-CL8"/>
+                                    <segue destination="wkN-sY-dEZ" kind="show" id="fMl-qc-CL8"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K02-Tn-ckV">
@@ -341,12 +379,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgG-bE-0Rt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="2384"/>
+            <point key="canvasLocation" x="569" y="212"/>
         </scene>
-        <!--Your Item Table View Controller-->
+        <!--My Items-->
         <scene sceneID="Yi5-GF-G2U">
             <objects>
-                <tableViewController id="Rg7-FQ-MwC" customClass="YourItemTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="YourItemsViewController" title="My Items" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rg7-FQ-MwC" customClass="YourItemTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3GE-yB-16m">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,17 +406,17 @@
                     </tableView>
                     <connections>
                         <outlet property="clientTable" destination="3GE-yB-16m" id="aCd-Yn-J9K"/>
-                        <segue destination="2un-Ge-NIf" kind="presentation" identifier="detailsSegue" id="yaM-nL-TSc"/>
+                        <segue destination="2un-Ge-NIf" kind="show" identifier="detailsSegue" id="yaM-nL-TSc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6OZ-gF-vMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-372" y="1029"/>
+            <point key="canvasLocation" x="-316" y="212"/>
         </scene>
-        <!--All Items Table View Controller-->
+        <!--All Items-->
         <scene sceneID="ttb-KX-cI0">
             <objects>
-                <tableViewController id="4cS-Qq-Yni" customClass="AllItemsTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AllItemsViewController" title="All Items" id="4cS-Qq-Yni" customClass="AllItemsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a4R-Hq-fBC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,17 +438,17 @@
                     </tableView>
                     <connections>
                         <outlet property="clientTable" destination="a4R-Hq-fBC" id="p4C-mZ-Vvs"/>
-                        <segue destination="2un-Ge-NIf" kind="presentation" identifier="allDetailsSegue" id="8Zc-ve-zU6"/>
+                        <segue destination="2un-Ge-NIf" kind="show" identifier="allDetailsSegue" id="8Zc-ve-zU6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHx-mG-vgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-362" y="1704"/>
+            <point key="canvasLocation" x="-2322" y="212"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Main-->
         <scene sceneID="oon-wc-Iv7">
             <objects>
-                <viewController id="wkN-sY-dEZ" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" title="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wkN-sY-dEZ" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ahq-8R-dyi"/>
                         <viewControllerLayoutGuide type="bottom" id="HKK-5V-eRh"/>
@@ -418,69 +456,18 @@
                     <view key="view" contentMode="scaleToFill" id="sa9-Xq-Z1d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmM-c7-uaM">
-                                <rect key="frame" x="203" y="55" width="195" height="30"/>
-                                <state key="normal" title="Open Camera to see objects"/>
-                                <connections>
-                                    <segue destination="0Rt-9A-wuh" kind="presentation" id="9dW-CO-y1t"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJz-rh-glF">
-                                <rect key="frame" x="253" y="127" width="95" height="30"/>
-                                <state key="normal" title="go to list view"/>
-                                <connections>
-                                    <segue destination="4cS-Qq-Yni" kind="presentation" id="V2f-z7-ulg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voB-mX-h3Q">
-                                <rect key="frame" x="264" y="207" width="72" height="39"/>
-                                <state key="normal" title="Go to map"/>
-                                <connections>
-                                    <segue destination="i0K-rq-yym" kind="presentation" id="FB5-Kh-nnL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eer-I2-5ah">
-                                <rect key="frame" x="283" y="254" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="WXr-r5-WDx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDz-xf-SV8">
-                                <rect key="frame" x="269" y="292" width="62" height="30"/>
-                                <state key="normal" title="Add Item"/>
-                                <connections>
-                                    <segue destination="381-oe-Sz3" kind="presentation" id="0ab-qy-b9A"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgv-Ab-aM7">
-                                <rect key="frame" x="273" y="89" width="55" height="30"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <action selector="logOutAction:" destination="wkN-sY-dEZ" eventType="touchUpInside" id="3G8-6O-AB6"/>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="49Y-yA-mtg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-VI-uBo">
-                                <rect key="frame" x="245" y="330" width="110" height="30"/>
-                                <state key="normal" title="View Your Items"/>
-                                <connections>
-                                    <segue destination="Rg7-FQ-MwC" kind="presentation" id="SDY-Uq-hDi"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Main" id="1cE-5l-74b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qII-Rd-1gt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="317" y="1029"/>
+            <point key="canvasLocation" x="-1843" y="-555"/>
         </scene>
-        <!--Camera View Controller-->
+        <!--Camera-->
         <scene sceneID="pn6-Df-3x6">
             <objects>
-                <viewController id="0Rt-9A-wuh" customClass="ARCameraViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OpenCameraViewController" title="Camera" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0Rt-9A-wuh" customClass="ARCameraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p1m-e0-8N6"/>
                         <viewControllerLayoutGuide type="bottom" id="XSh-ST-BfL"/>
@@ -501,20 +488,19 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="JQ5-5h-TBp" id="hu1-2V-TTu"/>
-                        <segue destination="2un-Ge-NIf" kind="presentation" identifier="toDetailsView" id="z62-A5-zNY"/>
+                        <segue destination="2un-Ge-NIf" kind="show" identifier="toDetailsView" id="z62-A5-zNY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFe-hu-SPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="409" y="1724"/>
+            <point key="canvasLocation" x="-3231" y="212"/>
         </scene>
     </scenes>
     <resources>
         <image name="backgroundLogin.png" width="1260" height="840"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bfD-2t-qlf"/>
-        <segue reference="Ass-B7-FyX"/>
-        <segue reference="WXr-r5-WDx"/>
+        <segue reference="yaM-nL-TSc"/>
+        <segue reference="fMl-qc-CL8"/>
     </inferredMetricsTieBreakers>
 </document>

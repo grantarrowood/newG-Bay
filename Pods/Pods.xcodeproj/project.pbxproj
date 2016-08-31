@@ -1,0 +1,1268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02DF85FCD639EECF7584079D58C5EE9C /* Bufferlines0085.png in Resources */ = {isa = PBXBuildFile; fileRef = 3124727C74B3EDB1C6607D8A47BF6476 /* Bufferlines0085.png */; };
+		04E9E9DA018E621FEE641B8DDAA7F4AB /* Bufferlines0082.png in Resources */ = {isa = PBXBuildFile; fileRef = 39206A4DF5F00D909435DD76E604305A /* Bufferlines0082.png */; };
+		05E3926AB4611F8E8D48EF3F0EC8F106 /* Bufferlines0088.png in Resources */ = {isa = PBXBuildFile; fileRef = 17593C4862D29F5AD9C3DEB37C3E2C43 /* Bufferlines0088.png */; };
+		09006F6CE44F3486E99A23D8A6373DFF /* Bufferlines0069.png in Resources */ = {isa = PBXBuildFile; fileRef = 8326DD21E49B9302524A8D98F339CCD7 /* Bufferlines0069.png */; };
+		0993F734FA540065AB833318F845FBA0 /* Bufferlines0048.png in Resources */ = {isa = PBXBuildFile; fileRef = F2BC7C518C05617135EFBC4E773F11F2 /* Bufferlines0048.png */; };
+		0A06F89BA3FB225C7F55676B6E4C283F /* Bufferlines0023.png in Resources */ = {isa = PBXBuildFile; fileRef = D990CA8247C771AFB6BD5762AB71BC6A /* Bufferlines0023.png */; };
+		0A934DB3D3009CDE5A7BCBA1D69EE1F3 /* Bufferlines0067.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8342EC9C6D5EF6926EC5ACAD89C643 /* Bufferlines0067.png */; };
+		0D53C01A4581A48E0AE1DE115F338868 /* Bufferlines0063.png in Resources */ = {isa = PBXBuildFile; fileRef = EE961ADAC2D787B95BDA436F28F631D7 /* Bufferlines0063.png */; };
+		126284DFA00BEE51C50A5387E54A9DFA /* Bufferlines0040.png in Resources */ = {isa = PBXBuildFile; fileRef = 327904CB3B3EA24024958AE31C551607 /* Bufferlines0040.png */; };
+		1B084563C6F201EEA79B940F616A123A /* Bufferlines0021.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BDCA12A88966726DEEBC32AC054A8E /* Bufferlines0021.png */; };
+		1CDD9FAFC583B92E9FAFFC27B883ED6B /* Bufferlines0042.png in Resources */ = {isa = PBXBuildFile; fileRef = B273C8706BACC35D1B07C85B7E9EF884 /* Bufferlines0042.png */; };
+		207B327F7BFAD3CBFB29C1B15A5CEC49 /* Bufferlines0001.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5C7093628AC51BDC5FD74DD9C485D4 /* Bufferlines0001.png */; };
+		212392217F41AEDA819617939174E445 /* Bufferlines0100.png in Resources */ = {isa = PBXBuildFile; fileRef = DFEF6DB4C896746168A6137D9C0CB195 /* Bufferlines0100.png */; };
+		21669A4694295A0FCD7B434F855FC759 /* Bufferlines0060.png in Resources */ = {isa = PBXBuildFile; fileRef = 61AB767EA5400FF005D25D2277E57628 /* Bufferlines0060.png */; };
+		262122497B0C4C1DAD37756876E221C4 /* SWToastConstraintManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 665AC3530479584BA83094956130C703 /* SWToastConstraintManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26DE8D1135D4AEEE798D626D83CBE983 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		2790481ABD9D62B513C2C047AB4F00BC /* Bufferlines0031.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C6D2D5CE7FE83FF5C68BC2ABAA35B7 /* Bufferlines0031.png */; };
+		28C0A9670AC55D28976210FA864A4C0F /* Bufferlines0058.png in Resources */ = {isa = PBXBuildFile; fileRef = AF89D5479E3E651FBF25F2CF3EE64EFD /* Bufferlines0058.png */; };
+		28EE1EEE4D36CD781D4C36928848AC2E /* Bufferlines0075.png in Resources */ = {isa = PBXBuildFile; fileRef = E82FF52ECC6C63E5100C711182045CE7 /* Bufferlines0075.png */; };
+		29ADE03F92BC42D2978F9FE709FC2738 /* SWBufferedToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 9073F33746909D558F24F908C84AB58B /* SWBufferedToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29C5865A31C57545A68298D19AE7221F /* Bufferlines0094.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A8FE3B109D3A9522ED6296BF94F60 /* Bufferlines0094.png */; };
+		2C663F897EBDD0FE50520141265AB125 /* BufferMask.png in Resources */ = {isa = PBXBuildFile; fileRef = 8256B331A4068258A136C2791553D455 /* BufferMask.png */; };
+		2EB4CB038F8D9E83BC60809810D1DDA0 /* Bufferlines0092.png in Resources */ = {isa = PBXBuildFile; fileRef = AF429E8C5DF23E8595E0FFC7868C4E26 /* Bufferlines0092.png */; };
+		2EE6C3B0A7FFB9D19FD3BA06DA8F26E4 /* Bufferlines0034.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FCC255E7753EAACB498104E919F3DBE /* Bufferlines0034.png */; };
+		2F64D2F6764C8F2980DEE953F20FCBAA /* Bufferlines0052.png in Resources */ = {isa = PBXBuildFile; fileRef = 1056992D8246335AB6D447423CB457F8 /* Bufferlines0052.png */; };
+		36F4811AABFA2A6D8055340A5671409F /* Bufferlines0044.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA34F845939777293CE34254AF6F59 /* Bufferlines0044.png */; };
+		377F40ABCFDF6036E0207C2C0D3DC1AB /* Bufferlines0006.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CD183B42696B68E903554B5F22472F /* Bufferlines0006.png */; };
+		3EF584D9171625AED84B254D187E1D5D /* Bufferlines0047.png in Resources */ = {isa = PBXBuildFile; fileRef = AB42F8C0C64950EA4953E2B5B82BCD8D /* Bufferlines0047.png */; };
+		3F9408FD55D56736D67A4BF6A4C055BA /* Bufferlines0037.png in Resources */ = {isa = PBXBuildFile; fileRef = D9305A608C44F99F42802BFAB0CB0BB0 /* Bufferlines0037.png */; };
+		3FC9A42D7717821C2DAD5A83AFF669C8 /* Bufferlines0099.png in Resources */ = {isa = PBXBuildFile; fileRef = 2181AA0049B458CFE42AAAF2A784D8A4 /* Bufferlines0099.png */; };
+		401EDE0C5ACB65092EFCA437EB5983D6 /* Bufferlines0076.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4876B81E9C0804053B881F151F054D /* Bufferlines0076.png */; };
+		40463C5669FE22D4293365B523086DF1 /* Bufferlines0068.png in Resources */ = {isa = PBXBuildFile; fileRef = CBAF3F55E37E519295053420A14B9DF3 /* Bufferlines0068.png */; };
+		40ADA84279684A63E434CBBC93751D99 /* SWToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A24CD3C32BCA983DD57FF924DA086 /* SWToast.m */; };
+		41FE4D10DEC21C3D8401EE37DDDBCEDA /* Bufferlines0096.png in Resources */ = {isa = PBXBuildFile; fileRef = E07355B175566348B3FC2DB7CD84A3A0 /* Bufferlines0096.png */; };
+		42A8102CCFFC45E122881E6804DBD6C9 /* Bufferlines0019.png in Resources */ = {isa = PBXBuildFile; fileRef = CAAAA3D5B8A3BD453EA594AD4BD25BC6 /* Bufferlines0019.png */; };
+		441244CB30233420842C8336F3EE504E /* Bufferlines0074.png in Resources */ = {isa = PBXBuildFile; fileRef = E4432E3724723FD071B96A64F2A43E35 /* Bufferlines0074.png */; };
+		452E42FCA142555FF628BE1F42D82FE4 /* Bufferlines0061.png in Resources */ = {isa = PBXBuildFile; fileRef = B6928477B31A5CD3FA09D05053DEBF47 /* Bufferlines0061.png */; };
+		45DF9E8B7481123113B8DE55EF361502 /* Bufferlines0028.png in Resources */ = {isa = PBXBuildFile; fileRef = DA21504C4B0B8941D47E3A7CA86F1C66 /* Bufferlines0028.png */; };
+		4D019B3BE98E89EB19E00CB06671DE6F /* Bufferlines0055.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2D908AC69E3BBBD63A0F9C788C014E /* Bufferlines0055.png */; };
+		4F5F3B81FED31C0FB33AF017D21F3FF9 /* Bufferlines0097.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B74022A33CC12E18B05BF444FECE20F /* Bufferlines0097.png */; };
+		4FEC867BFCAF78203ACFB5B36181B82A /* Bufferlines0064.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FAF15EF10B28C8C5FF6D77ADF660720 /* Bufferlines0064.png */; };
+		5400DE00D85BC64E2235F8E54584FCE7 /* Bufferlines0013.png in Resources */ = {isa = PBXBuildFile; fileRef = 911A2D70234EEF98E4D993801057E815 /* Bufferlines0013.png */; };
+		54296E4046ECAF267B189F3029B94528 /* Bufferlines0057.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D237B2B491477CB0BE8BC25ACDEFE0 /* Bufferlines0057.png */; };
+		543377CC95FFC32E15F81D21B4BE8C17 /* SWBufferedToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737E38129DDC268906456245279B010 /* SWBufferedToast-dummy.m */; };
+		55D0D74582A5062E670D5084022C2954 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		596B82BCC93F7103A081B047FA681FCD /* SWToastConstraintManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA19148F68E4030AB452516387D5FE0 /* SWToastConstraintManager.m */; };
+		6131B47804706B746D709C67243ACE99 /* Bufferlines0009.png in Resources */ = {isa = PBXBuildFile; fileRef = 80CB902D82765DA20A2D4557B56D3CE7 /* Bufferlines0009.png */; };
+		61D825D46BAD18D8A81A0CD2088F5CE5 /* Bufferlines0083.png in Resources */ = {isa = PBXBuildFile; fileRef = 417DA84EB0CE8CDD7BEDF96155D38450 /* Bufferlines0083.png */; };
+		64F5AFCEC25F04356AA652F3B02C8AEA /* Bufferlines0027.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B46B9CA17B5822287B8E2D40A5AC39 /* Bufferlines0027.png */; };
+		6651E9E6A5F7CF07EF0075320EECE309 /* Bufferlines0098.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E8E3CC206DB86DF83BCDFD141D5F5F /* Bufferlines0098.png */; };
+		681C0220EBE8551BEF423680ED5CDEB1 /* Bufferlines0043.png in Resources */ = {isa = PBXBuildFile; fileRef = BA39D500359937E3CEE5801E3E0EA7AC /* Bufferlines0043.png */; };
+		68DED3B2A51B5B69CC7826819724AD72 /* Bufferlines0015.png in Resources */ = {isa = PBXBuildFile; fileRef = C38423B157C21B488345E63EF2D847C0 /* Bufferlines0015.png */; };
+		6963811AFA810E34A55867EA9832EB50 /* Bufferlines0017.png in Resources */ = {isa = PBXBuildFile; fileRef = E8E798D2CCC5EE9038333C869624892C /* Bufferlines0017.png */; };
+		6A173ED8D23A3721492F465E4278E770 /* SWToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 148E9D0E29A67B8CB6295ED5C50ECFF3 /* SWToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E46B03FB2D06F1320BBC3F5B12E9BB4 /* Bufferlines0081.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CEED193783E6C80F652C7A5E09F48E /* Bufferlines0081.png */; };
+		70B564A97F581349DAFBE5ECF30C141B /* Bufferlines0077.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7A0D91628032CE5D1303947FC6EEEB /* Bufferlines0077.png */; };
+		726A7128AB343CBD094C967F2812E7D8 /* Bufferlines0012.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D6104F88B6D8B80BD26CA31C4B099C0 /* Bufferlines0012.png */; };
+		770EADB0653E0EAA683EDCD8DE8F09AD /* Bufferlines0022.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF7AF2D6416C6A1DCCFC43A92370A18 /* Bufferlines0022.png */; };
+		77A713F4ADD6D64F5770D3A5CCF2F93C /* Bufferlines0038.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6ED71BAAE43ABDCD6A9A5439C610C1 /* Bufferlines0038.png */; };
+		7F97A14192F606301905C50D46EB421D /* Bufferlines0072.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB7630161A538361098B2EC9200718A /* Bufferlines0072.png */; };
+		85ED1C7A34ABB1729FD8CDA1BD4A5E8B /* Bufferlines0059.png in Resources */ = {isa = PBXBuildFile; fileRef = A1F37E842F2890A234A1FC4AB660919E /* Bufferlines0059.png */; };
+		891E1D6DA082B4CE611081CCC9F63429 /* Bufferlines0002.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE6C31E0691D0700D552867794593CA /* Bufferlines0002.png */; };
+		89D9B7552A08F6549F7AD6822B66AB04 /* Pods-newG-Bay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C08B51FBEFE518D6D25D7CF6A1DB96 /* Pods-newG-Bay-dummy.m */; };
+		8A1B4A5B9147DA74B92D9261835B4C84 /* Bufferlines0071.png in Resources */ = {isa = PBXBuildFile; fileRef = D42812A4DE608F80539692B312F18248 /* Bufferlines0071.png */; };
+		8CF2BF2BB6F5E0264885B131A35E0EEC /* Bufferlines0029.png in Resources */ = {isa = PBXBuildFile; fileRef = 6618B8AFE0811FA8F084E45F7BDBE173 /* Bufferlines0029.png */; };
+		8F2443B764BC02EA3E6C7A083C00010D /* Bufferlines0032.png in Resources */ = {isa = PBXBuildFile; fileRef = A907DC8C32D0AD3BFAD06E8CB2382D47 /* Bufferlines0032.png */; };
+		91A3C04D00931FD9270DAABDAF66AC0B /* Bufferlines0005.png in Resources */ = {isa = PBXBuildFile; fileRef = 52F0319A740193DC798FB9A2F62F2432 /* Bufferlines0005.png */; };
+		941B4544B7AAC2F63C333C376275ADE6 /* Bufferlines0050.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E60BFA55323060FAAAE5D3F55644F52 /* Bufferlines0050.png */; };
+		94D50804F90AA44320C8FD46DF2F32E5 /* Bufferlines0079.png in Resources */ = {isa = PBXBuildFile; fileRef = E228384182F0DBE7B271B55B43C01638 /* Bufferlines0079.png */; };
+		991B39DDEE368341EAC26AAB54873FC4 /* Bufferlines0046.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9B64534F3AC1EF97E6CF58060E5BB2 /* Bufferlines0046.png */; };
+		9B36C3A96A064F35A399CF9C2E714604 /* Bufferlines0016.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C0C9B36C475C5D6B49138113EB01CB7 /* Bufferlines0016.png */; };
+		9E4B696E961A54F673819530DDE531D5 /* Bufferlines0035.png in Resources */ = {isa = PBXBuildFile; fileRef = 9043242523FBB0F8786565EA0C688671 /* Bufferlines0035.png */; };
+		9EE9BE0820BDA13760D83839762D3FBB /* Bufferlines0065.png in Resources */ = {isa = PBXBuildFile; fileRef = D826E1B4F089B26D778AA6694D021CC5 /* Bufferlines0065.png */; };
+		9FF98C4D732F23D76AC073661C7C26F9 /* Bufferlines0093.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BD9A65DCD3901F305372A7746D883B /* Bufferlines0093.png */; };
+		A30BA15E932822926A0F8EFC066BECF9 /* Bufferlines0049.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E183101155F06CE19E7531CC55099A /* Bufferlines0049.png */; };
+		A45326693F27521376EA8EBFBE4662B1 /* Bufferlines0030.png in Resources */ = {isa = PBXBuildFile; fileRef = 2817AC5ADD6AF21BCF4BBE1565AEFA11 /* Bufferlines0030.png */; };
+		A86C14AD9A53646C827DD04F9ECDC154 /* Bufferlines0010.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E5E8BBA117190C1194060EA14AED4D /* Bufferlines0010.png */; };
+		A922A0DF0D03710F0D51B9D7546D4B77 /* Bufferlines0091.png in Resources */ = {isa = PBXBuildFile; fileRef = 541DD351554336273284E463166A351B /* Bufferlines0091.png */; };
+		AB40903803E4DCCD0E56799BC408FEED /* Bufferlines0095.png in Resources */ = {isa = PBXBuildFile; fileRef = 5498DAC19BACE33F7E1D001D52A52731 /* Bufferlines0095.png */; };
+		B246E07156B314943518E8B14D7FE64D /* Bufferlines0004.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB4D5D1F996E332514D4F00A0F3A819 /* Bufferlines0004.png */; };
+		B31F71882A907BD79D9390839E96DDB4 /* Bufferlines0045.png in Resources */ = {isa = PBXBuildFile; fileRef = 58AF5BB1E203FC4721035E0F3C66C9C5 /* Bufferlines0045.png */; };
+		BB35F7FDD8D6048482218C03AE2AC08E /* Bufferlines0089.png in Resources */ = {isa = PBXBuildFile; fileRef = F843CA77935A3C8CE2243B8FCBC1B636 /* Bufferlines0089.png */; };
+		BD7864810CA345E0C22F5378923C5F7D /* Bufferlines0086.png in Resources */ = {isa = PBXBuildFile; fileRef = 15ACAD2A3A735B076EA6005F266F9DCC /* Bufferlines0086.png */; };
+		BF41F977767DBFA409D218CC7C45F670 /* Bufferlines0084.png in Resources */ = {isa = PBXBuildFile; fileRef = C5159E2FF36D51440B5C866EBB1B5932 /* Bufferlines0084.png */; };
+		BF86BB79F6504A4FB786D39167BB01D1 /* Bufferlines0053.png in Resources */ = {isa = PBXBuildFile; fileRef = AD77069CEEC0F26FEFB47A70383C3B87 /* Bufferlines0053.png */; };
+		C400D07AD57ED8E7E23C27C8A4809B7B /* Bufferlines0101.png in Resources */ = {isa = PBXBuildFile; fileRef = D6449E6C1D942609041B9F1C75469370 /* Bufferlines0101.png */; };
+		C43889C5CBD41271363EBA0F672D0DC1 /* Bufferlines0003.png in Resources */ = {isa = PBXBuildFile; fileRef = E9271F9CA351C95537D718BE560CA85B /* Bufferlines0003.png */; };
+		C68F187EECBA037F6B340C84C143F4B4 /* Bufferlines0020.png in Resources */ = {isa = PBXBuildFile; fileRef = F1BA31EA53F1B58085DBA8A7D7DC18AD /* Bufferlines0020.png */; };
+		C9F9086F8E92E18FA52271490765AAF8 /* Bufferlines0014.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A6A76827D8AF0A1F01937763A535CB /* Bufferlines0014.png */; };
+		CD438FB69F88C63FA3DB41102D7658D3 /* Bufferlines0102.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1CB744A1AB0BB93E19957E50D765DF /* Bufferlines0102.png */; };
+		D73F6CDAF1FA480A15842D9D8B258C7C /* Bufferlines0066.png in Resources */ = {isa = PBXBuildFile; fileRef = 91BD54A1218526C48264D22D72329F8F /* Bufferlines0066.png */; };
+		DA507BCDE30FCFDED68A4AE5B81B13C6 /* Bufferlines0051.png in Resources */ = {isa = PBXBuildFile; fileRef = 73521CCC78F11716024707FAEB881689 /* Bufferlines0051.png */; };
+		DB477955996B592BE364F5A342CCE92C /* Bufferlines0033.png in Resources */ = {isa = PBXBuildFile; fileRef = 05AA3C0640D181A38FDC8B07191F09F5 /* Bufferlines0033.png */; };
+		DB7358C83B3FB519AE940DAE1402939B /* Bufferlines0056.png in Resources */ = {isa = PBXBuildFile; fileRef = 69370DEF6F14CA49A900B1B67444726C /* Bufferlines0056.png */; };
+		DDA0391C090EB73819BEDDB6F6E08BDE /* Bufferlines0070.png in Resources */ = {isa = PBXBuildFile; fileRef = 941711AC4CF2FCD23C304F0D39468E69 /* Bufferlines0070.png */; };
+		DF899E9E5F7851428D185532113DC220 /* Bufferlines0090.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C82C04DC080C3EF6B88CBEF39751B6 /* Bufferlines0090.png */; };
+		E081638D06D3649062F89A4C0A2E36E8 /* Bufferlines0008.png in Resources */ = {isa = PBXBuildFile; fileRef = 580404C21FC2CE1CEEA04AF3BF6029D1 /* Bufferlines0008.png */; };
+		E0B609A9C8BF183D7C3C9FE5093E8C70 /* Bufferlines0039.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E0D2E72F2187B66CF7CB1FF912175E /* Bufferlines0039.png */; };
+		E1D6E671E86130E1A849F55DE725201A /* Bufferlines0025.png in Resources */ = {isa = PBXBuildFile; fileRef = 979CB80806B77E7728799B1BF5E5F6D9 /* Bufferlines0025.png */; };
+		E213D48A0EF2A0E5158B241079538403 /* Bufferlines0018.png in Resources */ = {isa = PBXBuildFile; fileRef = B05D84E8826EB7AE92259721D4F8703F /* Bufferlines0018.png */; };
+		E89F79FA1F9A7087497C578993D641AE /* Bufferlines0007.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6F1FF067ADB250B7D9686FF5777E41 /* Bufferlines0007.png */; };
+		E8AB29EA87221F4038842A010F2088B6 /* Bufferlines0087.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB3FCDCFF70AB504084162199E0CD5E /* Bufferlines0087.png */; };
+		EA125B0CC3BE738304AC6FB48944C5B0 /* Bufferlines0073.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F103AE262B84060ECBC0B9C720A3BA0 /* Bufferlines0073.png */; };
+		EC9861FF9E3FD7D2130ABCAFD6FC38C4 /* Bufferlines0054.png in Resources */ = {isa = PBXBuildFile; fileRef = 239C0AE071C5378239632A9D9E740EDA /* Bufferlines0054.png */; };
+		EE80ECAC782F86A13B58B4D29BAC93AA /* Bufferlines0011.png in Resources */ = {isa = PBXBuildFile; fileRef = 37246D3FA8ED7322869AD50155B88495 /* Bufferlines0011.png */; };
+		F0435407B3B700B4A3016335C2AF97FA /* Bufferlines0080.png in Resources */ = {isa = PBXBuildFile; fileRef = 737606CD9B2D1D3F0CCF8684F9E60E16 /* Bufferlines0080.png */; };
+		F56692D08E84999278F7B3E02084FE53 /* Bufferlines0078.png in Resources */ = {isa = PBXBuildFile; fileRef = E19C5E6DFF93A163822BB3BE07D54D73 /* Bufferlines0078.png */; };
+		F6E6EBAC14E6537C489982C88DDDC0DD /* SWBufferedToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 544F3864615F9E4A8C29D4C749527ABC /* SWBufferedToast.m */; };
+		FA5FA0DAD959EC2FA66983A2391C7E00 /* Bufferlines0041.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BAF73EBD06F833348EE544AEDFAC931 /* Bufferlines0041.png */; };
+		FA69B3D35A3E065BDFDFCC1EA4772861 /* Bufferlines0062.png in Resources */ = {isa = PBXBuildFile; fileRef = 412A1D4818CC18F9945B4577870F41D3 /* Bufferlines0062.png */; };
+		FD870BB0DB98555E5DCC657633F70832 /* Bufferlines0024.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C90823218E4B311F8088F63528AE06 /* Bufferlines0024.png */; };
+		FD918F8518AA9C0A13BDD8103EBF6532 /* Bufferlines0026.png in Resources */ = {isa = PBXBuildFile; fileRef = 0184EFC23910252EBAD10A50182983BB /* Bufferlines0026.png */; };
+		FE12BC8431D7AEDE8AA53CFB4D769B96 /* Bufferlines0036.png in Resources */ = {isa = PBXBuildFile; fileRef = B724854FEC7EE812428F1E6D2BF1FDCB /* Bufferlines0036.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40B1232E6DD30E8B831799246603799F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85BB6A5DA568DB4DE79E455D59B1627D;
+			remoteInfo = "SWBufferedToast-SWBufferedToast";
+		};
+		AECB1F58D0229BFE0E892E6306145BEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F3823474077BD47229D919F16005BB7;
+			remoteInfo = SWBufferedToast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0184EFC23910252EBAD10A50182983BB /* Bufferlines0026.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0026.png; path = Pod/Assets/Bufferlines0026.png; sourceTree = "<group>"; };
+		03C82C04DC080C3EF6B88CBEF39751B6 /* Bufferlines0090.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0090.png; path = Pod/Assets/Bufferlines0090.png; sourceTree = "<group>"; };
+		03E183101155F06CE19E7531CC55099A /* Bufferlines0049.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0049.png; path = Pod/Assets/Bufferlines0049.png; sourceTree = "<group>"; };
+		05AA3C0640D181A38FDC8B07191F09F5 /* Bufferlines0033.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0033.png; path = Pod/Assets/Bufferlines0033.png; sourceTree = "<group>"; };
+		0604748C5F1AF83C9EA7A929DBFFDFD1 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		0A7A0D91628032CE5D1303947FC6EEEB /* Bufferlines0077.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0077.png; path = Pod/Assets/Bufferlines0077.png; sourceTree = "<group>"; };
+		0C52AB3B6F43D9E369BEDD71DB97F960 /* Pods-newG-Bay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-newG-Bay.release.xcconfig"; sourceTree = "<group>"; };
+		0D6104F88B6D8B80BD26CA31C4B099C0 /* Bufferlines0012.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0012.png; path = Pod/Assets/Bufferlines0012.png; sourceTree = "<group>"; };
+		0F7475C75EDB5575040E6854A385F7AC /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		1056992D8246335AB6D447423CB457F8 /* Bufferlines0052.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0052.png; path = Pod/Assets/Bufferlines0052.png; sourceTree = "<group>"; };
+		12CEED193783E6C80F652C7A5E09F48E /* Bufferlines0081.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0081.png; path = Pod/Assets/Bufferlines0081.png; sourceTree = "<group>"; };
+		148E9D0E29A67B8CB6295ED5C50ECFF3 /* SWToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWToast.h; path = Pod/Classes/SWToast.h; sourceTree = "<group>"; };
+		14E5E8BBA117190C1194060EA14AED4D /* Bufferlines0010.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0010.png; path = Pod/Assets/Bufferlines0010.png; sourceTree = "<group>"; };
+		15ACAD2A3A735B076EA6005F266F9DCC /* Bufferlines0086.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0086.png; path = Pod/Assets/Bufferlines0086.png; sourceTree = "<group>"; };
+		17593C4862D29F5AD9C3DEB37C3E2C43 /* Bufferlines0088.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0088.png; path = Pod/Assets/Bufferlines0088.png; sourceTree = "<group>"; };
+		1841C863265052E462D4F784A834F8BC /* GoogleParsingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleParsingUtilities.framework; path = Frameworks/GoogleParsingUtilities.framework; sourceTree = "<group>"; };
+		1A2A24CD3C32BCA983DD57FF924DA086 /* SWToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWToast.m; path = Pod/Classes/SWToast.m; sourceTree = "<group>"; };
+		1EC3E2512A645E083A5D4B181FB5CFB1 /* Pods-newG-Bay-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-newG-Bay-resources.sh"; sourceTree = "<group>"; };
+		212911687D2C846FA6EF34C8D58E0881 /* FirebaseCrash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCrash.framework; path = Frameworks/frameworks/FirebaseCrash.framework; sourceTree = "<group>"; };
+		2181AA0049B458CFE42AAAF2A784D8A4 /* Bufferlines0099.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0099.png; path = Pod/Assets/Bufferlines0099.png; sourceTree = "<group>"; };
+		239C0AE071C5378239632A9D9E740EDA /* Bufferlines0054.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0054.png; path = Pod/Assets/Bufferlines0054.png; sourceTree = "<group>"; };
+		2682DFD3B34B1031E9F6D988D3088BD9 /* Pods-newG-Bay-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-newG-Bay-frameworks.sh"; sourceTree = "<group>"; };
+		2817AC5ADD6AF21BCF4BBE1565AEFA11 /* Bufferlines0030.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0030.png; path = Pod/Assets/Bufferlines0030.png; sourceTree = "<group>"; };
+		2DE6C31E0691D0700D552867794593CA /* Bufferlines0002.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0002.png; path = Pod/Assets/Bufferlines0002.png; sourceTree = "<group>"; };
+		2EB7630161A538361098B2EC9200718A /* Bufferlines0072.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0072.png; path = Pod/Assets/Bufferlines0072.png; sourceTree = "<group>"; };
+		30BDCA12A88966726DEEBC32AC054A8E /* Bufferlines0021.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0021.png; path = Pod/Assets/Bufferlines0021.png; sourceTree = "<group>"; };
+		3124727C74B3EDB1C6607D8A47BF6476 /* Bufferlines0085.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0085.png; path = Pod/Assets/Bufferlines0085.png; sourceTree = "<group>"; };
+		327904CB3B3EA24024958AE31C551607 /* Bufferlines0040.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0040.png; path = Pod/Assets/Bufferlines0040.png; sourceTree = "<group>"; };
+		37246D3FA8ED7322869AD50155B88495 /* Bufferlines0011.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0011.png; path = Pod/Assets/Bufferlines0011.png; sourceTree = "<group>"; };
+		39206A4DF5F00D909435DD76E604305A /* Bufferlines0082.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0082.png; path = Pod/Assets/Bufferlines0082.png; sourceTree = "<group>"; };
+		3C8342EC9C6D5EF6926EC5ACAD89C643 /* Bufferlines0067.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0067.png; path = Pod/Assets/Bufferlines0067.png; sourceTree = "<group>"; };
+		3E6F1FF067ADB250B7D9686FF5777E41 /* Bufferlines0007.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0007.png; path = Pod/Assets/Bufferlines0007.png; sourceTree = "<group>"; };
+		3F4A8FE3B109D3A9522ED6296BF94F60 /* Bufferlines0094.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0094.png; path = Pod/Assets/Bufferlines0094.png; sourceTree = "<group>"; };
+		3F747A28BC484583E506420E9CB1F033 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
+		412A1D4818CC18F9945B4577870F41D3 /* Bufferlines0062.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0062.png; path = Pod/Assets/Bufferlines0062.png; sourceTree = "<group>"; };
+		417DA84EB0CE8CDD7BEDF96155D38450 /* Bufferlines0083.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0083.png; path = Pod/Assets/Bufferlines0083.png; sourceTree = "<group>"; };
+		4C0C9B36C475C5D6B49138113EB01CB7 /* Bufferlines0016.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0016.png; path = Pod/Assets/Bufferlines0016.png; sourceTree = "<group>"; };
+		4E830EF2B90857CF1D01B2E3CD52EE6B /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		4F103AE262B84060ECBC0B9C720A3BA0 /* Bufferlines0073.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0073.png; path = Pod/Assets/Bufferlines0073.png; sourceTree = "<group>"; };
+		4FEA34F845939777293CE34254AF6F59 /* Bufferlines0044.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0044.png; path = Pod/Assets/Bufferlines0044.png; sourceTree = "<group>"; };
+		51D237B2B491477CB0BE8BC25ACDEFE0 /* Bufferlines0057.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0057.png; path = Pod/Assets/Bufferlines0057.png; sourceTree = "<group>"; };
+		526DBCFBFE91DC7ED8FD08B7ECFB6BF8 /* GoogleIPhoneUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleIPhoneUtilities.framework; path = Frameworks/GoogleIPhoneUtilities.framework; sourceTree = "<group>"; };
+		52F0319A740193DC798FB9A2F62F2432 /* Bufferlines0005.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0005.png; path = Pod/Assets/Bufferlines0005.png; sourceTree = "<group>"; };
+		541DD351554336273284E463166A351B /* Bufferlines0091.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0091.png; path = Pod/Assets/Bufferlines0091.png; sourceTree = "<group>"; };
+		544F3864615F9E4A8C29D4C749527ABC /* SWBufferedToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWBufferedToast.m; path = Pod/Classes/SWBufferedToast.m; sourceTree = "<group>"; };
+		5498DAC19BACE33F7E1D001D52A52731 /* Bufferlines0095.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0095.png; path = Pod/Assets/Bufferlines0095.png; sourceTree = "<group>"; };
+		580404C21FC2CE1CEEA04AF3BF6029D1 /* Bufferlines0008.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0008.png; path = Pod/Assets/Bufferlines0008.png; sourceTree = "<group>"; };
+		58AF5BB1E203FC4721035E0F3C66C9C5 /* Bufferlines0045.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0045.png; path = Pod/Assets/Bufferlines0045.png; sourceTree = "<group>"; };
+		5A50B562834771032ACBAF657B088DB4 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		5A6ED71BAAE43ABDCD6A9A5439C610C1 /* Bufferlines0038.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0038.png; path = Pod/Assets/Bufferlines0038.png; sourceTree = "<group>"; };
+		5BEA82A0689C2062809060E74F188DF5 /* Pods-newG-Bay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-newG-Bay.debug.xcconfig"; sourceTree = "<group>"; };
+		5D9B64534F3AC1EF97E6CF58060E5BB2 /* Bufferlines0046.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0046.png; path = Pod/Assets/Bufferlines0046.png; sourceTree = "<group>"; };
+		5E60BFA55323060FAAAE5D3F55644F52 /* Bufferlines0050.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0050.png; path = Pod/Assets/Bufferlines0050.png; sourceTree = "<group>"; };
+		5FAF15EF10B28C8C5FF6D77ADF660720 /* Bufferlines0064.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0064.png; path = Pod/Assets/Bufferlines0064.png; sourceTree = "<group>"; };
+		61AB767EA5400FF005D25D2277E57628 /* Bufferlines0060.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0060.png; path = Pod/Assets/Bufferlines0060.png; sourceTree = "<group>"; };
+		64E0D2E72F2187B66CF7CB1FF912175E /* Bufferlines0039.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0039.png; path = Pod/Assets/Bufferlines0039.png; sourceTree = "<group>"; };
+		6618B8AFE0811FA8F084E45F7BDBE173 /* Bufferlines0029.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0029.png; path = Pod/Assets/Bufferlines0029.png; sourceTree = "<group>"; };
+		665AC3530479584BA83094956130C703 /* SWToastConstraintManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWToastConstraintManager.h; path = Pod/Classes/SWToastConstraintManager.h; sourceTree = "<group>"; };
+		6737E38129DDC268906456245279B010 /* SWBufferedToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWBufferedToast-dummy.m"; sourceTree = "<group>"; };
+		6801C192CC81429D063ACD0758A2D7F0 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		69370DEF6F14CA49A900B1B67444726C /* Bufferlines0056.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0056.png; path = Pod/Assets/Bufferlines0056.png; sourceTree = "<group>"; };
+		6AF7AF2D6416C6A1DCCFC43A92370A18 /* Bufferlines0022.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0022.png; path = Pod/Assets/Bufferlines0022.png; sourceTree = "<group>"; };
+		6DB4D5D1F996E332514D4F00A0F3A819 /* Bufferlines0004.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0004.png; path = Pod/Assets/Bufferlines0004.png; sourceTree = "<group>"; };
+		6FCC255E7753EAACB498104E919F3DBE /* Bufferlines0034.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0034.png; path = Pod/Assets/Bufferlines0034.png; sourceTree = "<group>"; };
+		73205CB6F998F0ABDF0D3D4F60061E5E /* SWBufferedToast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWBufferedToast.xcconfig; sourceTree = "<group>"; };
+		73521CCC78F11716024707FAEB881689 /* Bufferlines0051.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0051.png; path = Pod/Assets/Bufferlines0051.png; sourceTree = "<group>"; };
+		737606CD9B2D1D3F0CCF8684F9E60E16 /* Bufferlines0080.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0080.png; path = Pod/Assets/Bufferlines0080.png; sourceTree = "<group>"; };
+		78B46B9CA17B5822287B8E2D40A5AC39 /* Bufferlines0027.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0027.png; path = Pod/Assets/Bufferlines0027.png; sourceTree = "<group>"; };
+		7A134B821CF568091EE87431CA60E881 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		7A8CA85E6A3F6A3E5DDC54D82FA9A6EF /* libSWBufferedToast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSWBufferedToast.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAF73EBD06F833348EE544AEDFAC931 /* Bufferlines0041.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0041.png; path = Pod/Assets/Bufferlines0041.png; sourceTree = "<group>"; };
+		80CB902D82765DA20A2D4557B56D3CE7 /* Bufferlines0009.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0009.png; path = Pod/Assets/Bufferlines0009.png; sourceTree = "<group>"; };
+		81CD183B42696B68E903554B5F22472F /* Bufferlines0006.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0006.png; path = Pod/Assets/Bufferlines0006.png; sourceTree = "<group>"; };
+		8256B331A4068258A136C2791553D455 /* BufferMask.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = BufferMask.png; path = Pod/Assets/BufferMask.png; sourceTree = "<group>"; };
+		8326DD21E49B9302524A8D98F339CCD7 /* Bufferlines0069.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0069.png; path = Pod/Assets/Bufferlines0069.png; sourceTree = "<group>"; };
+		8E5AD0454673210E483CE5E32CB8673D /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Frameworks/FirebaseStorage.framework; sourceTree = "<group>"; };
+		9043242523FBB0F8786565EA0C688671 /* Bufferlines0035.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0035.png; path = Pod/Assets/Bufferlines0035.png; sourceTree = "<group>"; };
+		9073F33746909D558F24F908C84AB58B /* SWBufferedToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWBufferedToast.h; path = Pod/Classes/SWBufferedToast.h; sourceTree = "<group>"; };
+		911A2D70234EEF98E4D993801057E815 /* Bufferlines0013.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0013.png; path = Pod/Assets/Bufferlines0013.png; sourceTree = "<group>"; };
+		91BD54A1218526C48264D22D72329F8F /* Bufferlines0066.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0066.png; path = Pod/Assets/Bufferlines0066.png; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		941711AC4CF2FCD23C304F0D39468E69 /* Bufferlines0070.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0070.png; path = Pod/Assets/Bufferlines0070.png; sourceTree = "<group>"; };
+		95A5F56925838B0AFD2AEC3DC6A73657 /* Pods-newG-Bay-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-newG-Bay-acknowledgements.markdown"; sourceTree = "<group>"; };
+		979CB80806B77E7728799B1BF5E5F6D9 /* Bufferlines0025.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0025.png; path = Pod/Assets/Bufferlines0025.png; sourceTree = "<group>"; };
+		97E8E3CC206DB86DF83BCDFD141D5F5F /* Bufferlines0098.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0098.png; path = Pod/Assets/Bufferlines0098.png; sourceTree = "<group>"; };
+		9B74022A33CC12E18B05BF444FECE20F /* Bufferlines0097.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0097.png; path = Pod/Assets/Bufferlines0097.png; sourceTree = "<group>"; };
+		A1F37E842F2890A234A1FC4AB660919E /* Bufferlines0059.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0059.png; path = Pod/Assets/Bufferlines0059.png; sourceTree = "<group>"; };
+		A8009C7F2A4AF0BA2ACA840535BC416A /* SWBufferedToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWBufferedToast-prefix.pch"; sourceTree = "<group>"; };
+		A907DC8C32D0AD3BFAD06E8CB2382D47 /* Bufferlines0032.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0032.png; path = Pod/Assets/Bufferlines0032.png; sourceTree = "<group>"; };
+		AA5C7093628AC51BDC5FD74DD9C485D4 /* Bufferlines0001.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0001.png; path = Pod/Assets/Bufferlines0001.png; sourceTree = "<group>"; };
+		AB42F8C0C64950EA4953E2B5B82BCD8D /* Bufferlines0047.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0047.png; path = Pod/Assets/Bufferlines0047.png; sourceTree = "<group>"; };
+		AD2D908AC69E3BBBD63A0F9C788C014E /* Bufferlines0055.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0055.png; path = Pod/Assets/Bufferlines0055.png; sourceTree = "<group>"; };
+		AD77069CEEC0F26FEFB47A70383C3B87 /* Bufferlines0053.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0053.png; path = Pod/Assets/Bufferlines0053.png; sourceTree = "<group>"; };
+		AF429E8C5DF23E8595E0FFC7868C4E26 /* Bufferlines0092.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0092.png; path = Pod/Assets/Bufferlines0092.png; sourceTree = "<group>"; };
+		AF89D5479E3E651FBF25F2CF3EE64EFD /* Bufferlines0058.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0058.png; path = Pod/Assets/Bufferlines0058.png; sourceTree = "<group>"; };
+		B05D84E8826EB7AE92259721D4F8703F /* Bufferlines0018.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0018.png; path = Pod/Assets/Bufferlines0018.png; sourceTree = "<group>"; };
+		B273C8706BACC35D1B07C85B7E9EF884 /* Bufferlines0042.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0042.png; path = Pod/Assets/Bufferlines0042.png; sourceTree = "<group>"; };
+		B6928477B31A5CD3FA09D05053DEBF47 /* Bufferlines0061.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0061.png; path = Pod/Assets/Bufferlines0061.png; sourceTree = "<group>"; };
+		B6B441E878A67A9A3A6FB297134E6823 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		B724854FEC7EE812428F1E6D2BF1FDCB /* Bufferlines0036.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0036.png; path = Pod/Assets/Bufferlines0036.png; sourceTree = "<group>"; };
+		B7865F07F7C86E866F35405EDB9059BE /* ResourceBundle-SWBufferedToast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SWBufferedToast-Info.plist"; sourceTree = "<group>"; };
+		BA39D500359937E3CEE5801E3E0EA7AC /* Bufferlines0043.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0043.png; path = Pod/Assets/Bufferlines0043.png; sourceTree = "<group>"; };
+		C38423B157C21B488345E63EF2D847C0 /* Bufferlines0015.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0015.png; path = Pod/Assets/Bufferlines0015.png; sourceTree = "<group>"; };
+		C5159E2FF36D51440B5C866EBB1B5932 /* Bufferlines0084.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0084.png; path = Pod/Assets/Bufferlines0084.png; sourceTree = "<group>"; };
+		C8C6D2D5CE7FE83FF5C68BC2ABAA35B7 /* Bufferlines0031.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0031.png; path = Pod/Assets/Bufferlines0031.png; sourceTree = "<group>"; };
+		C9BD9A65DCD3901F305372A7746D883B /* Bufferlines0093.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0093.png; path = Pod/Assets/Bufferlines0093.png; sourceTree = "<group>"; };
+		C9C595AB18566D2F0D8680D410928E73 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Analytics/Sources/Firebase.h; sourceTree = "<group>"; };
+		C9E6890F53B0AEA02405180DDB621C67 /* libPods-newG-Bay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-newG-Bay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA54EA3DA22327890886DA9A53C95CE6 /* Pods-newG-Bay-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-newG-Bay-acknowledgements.plist"; sourceTree = "<group>"; };
+		CAAAA3D5B8A3BD453EA594AD4BD25BC6 /* Bufferlines0019.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0019.png; path = Pod/Assets/Bufferlines0019.png; sourceTree = "<group>"; };
+		CBAF3F55E37E519295053420A14B9DF3 /* Bufferlines0068.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0068.png; path = Pod/Assets/Bufferlines0068.png; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D42812A4DE608F80539692B312F18248 /* Bufferlines0071.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0071.png; path = Pod/Assets/Bufferlines0071.png; sourceTree = "<group>"; };
+		D5C08B51FBEFE518D6D25D7CF6A1DB96 /* Pods-newG-Bay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-newG-Bay-dummy.m"; sourceTree = "<group>"; };
+		D6449E6C1D942609041B9F1C75469370 /* Bufferlines0101.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0101.png; path = Pod/Assets/Bufferlines0101.png; sourceTree = "<group>"; };
+		D826E1B4F089B26D778AA6694D021CC5 /* Bufferlines0065.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0065.png; path = Pod/Assets/Bufferlines0065.png; sourceTree = "<group>"; };
+		D9305A608C44F99F42802BFAB0CB0BB0 /* Bufferlines0037.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0037.png; path = Pod/Assets/Bufferlines0037.png; sourceTree = "<group>"; };
+		D990CA8247C771AFB6BD5762AB71BC6A /* Bufferlines0023.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0023.png; path = Pod/Assets/Bufferlines0023.png; sourceTree = "<group>"; };
+		DA21504C4B0B8941D47E3A7CA86F1C66 /* Bufferlines0028.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0028.png; path = Pod/Assets/Bufferlines0028.png; sourceTree = "<group>"; };
+		DC4BF4AAF5F300A55C09E6836544C742 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		DD4876B81E9C0804053B881F151F054D /* Bufferlines0076.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0076.png; path = Pod/Assets/Bufferlines0076.png; sourceTree = "<group>"; };
+		DFEF6DB4C896746168A6137D9C0CB195 /* Bufferlines0100.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0100.png; path = Pod/Assets/Bufferlines0100.png; sourceTree = "<group>"; };
+		E07355B175566348B3FC2DB7CD84A3A0 /* Bufferlines0096.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0096.png; path = Pod/Assets/Bufferlines0096.png; sourceTree = "<group>"; };
+		E19C5E6DFF93A163822BB3BE07D54D73 /* Bufferlines0078.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0078.png; path = Pod/Assets/Bufferlines0078.png; sourceTree = "<group>"; };
+		E1A6A76827D8AF0A1F01937763A535CB /* Bufferlines0014.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0014.png; path = Pod/Assets/Bufferlines0014.png; sourceTree = "<group>"; };
+		E228384182F0DBE7B271B55B43C01638 /* Bufferlines0079.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0079.png; path = Pod/Assets/Bufferlines0079.png; sourceTree = "<group>"; };
+		E4432E3724723FD071B96A64F2A43E35 /* Bufferlines0074.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0074.png; path = Pod/Assets/Bufferlines0074.png; sourceTree = "<group>"; };
+		E5C90823218E4B311F8088F63528AE06 /* Bufferlines0024.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0024.png; path = Pod/Assets/Bufferlines0024.png; sourceTree = "<group>"; };
+		E82FF52ECC6C63E5100C711182045CE7 /* Bufferlines0075.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0075.png; path = Pod/Assets/Bufferlines0075.png; sourceTree = "<group>"; };
+		E8E798D2CCC5EE9038333C869624892C /* Bufferlines0017.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0017.png; path = Pod/Assets/Bufferlines0017.png; sourceTree = "<group>"; };
+		E9271F9CA351C95537D718BE560CA85B /* Bufferlines0003.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0003.png; path = Pod/Assets/Bufferlines0003.png; sourceTree = "<group>"; };
+		EE961ADAC2D787B95BDA436F28F631D7 /* Bufferlines0063.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0063.png; path = Pod/Assets/Bufferlines0063.png; sourceTree = "<group>"; };
+		F183B88A1E58860641B37A32C36577F3 /* FirebaseRemoteConfig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseRemoteConfig.framework; path = Frameworks/frameworks/FirebaseRemoteConfig.framework; sourceTree = "<group>"; };
+		F1BA31EA53F1B58085DBA8A7D7DC18AD /* Bufferlines0020.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0020.png; path = Pod/Assets/Bufferlines0020.png; sourceTree = "<group>"; };
+		F2BC7C518C05617135EFBC4E773F11F2 /* Bufferlines0048.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0048.png; path = Pod/Assets/Bufferlines0048.png; sourceTree = "<group>"; };
+		F762764E76ACB709DA12E50153CDFCCC /* SWBufferedToast.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWBufferedToast.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F843CA77935A3C8CE2243B8FCBC1B636 /* Bufferlines0089.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0089.png; path = Pod/Assets/Bufferlines0089.png; sourceTree = "<group>"; };
+		FB1CB744A1AB0BB93E19957E50D765DF /* Bufferlines0102.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0102.png; path = Pod/Assets/Bufferlines0102.png; sourceTree = "<group>"; };
+		FC3FBAB2701B52060289B63B15196DBF /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		FCA19148F68E4030AB452516387D5FE0 /* SWToastConstraintManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWToastConstraintManager.m; path = Pod/Classes/SWToastConstraintManager.m; sourceTree = "<group>"; };
+		FDB3FCDCFF70AB504084162199E0CD5E /* Bufferlines0087.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bufferlines0087.png; path = Pod/Assets/Bufferlines0087.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8649A256E7A16EC04B289ED9324EF0EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D0D74582A5062E670D5084022C2954 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4D47A7F1D5F643802A256949DD5913 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB32E8F41F6B5796F5A1F9CFACC789C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26DE8D1135D4AEEE798D626D83CBE983 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A7281B0561BC057867FD9C5E162B434 /* GoogleParsingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				45365B1E92E771C9736A88F9E878DE5B /* Frameworks */,
+			);
+			path = GoogleParsingUtilities;
+			sourceTree = "<group>";
+		};
+		0F9F7749771A073434226576C988B3FD /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				8010EE3B027C5841EE0B5FEDFBA70A71 /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		1435AFF4BEC78C981EC4847E56E65CCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				212911687D2C846FA6EF34C8D58E0881 /* FirebaseCrash.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19CBC9E3B0C19D2B2C8BBAE27DEABC24 /* FirebaseCrash */ = {
+			isa = PBXGroup;
+			children = (
+				1435AFF4BEC78C981EC4847E56E65CCC /* Frameworks */,
+			);
+			path = FirebaseCrash;
+			sourceTree = "<group>";
+		};
+		1DCD3F3E686F8D9A4045D5414D3C2E7F /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				CBCC6DC39C0667EE2EA6B0DF2C4FC0B0 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		1EA35AABC86781DEE2C1B85F2C2F621D /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				A77C2186F424D3BD3DF0B0429B9552F9 /* Analytics */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		1FE3295D8809F21DDE0FDCFADF913198 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				526DBCFBFE91DC7ED8FD08B7ECFB6BF8 /* GoogleIPhoneUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C7971CD135CA95618D5A93B3C201799 /* FirebaseRemoteConfig */ = {
+			isa = PBXGroup;
+			children = (
+				66EF96332F166B74EA421C4CC171A341 /* Frameworks */,
+			);
+			path = FirebaseRemoteConfig;
+			sourceTree = "<group>";
+		};
+		2D97A028D400EF36F4EDB71125945349 /* FirebaseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				39098E65A82E08D11BDCFAE7D937EDE2 /* Frameworks */,
+			);
+			path = FirebaseStorage;
+			sourceTree = "<group>";
+		};
+		36D1CBA3298CBB5734E160CFB9AFDB69 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				DC4BF4AAF5F300A55C09E6836544C742 /* FIRInstanceID.h */,
+				99F73AEA7AE7F6F75397FE0401525D09 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		37B9252D4D0C3895A5609E93BC1C6180 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A50B562834771032ACBAF657B088DB4 /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39098E65A82E08D11BDCFAE7D937EDE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E5AD0454673210E483CE5E32CB8673D /* FirebaseStorage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		425B6E795CE5C621DAEDBE8C78CFE51D /* Pods-newG-Bay */ = {
+			isa = PBXGroup;
+			children = (
+				95A5F56925838B0AFD2AEC3DC6A73657 /* Pods-newG-Bay-acknowledgements.markdown */,
+				CA54EA3DA22327890886DA9A53C95CE6 /* Pods-newG-Bay-acknowledgements.plist */,
+				D5C08B51FBEFE518D6D25D7CF6A1DB96 /* Pods-newG-Bay-dummy.m */,
+				2682DFD3B34B1031E9F6D988D3088BD9 /* Pods-newG-Bay-frameworks.sh */,
+				1EC3E2512A645E083A5D4B181FB5CFB1 /* Pods-newG-Bay-resources.sh */,
+				5BEA82A0689C2062809060E74F188DF5 /* Pods-newG-Bay.debug.xcconfig */,
+				0C52AB3B6F43D9E369BEDD71DB97F960 /* Pods-newG-Bay.release.xcconfig */,
+			);
+			name = "Pods-newG-Bay";
+			path = "Target Support Files/Pods-newG-Bay";
+			sourceTree = "<group>";
+		};
+		45365B1E92E771C9736A88F9E878DE5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1841C863265052E462D4F784A834F8BC /* GoogleParsingUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D506B79959E2A1100F6A73118D2E734 /* GoogleNetworkingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				74248F6F42E16658859426458D71AAF9 /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
+			sourceTree = "<group>";
+		};
+		4F07F3E2926F886B0F23F6413B7053B6 /* GoogleIPhoneUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				1FE3295D8809F21DDE0FDCFADF913198 /* Frameworks */,
+			);
+			path = GoogleIPhoneUtilities;
+			sourceTree = "<group>";
+		};
+		610398D8C5A3126EB8872F66C45B1249 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0604748C5F1AF83C9EA7A929DBFFDFD1 /* FirebaseDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66EF96332F166B74EA421C4CC171A341 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F183B88A1E58860641B37A32C36577F3 /* FirebaseRemoteConfig.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C2E9710ED85757D879737F45F75C855 /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				610398D8C5A3126EB8872F66C45B1249 /* Frameworks */,
+			);
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		70043648E9496C4BB4EF7ED3D0EFBC84 /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				37B9252D4D0C3895A5609E93BC1C6180 /* Frameworks */,
+			);
+			path = "Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
+		74248F6F42E16658859426458D71AAF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E830EF2B90857CF1D01B2E3CD52EE6B /* GoogleNetworkingUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D049F47940CBB871CDBE0830A00C281 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7865F07F7C86E866F35405EDB9059BE /* ResourceBundle-SWBufferedToast-Info.plist */,
+				73205CB6F998F0ABDF0D3D4F60061E5E /* SWBufferedToast.xcconfig */,
+				6737E38129DDC268906456245279B010 /* SWBufferedToast-dummy.m */,
+				A8009C7F2A4AF0BA2ACA840535BC416A /* SWBufferedToast-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SWBufferedToast";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				9CA3E48BFE817E88BF3941657A50D66F /* Pods */,
+				C368A78D69122747DF6D594000B418C6 /* Products */,
+				F374CA62B9B48A34435943A2A0AB2E72 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7E1695E38583C6A52CA72A6D2C9878D6 /* SWBufferedToast */ = {
+			isa = PBXGroup;
+			children = (
+				9073F33746909D558F24F908C84AB58B /* SWBufferedToast.h */,
+				544F3864615F9E4A8C29D4C749527ABC /* SWBufferedToast.m */,
+				148E9D0E29A67B8CB6295ED5C50ECFF3 /* SWToast.h */,
+				1A2A24CD3C32BCA983DD57FF924DA086 /* SWToast.m */,
+				665AC3530479584BA83094956130C703 /* SWToastConstraintManager.h */,
+				FCA19148F68E4030AB452516387D5FE0 /* SWToastConstraintManager.m */,
+				8DDA44D9B1DB756B9E076CA0A63C4887 /* Resources */,
+				7D049F47940CBB871CDBE0830A00C281 /* Support Files */,
+			);
+			path = SWBufferedToast;
+			sourceTree = "<group>";
+		};
+		8010EE3B027C5841EE0B5FEDFBA70A71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6B441E878A67A9A3A6FB297134E6823 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DDA44D9B1DB756B9E076CA0A63C4887 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C7093628AC51BDC5FD74DD9C485D4 /* Bufferlines0001.png */,
+				2DE6C31E0691D0700D552867794593CA /* Bufferlines0002.png */,
+				E9271F9CA351C95537D718BE560CA85B /* Bufferlines0003.png */,
+				6DB4D5D1F996E332514D4F00A0F3A819 /* Bufferlines0004.png */,
+				52F0319A740193DC798FB9A2F62F2432 /* Bufferlines0005.png */,
+				81CD183B42696B68E903554B5F22472F /* Bufferlines0006.png */,
+				3E6F1FF067ADB250B7D9686FF5777E41 /* Bufferlines0007.png */,
+				580404C21FC2CE1CEEA04AF3BF6029D1 /* Bufferlines0008.png */,
+				80CB902D82765DA20A2D4557B56D3CE7 /* Bufferlines0009.png */,
+				14E5E8BBA117190C1194060EA14AED4D /* Bufferlines0010.png */,
+				37246D3FA8ED7322869AD50155B88495 /* Bufferlines0011.png */,
+				0D6104F88B6D8B80BD26CA31C4B099C0 /* Bufferlines0012.png */,
+				911A2D70234EEF98E4D993801057E815 /* Bufferlines0013.png */,
+				E1A6A76827D8AF0A1F01937763A535CB /* Bufferlines0014.png */,
+				C38423B157C21B488345E63EF2D847C0 /* Bufferlines0015.png */,
+				4C0C9B36C475C5D6B49138113EB01CB7 /* Bufferlines0016.png */,
+				E8E798D2CCC5EE9038333C869624892C /* Bufferlines0017.png */,
+				B05D84E8826EB7AE92259721D4F8703F /* Bufferlines0018.png */,
+				CAAAA3D5B8A3BD453EA594AD4BD25BC6 /* Bufferlines0019.png */,
+				F1BA31EA53F1B58085DBA8A7D7DC18AD /* Bufferlines0020.png */,
+				30BDCA12A88966726DEEBC32AC054A8E /* Bufferlines0021.png */,
+				6AF7AF2D6416C6A1DCCFC43A92370A18 /* Bufferlines0022.png */,
+				D990CA8247C771AFB6BD5762AB71BC6A /* Bufferlines0023.png */,
+				E5C90823218E4B311F8088F63528AE06 /* Bufferlines0024.png */,
+				979CB80806B77E7728799B1BF5E5F6D9 /* Bufferlines0025.png */,
+				0184EFC23910252EBAD10A50182983BB /* Bufferlines0026.png */,
+				78B46B9CA17B5822287B8E2D40A5AC39 /* Bufferlines0027.png */,
+				DA21504C4B0B8941D47E3A7CA86F1C66 /* Bufferlines0028.png */,
+				6618B8AFE0811FA8F084E45F7BDBE173 /* Bufferlines0029.png */,
+				2817AC5ADD6AF21BCF4BBE1565AEFA11 /* Bufferlines0030.png */,
+				C8C6D2D5CE7FE83FF5C68BC2ABAA35B7 /* Bufferlines0031.png */,
+				A907DC8C32D0AD3BFAD06E8CB2382D47 /* Bufferlines0032.png */,
+				05AA3C0640D181A38FDC8B07191F09F5 /* Bufferlines0033.png */,
+				6FCC255E7753EAACB498104E919F3DBE /* Bufferlines0034.png */,
+				9043242523FBB0F8786565EA0C688671 /* Bufferlines0035.png */,
+				B724854FEC7EE812428F1E6D2BF1FDCB /* Bufferlines0036.png */,
+				D9305A608C44F99F42802BFAB0CB0BB0 /* Bufferlines0037.png */,
+				5A6ED71BAAE43ABDCD6A9A5439C610C1 /* Bufferlines0038.png */,
+				64E0D2E72F2187B66CF7CB1FF912175E /* Bufferlines0039.png */,
+				327904CB3B3EA24024958AE31C551607 /* Bufferlines0040.png */,
+				7BAF73EBD06F833348EE544AEDFAC931 /* Bufferlines0041.png */,
+				B273C8706BACC35D1B07C85B7E9EF884 /* Bufferlines0042.png */,
+				BA39D500359937E3CEE5801E3E0EA7AC /* Bufferlines0043.png */,
+				4FEA34F845939777293CE34254AF6F59 /* Bufferlines0044.png */,
+				58AF5BB1E203FC4721035E0F3C66C9C5 /* Bufferlines0045.png */,
+				5D9B64534F3AC1EF97E6CF58060E5BB2 /* Bufferlines0046.png */,
+				AB42F8C0C64950EA4953E2B5B82BCD8D /* Bufferlines0047.png */,
+				F2BC7C518C05617135EFBC4E773F11F2 /* Bufferlines0048.png */,
+				03E183101155F06CE19E7531CC55099A /* Bufferlines0049.png */,
+				5E60BFA55323060FAAAE5D3F55644F52 /* Bufferlines0050.png */,
+				73521CCC78F11716024707FAEB881689 /* Bufferlines0051.png */,
+				1056992D8246335AB6D447423CB457F8 /* Bufferlines0052.png */,
+				AD77069CEEC0F26FEFB47A70383C3B87 /* Bufferlines0053.png */,
+				239C0AE071C5378239632A9D9E740EDA /* Bufferlines0054.png */,
+				AD2D908AC69E3BBBD63A0F9C788C014E /* Bufferlines0055.png */,
+				69370DEF6F14CA49A900B1B67444726C /* Bufferlines0056.png */,
+				51D237B2B491477CB0BE8BC25ACDEFE0 /* Bufferlines0057.png */,
+				AF89D5479E3E651FBF25F2CF3EE64EFD /* Bufferlines0058.png */,
+				A1F37E842F2890A234A1FC4AB660919E /* Bufferlines0059.png */,
+				61AB767EA5400FF005D25D2277E57628 /* Bufferlines0060.png */,
+				B6928477B31A5CD3FA09D05053DEBF47 /* Bufferlines0061.png */,
+				412A1D4818CC18F9945B4577870F41D3 /* Bufferlines0062.png */,
+				EE961ADAC2D787B95BDA436F28F631D7 /* Bufferlines0063.png */,
+				5FAF15EF10B28C8C5FF6D77ADF660720 /* Bufferlines0064.png */,
+				D826E1B4F089B26D778AA6694D021CC5 /* Bufferlines0065.png */,
+				91BD54A1218526C48264D22D72329F8F /* Bufferlines0066.png */,
+				3C8342EC9C6D5EF6926EC5ACAD89C643 /* Bufferlines0067.png */,
+				CBAF3F55E37E519295053420A14B9DF3 /* Bufferlines0068.png */,
+				8326DD21E49B9302524A8D98F339CCD7 /* Bufferlines0069.png */,
+				941711AC4CF2FCD23C304F0D39468E69 /* Bufferlines0070.png */,
+				D42812A4DE608F80539692B312F18248 /* Bufferlines0071.png */,
+				2EB7630161A538361098B2EC9200718A /* Bufferlines0072.png */,
+				4F103AE262B84060ECBC0B9C720A3BA0 /* Bufferlines0073.png */,
+				E4432E3724723FD071B96A64F2A43E35 /* Bufferlines0074.png */,
+				E82FF52ECC6C63E5100C711182045CE7 /* Bufferlines0075.png */,
+				DD4876B81E9C0804053B881F151F054D /* Bufferlines0076.png */,
+				0A7A0D91628032CE5D1303947FC6EEEB /* Bufferlines0077.png */,
+				E19C5E6DFF93A163822BB3BE07D54D73 /* Bufferlines0078.png */,
+				E228384182F0DBE7B271B55B43C01638 /* Bufferlines0079.png */,
+				737606CD9B2D1D3F0CCF8684F9E60E16 /* Bufferlines0080.png */,
+				12CEED193783E6C80F652C7A5E09F48E /* Bufferlines0081.png */,
+				39206A4DF5F00D909435DD76E604305A /* Bufferlines0082.png */,
+				417DA84EB0CE8CDD7BEDF96155D38450 /* Bufferlines0083.png */,
+				C5159E2FF36D51440B5C866EBB1B5932 /* Bufferlines0084.png */,
+				3124727C74B3EDB1C6607D8A47BF6476 /* Bufferlines0085.png */,
+				15ACAD2A3A735B076EA6005F266F9DCC /* Bufferlines0086.png */,
+				FDB3FCDCFF70AB504084162199E0CD5E /* Bufferlines0087.png */,
+				17593C4862D29F5AD9C3DEB37C3E2C43 /* Bufferlines0088.png */,
+				F843CA77935A3C8CE2243B8FCBC1B636 /* Bufferlines0089.png */,
+				03C82C04DC080C3EF6B88CBEF39751B6 /* Bufferlines0090.png */,
+				541DD351554336273284E463166A351B /* Bufferlines0091.png */,
+				AF429E8C5DF23E8595E0FFC7868C4E26 /* Bufferlines0092.png */,
+				C9BD9A65DCD3901F305372A7746D883B /* Bufferlines0093.png */,
+				3F4A8FE3B109D3A9522ED6296BF94F60 /* Bufferlines0094.png */,
+				5498DAC19BACE33F7E1D001D52A52731 /* Bufferlines0095.png */,
+				E07355B175566348B3FC2DB7CD84A3A0 /* Bufferlines0096.png */,
+				9B74022A33CC12E18B05BF444FECE20F /* Bufferlines0097.png */,
+				97E8E3CC206DB86DF83BCDFD141D5F5F /* Bufferlines0098.png */,
+				2181AA0049B458CFE42AAAF2A784D8A4 /* Bufferlines0099.png */,
+				DFEF6DB4C896746168A6137D9C0CB195 /* Bufferlines0100.png */,
+				D6449E6C1D942609041B9F1C75469370 /* Bufferlines0101.png */,
+				FB1CB744A1AB0BB93E19957E50D765DF /* Bufferlines0102.png */,
+				8256B331A4068258A136C2791553D455 /* BufferMask.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8E988AA789C3354FFFF444B76EE5A2A2 /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				E9B7305570A31B4C84EC379CF0EDD189 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		99254E73634F115BB168714A99A53E9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A134B821CF568091EE87431CA60E881 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99F73AEA7AE7F6F75397FE0401525D09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F7475C75EDB5575040E6854A385F7AC /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CA3E48BFE817E88BF3941657A50D66F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EA35AABC86781DEE2C1B85F2C2F621D /* Firebase */,
+				0F9F7749771A073434226576C988B3FD /* FirebaseAnalytics */,
+				B08EF99CC6ED1AB104008490F7314576 /* FirebaseAuth */,
+				19CBC9E3B0C19D2B2C8BBAE27DEABC24 /* FirebaseCrash */,
+				6C2E9710ED85757D879737F45F75C855 /* FirebaseDatabase */,
+				36D1CBA3298CBB5734E160CFB9AFDB69 /* FirebaseInstanceID */,
+				2C7971CD135CA95618D5A93B3C201799 /* FirebaseRemoteConfig */,
+				2D97A028D400EF36F4EDB71125945349 /* FirebaseStorage */,
+				70043648E9496C4BB4EF7ED3D0EFBC84 /* Google-Mobile-Ads-SDK */,
+				8E988AA789C3354FFFF444B76EE5A2A2 /* GoogleInterchangeUtilities */,
+				4F07F3E2926F886B0F23F6413B7053B6 /* GoogleIPhoneUtilities */,
+				4D506B79959E2A1100F6A73118D2E734 /* GoogleNetworkingUtilities */,
+				0A7281B0561BC057867FD9C5E162B434 /* GoogleParsingUtilities */,
+				F29FB918EBA54EAB48A7198BBD1D9AE2 /* GoogleSymbolUtilities */,
+				1DCD3F3E686F8D9A4045D5414D3C2E7F /* GoogleUtilities */,
+				7E1695E38583C6A52CA72A6D2C9878D6 /* SWBufferedToast */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A77C2186F424D3BD3DF0B0429B9552F9 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				C9C595AB18566D2F0D8680D410928E73 /* Firebase.h */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		B08EF99CC6ED1AB104008490F7314576 /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				B2ED1F6BAEC14174A0486556A1001D9F /* Frameworks */,
+			);
+			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
+		B2ED1F6BAEC14174A0486556A1001D9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F747A28BC484583E506420E9CB1F033 /* FirebaseAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C368A78D69122747DF6D594000B418C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6890F53B0AEA02405180DDB621C67 /* libPods-newG-Bay.a */,
+				7A8CA85E6A3F6A3E5DDC54D82FA9A6EF /* libSWBufferedToast.a */,
+				F762764E76ACB709DA12E50153CDFCCC /* SWBufferedToast.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBCC6DC39C0667EE2EA6B0DF2C4FC0B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC3FBAB2701B52060289B63B15196DBF /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9B7305570A31B4C84EC379CF0EDD189 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6801C192CC81429D063ACD0758A2D7F0 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F29FB918EBA54EAB48A7198BBD1D9AE2 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				99254E73634F115BB168714A99A53E9F /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		F374CA62B9B48A34435943A2A0AB2E72 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				425B6E795CE5C621DAEDBE8C78CFE51D /* Pods-newG-Bay */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		71801AC9C2969CF691BCA8C84D514501 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29ADE03F92BC42D2978F9FE709FC2738 /* SWBufferedToast.h in Headers */,
+				6A173ED8D23A3721492F465E4278E770 /* SWToast.h in Headers */,
+				262122497B0C4C1DAD37756876E221C4 /* SWToastConstraintManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		85BB6A5DA568DB4DE79E455D59B1627D /* SWBufferedToast-SWBufferedToast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E3443CF85EB84A97A0DEAB43E8235D2 /* Build configuration list for PBXNativeTarget "SWBufferedToast-SWBufferedToast" */;
+			buildPhases = (
+				1FB9916D3901BD3653099378D07AAC30 /* Sources */,
+				8A4D47A7F1D5F643802A256949DD5913 /* Frameworks */,
+				A22FBDDE040E1D75AE443CE6AF2F0337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SWBufferedToast-SWBufferedToast";
+			productName = "SWBufferedToast-SWBufferedToast";
+			productReference = F762764E76ACB709DA12E50153CDFCCC /* SWBufferedToast.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8F3823474077BD47229D919F16005BB7 /* SWBufferedToast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B3CAFCBE390D9B9118047FEC0EB3F82 /* Build configuration list for PBXNativeTarget "SWBufferedToast" */;
+			buildPhases = (
+				5E6CAEB151C97DBFD8E57989FC3D2588 /* Sources */,
+				AFB32E8F41F6B5796F5A1F9CFACC789C /* Frameworks */,
+				71801AC9C2969CF691BCA8C84D514501 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A21B85EC1FB9A0AF18C1CA06783D11FF /* PBXTargetDependency */,
+			);
+			name = SWBufferedToast;
+			productName = SWBufferedToast;
+			productReference = 7A8CA85E6A3F6A3E5DDC54D82FA9A6EF /* libSWBufferedToast.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BF4E7445B18ED1BDF2213D1E88587921 /* Pods-newG-Bay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47BE2A5AA1A94BFF7C374093DB3E6237 /* Build configuration list for PBXNativeTarget "Pods-newG-Bay" */;
+			buildPhases = (
+				0FF58807DC66F24585C77B1E8C6725E2 /* Sources */,
+				8649A256E7A16EC04B289ED9324EF0EE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F43915D6E4C26C5B052AE906F54EC89 /* PBXTargetDependency */,
+			);
+			name = "Pods-newG-Bay";
+			productName = "Pods-newG-Bay";
+			productReference = C9E6890F53B0AEA02405180DDB621C67 /* libPods-newG-Bay.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C368A78D69122747DF6D594000B418C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF4E7445B18ED1BDF2213D1E88587921 /* Pods-newG-Bay */,
+				8F3823474077BD47229D919F16005BB7 /* SWBufferedToast */,
+				85BB6A5DA568DB4DE79E455D59B1627D /* SWBufferedToast-SWBufferedToast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A22FBDDE040E1D75AE443CE6AF2F0337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207B327F7BFAD3CBFB29C1B15A5CEC49 /* Bufferlines0001.png in Resources */,
+				891E1D6DA082B4CE611081CCC9F63429 /* Bufferlines0002.png in Resources */,
+				C43889C5CBD41271363EBA0F672D0DC1 /* Bufferlines0003.png in Resources */,
+				B246E07156B314943518E8B14D7FE64D /* Bufferlines0004.png in Resources */,
+				91A3C04D00931FD9270DAABDAF66AC0B /* Bufferlines0005.png in Resources */,
+				377F40ABCFDF6036E0207C2C0D3DC1AB /* Bufferlines0006.png in Resources */,
+				E89F79FA1F9A7087497C578993D641AE /* Bufferlines0007.png in Resources */,
+				E081638D06D3649062F89A4C0A2E36E8 /* Bufferlines0008.png in Resources */,
+				6131B47804706B746D709C67243ACE99 /* Bufferlines0009.png in Resources */,
+				A86C14AD9A53646C827DD04F9ECDC154 /* Bufferlines0010.png in Resources */,
+				EE80ECAC782F86A13B58B4D29BAC93AA /* Bufferlines0011.png in Resources */,
+				726A7128AB343CBD094C967F2812E7D8 /* Bufferlines0012.png in Resources */,
+				5400DE00D85BC64E2235F8E54584FCE7 /* Bufferlines0013.png in Resources */,
+				C9F9086F8E92E18FA52271490765AAF8 /* Bufferlines0014.png in Resources */,
+				68DED3B2A51B5B69CC7826819724AD72 /* Bufferlines0015.png in Resources */,
+				9B36C3A96A064F35A399CF9C2E714604 /* Bufferlines0016.png in Resources */,
+				6963811AFA810E34A55867EA9832EB50 /* Bufferlines0017.png in Resources */,
+				E213D48A0EF2A0E5158B241079538403 /* Bufferlines0018.png in Resources */,
+				42A8102CCFFC45E122881E6804DBD6C9 /* Bufferlines0019.png in Resources */,
+				C68F187EECBA037F6B340C84C143F4B4 /* Bufferlines0020.png in Resources */,
+				1B084563C6F201EEA79B940F616A123A /* Bufferlines0021.png in Resources */,
+				770EADB0653E0EAA683EDCD8DE8F09AD /* Bufferlines0022.png in Resources */,
+				0A06F89BA3FB225C7F55676B6E4C283F /* Bufferlines0023.png in Resources */,
+				FD870BB0DB98555E5DCC657633F70832 /* Bufferlines0024.png in Resources */,
+				E1D6E671E86130E1A849F55DE725201A /* Bufferlines0025.png in Resources */,
+				FD918F8518AA9C0A13BDD8103EBF6532 /* Bufferlines0026.png in Resources */,
+				64F5AFCEC25F04356AA652F3B02C8AEA /* Bufferlines0027.png in Resources */,
+				45DF9E8B7481123113B8DE55EF361502 /* Bufferlines0028.png in Resources */,
+				8CF2BF2BB6F5E0264885B131A35E0EEC /* Bufferlines0029.png in Resources */,
+				A45326693F27521376EA8EBFBE4662B1 /* Bufferlines0030.png in Resources */,
+				2790481ABD9D62B513C2C047AB4F00BC /* Bufferlines0031.png in Resources */,
+				8F2443B764BC02EA3E6C7A083C00010D /* Bufferlines0032.png in Resources */,
+				DB477955996B592BE364F5A342CCE92C /* Bufferlines0033.png in Resources */,
+				2EE6C3B0A7FFB9D19FD3BA06DA8F26E4 /* Bufferlines0034.png in Resources */,
+				9E4B696E961A54F673819530DDE531D5 /* Bufferlines0035.png in Resources */,
+				FE12BC8431D7AEDE8AA53CFB4D769B96 /* Bufferlines0036.png in Resources */,
+				3F9408FD55D56736D67A4BF6A4C055BA /* Bufferlines0037.png in Resources */,
+				77A713F4ADD6D64F5770D3A5CCF2F93C /* Bufferlines0038.png in Resources */,
+				E0B609A9C8BF183D7C3C9FE5093E8C70 /* Bufferlines0039.png in Resources */,
+				126284DFA00BEE51C50A5387E54A9DFA /* Bufferlines0040.png in Resources */,
+				FA5FA0DAD959EC2FA66983A2391C7E00 /* Bufferlines0041.png in Resources */,
+				1CDD9FAFC583B92E9FAFFC27B883ED6B /* Bufferlines0042.png in Resources */,
+				681C0220EBE8551BEF423680ED5CDEB1 /* Bufferlines0043.png in Resources */,
+				36F4811AABFA2A6D8055340A5671409F /* Bufferlines0044.png in Resources */,
+				B31F71882A907BD79D9390839E96DDB4 /* Bufferlines0045.png in Resources */,
+				991B39DDEE368341EAC26AAB54873FC4 /* Bufferlines0046.png in Resources */,
+				3EF584D9171625AED84B254D187E1D5D /* Bufferlines0047.png in Resources */,
+				0993F734FA540065AB833318F845FBA0 /* Bufferlines0048.png in Resources */,
+				A30BA15E932822926A0F8EFC066BECF9 /* Bufferlines0049.png in Resources */,
+				941B4544B7AAC2F63C333C376275ADE6 /* Bufferlines0050.png in Resources */,
+				DA507BCDE30FCFDED68A4AE5B81B13C6 /* Bufferlines0051.png in Resources */,
+				2F64D2F6764C8F2980DEE953F20FCBAA /* Bufferlines0052.png in Resources */,
+				BF86BB79F6504A4FB786D39167BB01D1 /* Bufferlines0053.png in Resources */,
+				EC9861FF9E3FD7D2130ABCAFD6FC38C4 /* Bufferlines0054.png in Resources */,
+				4D019B3BE98E89EB19E00CB06671DE6F /* Bufferlines0055.png in Resources */,
+				DB7358C83B3FB519AE940DAE1402939B /* Bufferlines0056.png in Resources */,
+				54296E4046ECAF267B189F3029B94528 /* Bufferlines0057.png in Resources */,
+				28C0A9670AC55D28976210FA864A4C0F /* Bufferlines0058.png in Resources */,
+				85ED1C7A34ABB1729FD8CDA1BD4A5E8B /* Bufferlines0059.png in Resources */,
+				21669A4694295A0FCD7B434F855FC759 /* Bufferlines0060.png in Resources */,
+				452E42FCA142555FF628BE1F42D82FE4 /* Bufferlines0061.png in Resources */,
+				FA69B3D35A3E065BDFDFCC1EA4772861 /* Bufferlines0062.png in Resources */,
+				0D53C01A4581A48E0AE1DE115F338868 /* Bufferlines0063.png in Resources */,
+				4FEC867BFCAF78203ACFB5B36181B82A /* Bufferlines0064.png in Resources */,
+				9EE9BE0820BDA13760D83839762D3FBB /* Bufferlines0065.png in Resources */,
+				D73F6CDAF1FA480A15842D9D8B258C7C /* Bufferlines0066.png in Resources */,
+				0A934DB3D3009CDE5A7BCBA1D69EE1F3 /* Bufferlines0067.png in Resources */,
+				40463C5669FE22D4293365B523086DF1 /* Bufferlines0068.png in Resources */,
+				09006F6CE44F3486E99A23D8A6373DFF /* Bufferlines0069.png in Resources */,
+				DDA0391C090EB73819BEDDB6F6E08BDE /* Bufferlines0070.png in Resources */,
+				8A1B4A5B9147DA74B92D9261835B4C84 /* Bufferlines0071.png in Resources */,
+				7F97A14192F606301905C50D46EB421D /* Bufferlines0072.png in Resources */,
+				EA125B0CC3BE738304AC6FB48944C5B0 /* Bufferlines0073.png in Resources */,
+				441244CB30233420842C8336F3EE504E /* Bufferlines0074.png in Resources */,
+				28EE1EEE4D36CD781D4C36928848AC2E /* Bufferlines0075.png in Resources */,
+				401EDE0C5ACB65092EFCA437EB5983D6 /* Bufferlines0076.png in Resources */,
+				70B564A97F581349DAFBE5ECF30C141B /* Bufferlines0077.png in Resources */,
+				F56692D08E84999278F7B3E02084FE53 /* Bufferlines0078.png in Resources */,
+				94D50804F90AA44320C8FD46DF2F32E5 /* Bufferlines0079.png in Resources */,
+				F0435407B3B700B4A3016335C2AF97FA /* Bufferlines0080.png in Resources */,
+				6E46B03FB2D06F1320BBC3F5B12E9BB4 /* Bufferlines0081.png in Resources */,
+				04E9E9DA018E621FEE641B8DDAA7F4AB /* Bufferlines0082.png in Resources */,
+				61D825D46BAD18D8A81A0CD2088F5CE5 /* Bufferlines0083.png in Resources */,
+				BF41F977767DBFA409D218CC7C45F670 /* Bufferlines0084.png in Resources */,
+				02DF85FCD639EECF7584079D58C5EE9C /* Bufferlines0085.png in Resources */,
+				BD7864810CA345E0C22F5378923C5F7D /* Bufferlines0086.png in Resources */,
+				E8AB29EA87221F4038842A010F2088B6 /* Bufferlines0087.png in Resources */,
+				05E3926AB4611F8E8D48EF3F0EC8F106 /* Bufferlines0088.png in Resources */,
+				BB35F7FDD8D6048482218C03AE2AC08E /* Bufferlines0089.png in Resources */,
+				DF899E9E5F7851428D185532113DC220 /* Bufferlines0090.png in Resources */,
+				A922A0DF0D03710F0D51B9D7546D4B77 /* Bufferlines0091.png in Resources */,
+				2EB4CB038F8D9E83BC60809810D1DDA0 /* Bufferlines0092.png in Resources */,
+				9FF98C4D732F23D76AC073661C7C26F9 /* Bufferlines0093.png in Resources */,
+				29C5865A31C57545A68298D19AE7221F /* Bufferlines0094.png in Resources */,
+				AB40903803E4DCCD0E56799BC408FEED /* Bufferlines0095.png in Resources */,
+				41FE4D10DEC21C3D8401EE37DDDBCEDA /* Bufferlines0096.png in Resources */,
+				4F5F3B81FED31C0FB33AF017D21F3FF9 /* Bufferlines0097.png in Resources */,
+				6651E9E6A5F7CF07EF0075320EECE309 /* Bufferlines0098.png in Resources */,
+				3FC9A42D7717821C2DAD5A83AFF669C8 /* Bufferlines0099.png in Resources */,
+				212392217F41AEDA819617939174E445 /* Bufferlines0100.png in Resources */,
+				C400D07AD57ED8E7E23C27C8A4809B7B /* Bufferlines0101.png in Resources */,
+				CD438FB69F88C63FA3DB41102D7658D3 /* Bufferlines0102.png in Resources */,
+				2C663F897EBDD0FE50520141265AB125 /* BufferMask.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FF58807DC66F24585C77B1E8C6725E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89D9B7552A08F6549F7AD6822B66AB04 /* Pods-newG-Bay-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB9916D3901BD3653099378D07AAC30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E6CAEB151C97DBFD8E57989FC3D2588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				543377CC95FFC32E15F81D21B4BE8C17 /* SWBufferedToast-dummy.m in Sources */,
+				F6E6EBAC14E6537C489982C88DDDC0DD /* SWBufferedToast.m in Sources */,
+				40ADA84279684A63E434CBBC93751D99 /* SWToast.m in Sources */,
+				596B82BCC93F7103A081B047FA681FCD /* SWToastConstraintManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F43915D6E4C26C5B052AE906F54EC89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SWBufferedToast;
+			target = 8F3823474077BD47229D919F16005BB7 /* SWBufferedToast */;
+			targetProxy = AECB1F58D0229BFE0E892E6306145BEF /* PBXContainerItemProxy */;
+		};
+		A21B85EC1FB9A0AF18C1CA06783D11FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SWBufferedToast-SWBufferedToast";
+			target = 85BB6A5DA568DB4DE79E455D59B1627D /* SWBufferedToast-SWBufferedToast */;
+			targetProxy = 40B1232E6DD30E8B831799246603799F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02D1563EC7F5604778A7C1AF37976006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BEA82A0689C2062809060E74F188DF5 /* Pods-newG-Bay.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		034014829C1E4434983CF3A690C12017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		43283AABBFCF7A2E7506F0ED07937DCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73205CB6F998F0ABDF0D3D4F60061E5E /* SWBufferedToast.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWBufferedToast/SWBufferedToast-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5197E80C4A67DA3C578317C3B644E703 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73205CB6F998F0ABDF0D3D4F60061E5E /* SWBufferedToast.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWBufferedToast/SWBufferedToast-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B6F8F1E732DC1DDDC3263CADF4126390 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C52AB3B6F43D9E369BEDD71DB97F960 /* Pods-newG-Bay.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE0F66FE56B0D95D6F346368126078CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73205CB6F998F0ABDF0D3D4F60061E5E /* SWBufferedToast.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SWBufferedToast";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SWBufferedToast/ResourceBundle-SWBufferedToast-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = SWBufferedToast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		EE2DD8BF68B5EE98784B4C04B111C491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73205CB6F998F0ABDF0D3D4F60061E5E /* SWBufferedToast.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SWBufferedToast";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SWBufferedToast/ResourceBundle-SWBufferedToast-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = SWBufferedToast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B3CAFCBE390D9B9118047FEC0EB3F82 /* Build configuration list for PBXNativeTarget "SWBufferedToast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43283AABBFCF7A2E7506F0ED07937DCE /* Debug */,
+				5197E80C4A67DA3C578317C3B644E703 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034014829C1E4434983CF3A690C12017 /* Debug */,
+				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47BE2A5AA1A94BFF7C374093DB3E6237 /* Build configuration list for PBXNativeTarget "Pods-newG-Bay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02D1563EC7F5604778A7C1AF37976006 /* Debug */,
+				B6F8F1E732DC1DDDC3263CADF4126390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E3443CF85EB84A97A0DEAB43E8235D2 /* Build configuration list for PBXNativeTarget "SWBufferedToast-SWBufferedToast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE2DD8BF68B5EE98784B4C04B111C491 /* Debug */,
+				DE0F66FE56B0D95D6F346368126078CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

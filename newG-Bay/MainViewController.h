@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SlideNavigationController.h"
 
 
-@interface MainViewController : UIViewController
+
+@interface MainViewController : UIViewController <SlideNavigationControllerDelegate>
+
+
 - (IBAction)logOutAction:(id)sender;
 
 @end
