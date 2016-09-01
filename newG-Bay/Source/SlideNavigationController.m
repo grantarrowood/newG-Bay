@@ -126,7 +126,7 @@ static SlideNavigationController *singletonInstance;
 	self.panGestureSideOffset = 0;
 	self.avoidSwitchingToSameClassViewController = YES;
 	self.enableShadow = YES;
-	self.enableSwipeGesture = YES;
+	self.enableSwipeGesture = NO;
 	self.delegate = self;
 }
 
