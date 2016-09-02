@@ -9,10 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "SlideNavigationController.h"
 @import Firebase;
+#import "SWBufferedToast/SWBufferedToast.h"
 
 
 
 @interface MainViewController : UIViewController <SlideNavigationControllerDelegate, UIScrollViewDelegate>
+
+
+
+@property (nonatomic, readonly) UIColor *eggshellGreen;
+@property (nonatomic, readonly) UIColor *ectoplasmGreen;
+@property (nonatomic, readonly) UIColor *candyCaneRed;
+@property (nonatomic, readonly) UIColor *jarringBlue;
+
+
 
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollview;

@@ -101,8 +101,29 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     MyCustomAnnotation *myLoc = view.annotation;
-    tapped = myLoc.tags;
-    [self performSegueWithIdentifier:@"infoDetails" sender:self];
+    //tapped = myLoc.tags;
+    FIRDataSnapshot *objectSnapshot = _objects[myLoc.tags];
+    NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    DetailsViewController *destViewController = (DetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
+    destViewController.titled = object[@"title"];
+    destViewController.dataDescription = object[@"description"];
+    destViewController.condition = object[@"condition"];
+    destViewController.price = object[@"price"];
+    destViewController.category = object[@"category"];
+    double lat = object[@"latitude"].doubleValue;
+    double lon = object[@"longitude"].doubleValue;
+    CLLocationCoordinate2D pointCoordinates;
+    pointCoordinates.latitude = lat;
+    pointCoordinates.longitude = lon;
+    destViewController.locationLat = pointCoordinates.latitude;
+    destViewController.locationLon = pointCoordinates.longitude;
+    destViewController.ishidden = true;
+    [[NSUserDefaults standardUserDefaults] setObject:@"ItemMapViewController"
+                                              forKey:@"last_view"];
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:destViewController
+                                                             withSlideOutAnimation:NO
+                                                                     andCompletion:nil];
 }
 
 
@@ -112,25 +133,27 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"infoDetails"]) {
-        FIRDataSnapshot *objectSnapshot = _objects[(long)tapped];
-        NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
-        DetailsViewController *destViewController = segue.destinationViewController;
-        destViewController.titled = object[@"title"];
-        destViewController.dataDescription = object[@"description"];
-        destViewController.condition = object[@"condition"];
-        destViewController.price = object[@"price"];
-        destViewController.category = object[@"category"];
-        double lat = object[@"latitude"].doubleValue;
-        double lon = object[@"longitude"].doubleValue;
-        CLLocationCoordinate2D pointCoordinates;
-        pointCoordinates.latitude = lat;
-        pointCoordinates.longitude = lon;
-        destViewController.locationLat = pointCoordinates.latitude;
-        destViewController.locationLon = pointCoordinates.longitude;
-        destViewController.ishidden = true;
-        
-    }
+//    if ([segue.identifier isEqualToString:@"infoDetails"]) {
+//        FIRDataSnapshot *objectSnapshot = _objects[(long)tapped];
+//        NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
+//        DetailsViewController *destViewController = segue.destinationViewController;
+//        destViewController.titled = object[@"title"];
+//        destViewController.dataDescription = object[@"description"];
+//        destViewController.condition = object[@"condition"];
+//        destViewController.price = object[@"price"];
+//        destViewController.category = object[@"category"];
+//        double lat = object[@"latitude"].doubleValue;
+//        double lon = object[@"longitude"].doubleValue;
+//        CLLocationCoordinate2D pointCoordinates;
+//        pointCoordinates.latitude = lat;
+//        pointCoordinates.longitude = lon;
+//        destViewController.locationLat = pointCoordinates.latitude;
+//        destViewController.locationLon = pointCoordinates.longitude;
+//        destViewController.ishidden = true;
+//        [[NSUserDefaults standardUserDefaults] setObject:@"ItemMapViewController"
+//                                                  forKey:@"last_view"];
+//        
+//    }
 
 }
 

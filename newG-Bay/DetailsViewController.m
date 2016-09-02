@@ -19,17 +19,50 @@
 
 @implementation DetailsViewController
 
+
+
+#pragma mark - nice colours.
+- (UIColor *)eggshellGreen
+{
+    return [UIColor colorWithRed:114.0f/255.0f green:209.0f/255.0f blue:192.0f/255.0f alpha:1.0f];
+}
+
+- (UIColor *)ectoplasmGreen
+{
+    //Mmmmmm, tastes like spooks.
+    return [UIColor colorWithRed:114.0f/255.0f green:209.0f/255.0f blue:192.0f/255.0f alpha:0.75f];
+}
+
+- (UIColor *)candyCaneRed
+{
+    return [UIColor colorWithRed:211.0f/255.0f green:59.0f/255.0f blue:66.0f/255.0f alpha:1.0f];
+}
+
+- (UIColor *)jarringBlue
+{
+    return [UIColor colorWithRed:0.0f/255.0f green:176.0f/255.0f blue:193.0f/255.0f alpha:0.75f];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.noticeToast = [[SWBufferedToast alloc] initNoticeToastWithTitle:@"Loading"
+                                                                subtitle:@"Please wait while loading data!"
+                                                           timeToDisplay:120
+                                                        backgroundColour:nil
+                                                              toastColor:self.candyCaneRed
+                                                     animationImageNames:nil
+                                                                  onView:self.view];
+    [self.noticeToast appear];
+    [self.noticeToast beginLoading];
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.foundTokenView.hidden = self.ishidden;
     self.totalGBalance.text = self.GBalanceText;
     
-    
-    
-    //self.title = @"Details";
-    UINib *nib = [UINib nibWithNibName:@"ViewController" bundle:nil];
-
     _dataSource = [TagGroups dataSource:[NSMutableString stringWithString:self.category]];
     
     
@@ -44,7 +77,7 @@
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     
-    [self.view bringSubviewToFront:_headerView];
+    [self.view bringSubviewToFront:self.headerView];
     
     UIButton *buttonBack = [UIButton buttonWithType:UIButtonTypeCustom];
     buttonBack.frame = CGRectMake(10, 22, 44, 44);
@@ -52,13 +85,7 @@
     [buttonBack addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonBack];
     
-    UIButton *buttonPost = [UIButton buttonWithType:UIButtonTypeCustom];
-    buttonPost.frame = CGRectMake(self.view.bounds.size.width - 44, 18, 44, 44);
-    [buttonPost setImage:[UIImage imageNamed:@"btn_post"] forState:UIControlStateNormal];
-    [buttonPost addTarget:self action:@selector(post) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:buttonPost];
-    
-    self.locationDetail.headerView = _headerView;
+    self.locationDetail.headerView = self.headerView;
 
 }
 
@@ -134,10 +161,11 @@
                  cell.stateAddress.text = placemark.administrativeArea;
                  
                  //LOADING ENDS HERE
+                 [self.noticeToast dismiss];
                  
              }];
             
-            _map = [[MKMapView alloc] initWithFrame:CGRectMake(219, 0, 101, 171)];
+            _map = [[MKMapView alloc] initWithFrame:CGRectMake(219, 0, 156, 171)];
             _map.userInteractionEnabled = FALSE;
             _map.delegate = self;
             MKCoordinateRegion myRegion;
@@ -338,7 +366,11 @@
 {
     NSLog(@"Here you should go back to previous view controller");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    MainViewController *viewController = (MainViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    // when your application opens:
+    NSString * viewIdentifierString = [[NSUserDefaults standardUserDefaults]
+                                       stringForKey:@"last_view"];
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:viewIdentifierString];
+
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
                                                              withSlideOutAnimation:NO
                                                                      andCompletion:nil];

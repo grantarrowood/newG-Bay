@@ -77,7 +77,28 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"detailsSegue" sender:self];
+    FIRDataSnapshot *objectSnapshot = _objects[indexPath.row];
+    NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    DetailsViewController *destViewController = (DetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
+    destViewController.titled = object[@"title"];
+    destViewController.dataDescription = object[@"description"];
+    destViewController.condition = object[@"condition"];
+    destViewController.price = object[@"price"];
+    destViewController.category = object[@"category"];
+    double lat = object[@"latitude"].doubleValue;
+    double lon = object[@"longitude"].doubleValue;
+    CLLocationCoordinate2D pointCoordinates;
+    pointCoordinates.latitude = lat;
+    pointCoordinates.longitude = lon;
+    destViewController.locationLat = pointCoordinates.latitude;
+    destViewController.locationLon = pointCoordinates.longitude;
+    destViewController.ishidden = true;
+    [[NSUserDefaults standardUserDefaults] setObject:@"YourItemsViewController"
+                                              forKey:@"last_view"];
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:destViewController
+                                                             withSlideOutAnimation:NO
+                                                                     andCompletion:nil];
 }
 
 /*
@@ -94,23 +115,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"detailsSegue"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        FIRDataSnapshot *objectSnapshot = _objects[indexPath.row];
-        NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
-        DetailsViewController *destViewController = segue.destinationViewController;
-        destViewController.titled = object[@"title"];
-        destViewController.dataDescription = object[@"description"];
-        destViewController.condition = object[@"condition"];
-        destViewController.price = object[@"price"];
-        destViewController.category = object[@"category"];
-        double lat = object[@"latitude"].doubleValue;
-        double lon = object[@"longitude"].doubleValue;
-        CLLocationCoordinate2D pointCoordinates;
-        pointCoordinates.latitude = lat;
-        pointCoordinates.longitude = lon;
-        destViewController.locationLat = pointCoordinates.latitude;
-        destViewController.locationLon = pointCoordinates.longitude;
-        destViewController.ishidden = true;
 
         
     }

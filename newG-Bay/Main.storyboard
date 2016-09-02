@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Left Menu View Controller-->
@@ -159,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="-1327" y="212"/>
         </scene>
-        <!--Item Details-->
+        <!--Details View Controller-->
         <scene sceneID="Jp5-0J-V7d">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewController" title="Item Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2un-Ge-NIf" customClass="DetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2un-Ge-NIf" customClass="DetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ndn-C9-7GR"/>
                         <viewControllerLayoutGuide type="bottom" id="ZEh-Om-8Dv"/>
@@ -268,8 +269,55 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSG-Yu-Nfa" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmG-zp-M8I">
+                                        <rect key="frame" x="0.0" y="14" width="600" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.76470588240000004" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NmG-zp-M8I" firstAttribute="top" secondItem="gSG-Yu-Nfa" secondAttribute="top" id="0YZ-6I-tUy"/>
+                                    <constraint firstItem="NmG-zp-M8I" firstAttribute="leading" secondItem="gSG-Yu-Nfa" secondAttribute="leading" id="1Dv-Ga-Mux"/>
+                                    <constraint firstItem="NmG-zp-M8I" firstAttribute="top" secondItem="gSG-Yu-Nfa" secondAttribute="top" id="8Ye-Je-h24"/>
+                                    <constraint firstAttribute="trailing" secondItem="NmG-zp-M8I" secondAttribute="trailing" id="Gv8-EZ-z7n"/>
+                                    <constraint firstAttribute="trailing" secondItem="NmG-zp-M8I" secondAttribute="trailing" id="H2J-Lp-SQo"/>
+                                    <constraint firstItem="NmG-zp-M8I" firstAttribute="top" secondItem="gSG-Yu-Nfa" secondAttribute="top" constant="13" id="YRn-qc-MJ9"/>
+                                    <constraint firstAttribute="bottom" secondItem="NmG-zp-M8I" secondAttribute="bottom" id="bsU-Hw-8ah"/>
+                                    <constraint firstItem="NmG-zp-M8I" firstAttribute="top" secondItem="gSG-Yu-Nfa" secondAttribute="top" constant="14" id="cGc-1o-Onf"/>
+                                    <constraint firstAttribute="bottom" secondItem="NmG-zp-M8I" secondAttribute="bottom" id="eoa-KT-Iw0"/>
+                                    <constraint firstAttribute="height" constant="65" id="it9-pj-YbF"/>
+                                    <constraint firstAttribute="bottom" secondItem="NmG-zp-M8I" secondAttribute="bottom" constant="8" id="pVw-v0-jrS"/>
+                                    <constraint firstItem="NmG-zp-M8I" firstAttribute="leading" secondItem="gSG-Yu-Nfa" secondAttribute="leading" id="rIi-Vx-fI8"/>
+                                    <constraint firstItem="NmG-zp-M8I" firstAttribute="top" secondItem="gSG-Yu-Nfa" secondAttribute="top" id="y4O-HK-yw4"/>
+                                    <constraint firstAttribute="bottom" secondItem="NmG-zp-M8I" secondAttribute="bottom" id="z2y-oJ-nKf"/>
+                                </constraints>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0YZ-6I-tUy"/>
+                                        <exclude reference="8Ye-Je-h24"/>
+                                        <exclude reference="H2J-Lp-SQo"/>
+                                        <exclude reference="YRn-qc-MJ9"/>
+                                        <exclude reference="bsU-Hw-8ah"/>
+                                        <exclude reference="eoa-KT-Iw0"/>
+                                        <exclude reference="pVw-v0-jrS"/>
+                                        <exclude reference="rIi-Vx-fI8"/>
+                                        <exclude reference="y4O-HK-yw4"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gSG-Yu-Nfa" firstAttribute="leading" secondItem="ehC-6s-Vj0" secondAttribute="leadingMargin" constant="-20" id="9va-R1-IEe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gSG-Yu-Nfa" secondAttribute="trailing" constant="-20" id="cGi-5p-DNn"/>
+                            <constraint firstItem="gSG-Yu-Nfa" firstAttribute="top" secondItem="ehC-6s-Vj0" secondAttribute="topMargin" id="hIj-EZ-TJk"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ljV-71-TpK"/>
@@ -287,9 +335,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="C6E-vL-SYX"/>
                     <connections>
                         <outlet property="foundTokenView" destination="U7y-7R-yXb" id="voj-K3-zIE"/>
+                        <outlet property="headerTitle" destination="NmG-zp-M8I" id="0E0-JC-ggW"/>
+                        <outlet property="headerView" destination="gSG-Yu-Nfa" id="vle-5f-6zc"/>
                         <outlet property="totalGBalance" destination="0BQ-Hv-K8o" id="q3v-yA-7UA"/>
                     </connections>
                 </viewController>

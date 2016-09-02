@@ -55,7 +55,8 @@
             viewController.ishidden = false;
             [self addObject:@{@"Gbalance": [NSString stringWithFormat:@"%.2f", balanceNum], @"firstName": firstName} withUserId:[FIRAuth auth].currentUser];
             [self addObject:@{}];
-            
+            [[NSUserDefaults standardUserDefaults] setObject:@"OpenCameraViewController"
+                                                      forKey:@"last_view"];
             [self presentViewController:viewController animated:YES completion:nil];
         } withCancelBlock:^(NSError * _Nonnull error) {
             NSLog(@"%@", error.localizedDescription);
@@ -70,6 +71,8 @@
         viewController.price = arPrice;
         viewController.category = arCategory;
         viewController.condition = arCondition;
+        [[NSUserDefaults standardUserDefaults] setObject:@"OpenCameraViewController"
+                                                  forKey:@"last_view"];
         [self presentViewController:viewController animated:YES completion:nil];
 
     }

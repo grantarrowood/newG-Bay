@@ -17,8 +17,12 @@
 #import "TGAnnotation.h"
 #import "MainViewController.h"
 #import "SlideNavigationController.h"
+#import "SWBufferedToast.h"
 
-@interface DetailsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MKMapViewDelegate,TGFoursquareLocationDetailDelegate, KIImagePagerDelegate, KIImagePagerDataSource, CLLocationManagerDelegate>
+@interface DetailsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MKMapViewDelegate,TGFoursquareLocationDetailDelegate, KIImagePagerDelegate, KIImagePagerDataSource, CLLocationManagerDelegate, SWBufferedToastDelegate>
+
+
+@property (nonatomic, strong) SWBufferedToast *noticeToast;
 
 
 @property(nonatomic) NSString* titled;

@@ -33,6 +33,30 @@
 @implementation MainViewController
 
 
+#pragma mark - nice colours.
+- (UIColor *)eggshellGreen
+{
+    return [UIColor colorWithRed:114.0f/255.0f green:209.0f/255.0f blue:192.0f/255.0f alpha:1.0f];
+}
+
+- (UIColor *)ectoplasmGreen
+{
+    //Mmmmmm, tastes like spooks.
+    return [UIColor colorWithRed:114.0f/255.0f green:209.0f/255.0f blue:192.0f/255.0f alpha:0.75f];
+}
+
+- (UIColor *)candyCaneRed
+{
+    return [UIColor colorWithRed:211.0f/255.0f green:59.0f/255.0f blue:66.0f/255.0f alpha:1.0f];
+}
+
+- (UIColor *)jarringBlue
+{
+    return [UIColor colorWithRed:0.0f/255.0f green:176.0f/255.0f blue:193.0f/255.0f alpha:0.75f];
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO];
@@ -45,7 +69,18 @@
 -(void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    SWBufferedToast *noticeToast = [[SWBufferedToast alloc] initNoticeToastWithTitle:@"Loading"
+                                                                            subtitle:@"Please wait while loading data!"
+                                                                       timeToDisplay:120
+                                                                    backgroundColour:nil
+                                                                          toastColor:self.candyCaneRed
+                                                                 animationImageNames:nil
+                                                                              onView:self.view];
+    [noticeToast appear];
     
+    //Show the buffering state. You can supply your own images for the animation; if you don't a default animation will be used.
+    [noticeToast beginLoading];
+
     _objects = [[NSMutableArray alloc] init];
     
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/objects"];
@@ -163,6 +198,7 @@
             viewObject3 = _objects.count -1;
             
         }
+        [noticeToast dismiss];
     }];
     
     
@@ -276,7 +312,6 @@
             
             
         }
-        
     }];
 
 }
@@ -353,6 +388,8 @@
     viewController.ishidden = true;
     
     if (object[@"imageUrl"] == nil) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"MainViewController"
+                                                  forKey:@"last_view"];
         [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
                                                                  withSlideOutAnimation:NO
                                                                          andCompletion:nil];
@@ -368,6 +405,8 @@
             } else {
                 theImage = [UIImage imageWithData:data];
                 viewController.itemImage = theImage;
+                [[NSUserDefaults standardUserDefaults] setObject:@"MainViewController"
+                                                          forKey:@"last_view"];
                 [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
                                                                          withSlideOutAnimation:NO
                                                                                  andCompletion:nil];
