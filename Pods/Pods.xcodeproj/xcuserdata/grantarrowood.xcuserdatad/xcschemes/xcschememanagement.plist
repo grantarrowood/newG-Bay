@@ -19,20 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TGFoursquareLocationDetail.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>85BB6A5DA568DB4DE79E455D59B1627D</key>
+		<key>351992A59AC62181B0C7C590A4426AE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8F3823474077BD47229D919F16005BB7</key>
+		<key>4BDCE4FDEC94A33BC85BA689FB76A42B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF4E7445B18ED1BDF2213D1E88587921</key>
+		<key>5C10617894D00AF4E72D640F67B3A7BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>665B4F49BD673EEB6D44B71DD0397F92</key>
 		<dict>
 			<key>primary</key>
 			<true/>

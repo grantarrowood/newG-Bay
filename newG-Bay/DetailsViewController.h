@@ -8,15 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
+#import "TGFoursquareLocationDetail.h"
+#import "DetailLocationCell.h"
+#import "AddressLocationCell.h"
+#import "TipCell.h"
+#import "TipCells.h"
+#import "TGAnnotation.h"
+#import "ANTagsView.h"
 
-@interface DetailsViewController : UIViewController <CLLocationManagerDelegate>
 
-@property(nonatomic) NSString* title;
+@interface DetailsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MKMapViewDelegate,TGFoursquareLocationDetailDelegate, KIImagePagerDelegate, KIImagePagerDataSource, CLLocationManagerDelegate>
+
+
+@property(nonatomic) NSString* titled;
 @property(nonatomic) NSMutableString* dataDescription;
 @property(nonatomic) NSString* condition;
 @property(nonatomic) NSNumber* price;
 @property(nonatomic) NSString* category;
 @property(nonatomic) NSString* GBalanceText;
+@property(nonatomic) UIImage* itemImage;
 @property(nonatomic) int theid;
 @property(nonatomic) double locationLat;
 @property(nonatomic) double locationLon;
@@ -29,5 +40,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UIView *foundTokenView;
 @property (weak, nonatomic) IBOutlet UILabel *totalGBalance;
+
+
+
+@property (nonatomic, strong) TGFoursquareLocationDetail *locationDetail;
+@property (nonatomic, strong) MKMapView *map;
+
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UILabel *headerTitle;
+
 
 @end

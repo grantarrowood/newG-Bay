@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="ar_overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="218">
+                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="ar_overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="218">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6">
