@@ -338,7 +338,7 @@
     DetailsViewController *viewController = (DetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
     FIRDataSnapshot *objectSnapshot = _objects[viewObject1];
     NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
-    viewController.title = object[@"title"];
+    viewController.titled = object[@"title"];
     viewController.dataDescription = object[@"description"];
     viewController.condition = object[@"condition"];
     viewController.price = object[@"price"];
@@ -383,7 +383,7 @@
     DetailsViewController *viewController = (DetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
     FIRDataSnapshot *objectSnapshot = _objects[viewObject2];
     NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
-    viewController.title = object[@"title"];
+    viewController.titled = object[@"title"];
     viewController.dataDescription = object[@"description"];
     viewController.condition = object[@"condition"];
     viewController.price = object[@"price"];
@@ -426,7 +426,7 @@
     DetailsViewController *viewController = (DetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
     FIRDataSnapshot *objectSnapshot = _objects[viewObject3];
     NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
-    viewController.title = object[@"title"];
+    viewController.titled = object[@"title"];
     viewController.dataDescription = object[@"description"];
     viewController.condition = object[@"condition"];
     viewController.price = object[@"price"];

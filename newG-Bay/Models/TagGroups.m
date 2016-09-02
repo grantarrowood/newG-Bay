@@ -71,111 +71,113 @@
             [arrayItems deleteCharactersInRange:NSMakeRange(0, 1)];
         }
     }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"10"])) {
-        array = [array arrayByAddingObject:[self app10]];
-        if ([arrayItems length] > 2) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+    if ([arrayItems length] > 1) {
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"10"])) {
+            array = [array arrayByAddingObject:[self app10]];
+            if ([arrayItems length] > 2) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"11"])) {
+            array = [array arrayByAddingObject:[self app11]];
+            if ([arrayItems length] > 2) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"12"])) {
+            array = [array arrayByAddingObject:[self app12]];
+            if ([arrayItems length] > 2) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"13"])) {
+            array = [array arrayByAddingObject:[self app13]];
+            if ([arrayItems length] > 2) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"14"])) {
+            array = [array arrayByAddingObject:[self app14]];
+            if ([arrayItems length] > 2) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"15"])) {
+            array = [array arrayByAddingObject:[self app15]];
+            if ([arrayItems length] > 1) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"16"])) {
+            array = [array arrayByAddingObject:[self app16]];
+            if ([arrayItems length] > 1) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"17"])) {
+            if ([arrayItems length] > 1) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"18"])) {
+            array = [array arrayByAddingObject:[self app18]];
+            if ([arrayItems length] > 1) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"19"])) {
+            array = [array arrayByAddingObject:[self app19]];
+            if ([arrayItems length] > 1) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"20"])) {
+            array = [array arrayByAddingObject:[self app20]];
+            if ([arrayItems length] > 1) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"21"])) {
+            array = [array arrayByAddingObject:[self app21]];
+            if ([arrayItems length] > 1) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"22"])) {
+            array = [array arrayByAddingObject:[self app22]];
+            if ([arrayItems length] > 1) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"23"])) {
+            array = [array arrayByAddingObject:[self app23]];
+            if ([arrayItems length] > 1) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
+        }
+        newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
+        if (([arrayItems length] > 0) && ([newString  isEqual: @"24"])) {
+            array = [array arrayByAddingObject:[self app24]];
+            if ([arrayItems length] > 1) {
+                [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
+            }
         }
     }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"11"])) {
-        array = [array arrayByAddingObject:[self app11]];
-        if ([arrayItems length] > 2) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"12"])) {
-        array = [array arrayByAddingObject:[self app12]];
-        if ([arrayItems length] > 2) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"13"])) {
-        array = [array arrayByAddingObject:[self app13]];
-        if ([arrayItems length] > 2) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"14"])) {
-        array = [array arrayByAddingObject:[self app14]];
-        if ([arrayItems length] > 2) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"15"])) {
-        array = [array arrayByAddingObject:[self app15]];
-        if ([arrayItems length] > 1) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"16"])) {
-        array = [array arrayByAddingObject:[self app16]];
-        if ([arrayItems length] > 1) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"17"])) {
-        if ([arrayItems length] > 1) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"18"])) {
-        array = [array arrayByAddingObject:[self app18]];
-        if ([arrayItems length] > 1) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"19"])) {
-        array = [array arrayByAddingObject:[self app19]];
-        if ([arrayItems length] > 1) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"20"])) {
-        array = [array arrayByAddingObject:[self app20]];
-        if ([arrayItems length] > 1) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"21"])) {
-        array = [array arrayByAddingObject:[self app21]];
-        if ([arrayItems length] > 1) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"22"])) {
-        array = [array arrayByAddingObject:[self app22]];
-        if ([arrayItems length] > 1) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"23"])) {
-        array = [array arrayByAddingObject:[self app23]];
-        if ([arrayItems length] > 1) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    newString = [arrayItems substringWithRange:NSMakeRange(0, 2)];
-    if (([arrayItems length] > 0) && ([newString  isEqual: @"24"])) {
-        array = [array arrayByAddingObject:[self app24]];
-        if ([arrayItems length] > 1) {
-            [arrayItems deleteCharactersInRange:NSMakeRange(0, 2)];
-        }
-    }
-    //NSArray *app = @[[self app1], [self app2], [self app3], [self app4], [self app5], [self app6], [self app7], [self app8], [self app9], [self app10], [self app11], [self app12], [self app13], [self app14], [self app15], [self app16], [self app17], [self app18], [self app19], [self app20], [self app22], [self app22], [self app23], [self app24]];
+        //NSArray *app = @[[self app1], [self app2], [self app3], [self app4], [self app5], [self app6], [self app7], [self app8], [self app9], [self app10], [self app11], [self app12], [self app13], [self app14], [self app15], [self app16], [self app17], [self app18], [self app19], [self app20], [self app22], [self app22], [self app23], [self app24]];
     return @[array];
 }
 

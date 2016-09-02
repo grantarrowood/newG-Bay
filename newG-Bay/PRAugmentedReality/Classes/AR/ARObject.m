@@ -63,7 +63,7 @@
     } else {
         viewController.ishidden = true;
         viewController.theid = arId;
-        viewController.title = arTitle;
+        viewController.titled = arTitle;
         viewController.locationLat = lat;
         viewController.locationLon = lon;
         viewController.dataDescription = arDescription;

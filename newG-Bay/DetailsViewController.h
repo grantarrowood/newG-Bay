@@ -15,8 +15,8 @@
 #import "TipCell.h"
 #import "TipCells.h"
 #import "TGAnnotation.h"
-#import "ANTagsView.h"
-
+#import "MainViewController.h"
+#import "SlideNavigationController.h"
 
 @interface DetailsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MKMapViewDelegate,TGFoursquareLocationDetailDelegate, KIImagePagerDelegate, KIImagePagerDataSource, CLLocationManagerDelegate>
 
@@ -32,12 +32,6 @@
 @property(nonatomic) double locationLat;
 @property(nonatomic) double locationLon;
 @property(nonatomic) bool ishidden;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *conditionLabel;
-@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UIView *foundTokenView;
 @property (weak, nonatomic) IBOutlet UILabel *totalGBalance;
 

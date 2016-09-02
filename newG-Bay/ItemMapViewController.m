@@ -116,7 +116,7 @@
         FIRDataSnapshot *objectSnapshot = _objects[(long)tapped];
         NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
         DetailsViewController *destViewController = segue.destinationViewController;
-        destViewController.title = object[@"title"];
+        destViewController.titled = object[@"title"];
         destViewController.dataDescription = object[@"description"];
         destViewController.condition = object[@"condition"];
         destViewController.price = object[@"price"];
