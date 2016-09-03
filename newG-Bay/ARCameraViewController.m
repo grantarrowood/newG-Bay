@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self.navigationController setNavigationBarHidden:NO];
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -205,7 +206,6 @@
     [self.view addSubview:arView];
     
     [self.view bringSubviewToFront:[self.view viewWithTag:AR_VIEW_TAG]];
-    [self.view bringSubviewToFront:self.backButton];
     
     
 }

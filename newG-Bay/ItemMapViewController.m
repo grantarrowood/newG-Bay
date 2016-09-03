@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationController setNavigationBarHidden:NO];
     self.mappedView.delegate = self;
     _objects = [[NSMutableArray alloc] init];
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/objects"];

@@ -13,8 +13,4 @@
 
 @interface ARCameraViewController : UIViewController <PRARManagerDelegate, CLLocationManagerDelegate>
 
-
-
-@property (weak, nonatomic) IBOutlet UIButton *backButton;
-
 @end

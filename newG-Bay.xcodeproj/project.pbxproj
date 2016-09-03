@@ -91,6 +91,7 @@
 		9CBDCAAA1D79472700690927 /* KICamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDCA991D79472700690927 /* KICamera@2x.png */; };
 		9CBDCAAB1D79472700690927 /* pin_map_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDCA9A1D79472700690927 /* pin_map_blue.png */; };
 		9CBDCAAC1D79472700690927 /* pin_map_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDCA9B1D79472700690927 /* pin_map_blue@2x.png */; };
+		9CD1CD481D7A43F30090E496 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD1CD471D7A43F30090E496 /* ProfileViewController.m */; };
 		B619A451BB72B8DB9CA1FCCD /* libPods-newG-Bay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 027B56D3FA2FBD8E524860D0 /* libPods-newG-Bay.a */; };
 /* End PBXBuildFile section */
 
@@ -240,6 +241,8 @@
 		9CBDCA991D79472700690927 /* KICamera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KICamera@2x.png"; sourceTree = "<group>"; };
 		9CBDCA9A1D79472700690927 /* pin_map_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_map_blue.png; sourceTree = "<group>"; };
 		9CBDCA9B1D79472700690927 /* pin_map_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_map_blue@2x.png"; sourceTree = "<group>"; };
+		9CD1CD461D7A43F30090E496 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		9CD1CD471D7A43F30090E496 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +377,8 @@
 				9CA60B001D693CBC0081A5B5 /* ARCameraViewController.m */,
 				9CA60B011D693CBC0081A5B5 /* DetailsViewController.h */,
 				9CA60B021D693CBC0081A5B5 /* DetailsViewController.m */,
+				9CD1CD461D7A43F30090E496 /* ProfileViewController.h */,
+				9CD1CD471D7A43F30090E496 /* ProfileViewController.m */,
 				9CBDCA7C1D7927E400690927 /* Views */,
 				9CBDCA751D7927DF00690927 /* Models */,
 				9CBDCA4D1D78E98700690927 /* Cell */,
@@ -793,6 +798,7 @@
 				9CA60B1F1D693DB60081A5B5 /* ARController.m in Sources */,
 				9CBDCA7B1D7927DF00690927 /* TagGroups.m in Sources */,
 				9CA60B271D693DB60081A5B5 /* ARRadar.m in Sources */,
+				9CD1CD481D7A43F30090E496 /* ProfileViewController.m in Sources */,
 				9C97E4361D70DC1D00C74DD6 /* ItemMapViewController.m in Sources */,
 				9C113D4D1D768DCE009FA8F2 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				9CBDCA6C1D78ECBC00690927 /* TipCells.m in Sources */,
