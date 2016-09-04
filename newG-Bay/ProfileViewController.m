@@ -23,7 +23,6 @@
     // Do any additional setup after loading the view.
     [self.navigationController setNavigationBarHidden:NO];
 
-    
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/users"];
     _refHandle = [ref observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
         NSString *key = [NSString stringWithFormat:@"%@",[FIRAuth auth].currentUser.uid];

@@ -270,7 +270,8 @@
     imagePager.slideshowTimeInterval = 0.0f;
     imagePager.slideshowShouldCallScrollToDelegate = YES;
     
-    self.locationDetail.nbImages = [self.locationDetail.imagePager.dataSource.arrayWithImages count];
+    //self.locationDetail.nbImages = [self.locationDetail.imagePager.dataSource.arrayWithImages count];
+    self.locationDetail.nbImages = 1;
     self.locationDetail.currentImage = 0;
     //[imagePager updateCaptionLabelForImageAtIndex:self.locationDetail.currentImage];
 }
@@ -326,12 +327,7 @@
 #pragma mark - KIImagePager DataSource
 - (NSArray *) arrayWithImages
 {
-    return @[
-             @"https://irs2.4sqi.net/img/general/500x500/2514_BvEN_Q6lG50xZQ9TIG0XY8eYXzF3USSMdtTmxHCmqnE.jpg",
-             @"https://irs3.4sqi.net/img/general/500x500/6555164_Rkk21OJj4X54X8bkutzxbeCwLHTA8Hrre6_wUVc1DMg.jpg",
-             @"https://irs2.4sqi.net/img/general/500x500/3648632_NVZOdXiRTkVtzHoGNh5c5SqsF2NxYDB_FMfXRCbYu6I.jpg",
-             @"https://irs1.4sqi.net/img/general/500x500/23351702_KoUKj6hZLOTHIsawxi2L64O5CpJwCadeIv2daMBDE8Q.jpg"
-             ];
+    return @[_itemImage];
 }
 
 - (UIViewContentMode) contentModeForImage:(NSUInteger)image
@@ -339,15 +335,10 @@
     return UIViewContentModeScaleAspectFill;
 }
 
-- (NSString *) captionForImageAtIndex:(NSUInteger)index
-{
-    return @[
-             @"First screenshot",
-             @"Another screenshot",
-             @"And another one",
-             @"Last one! ;-)"
-             ][index];
-}
+//- (NSString *) captionForImageAtIndex:(NSUInteger)index
+//{
+//    return @[@"Image 1"][index];
+//}
 
 #pragma mark - KIImagePager Delegate
 - (void) imagePager:(KIImagePager *)imagePager didScrollToIndex:(NSUInteger)index

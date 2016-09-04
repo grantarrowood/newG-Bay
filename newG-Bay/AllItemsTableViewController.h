@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 @import Firebase;
+#import "SWBufferedToast.h"
 
 @interface AllItemsTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, weak) IBOutlet UITableView *clientTable;
-
+@property (nonatomic, strong) SWBufferedToast *noticeToast;
 @property (strong, nonatomic) NSMutableArray<FIRDataSnapshot *> *objects;
 
 @end
