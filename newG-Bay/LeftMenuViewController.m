@@ -163,7 +163,7 @@
                 break;
                 
             case 5:
-                vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"AddItemsViewController"];
+                vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"ItemNew"];
                 break;
             
             case 6:

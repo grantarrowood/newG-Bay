@@ -14,7 +14,9 @@
 @interface MainViewController ()
 {
     FIRDatabaseHandle _refHandle;
-    UIImage *theImage;
+    UIImage *theImage1;
+    UIImage *theImage2;
+    UIImage *theImage3;
     int viewValue1;
     int viewValue2;
     int viewValue3;
@@ -27,6 +29,7 @@
     int tokenValue1;
     int tokenValue2;
     int tokenValue3;
+    SWBufferedToast *noticeToast;
 }
 @end
 
@@ -66,10 +69,13 @@
     // Do any additional setup after loading the view.
 }
 
+
+
 -(void)viewWillAppear:(BOOL)animated {
-    
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
+
     [super viewWillAppear:animated];
-    SWBufferedToast *noticeToast = [[SWBufferedToast alloc] initNoticeToastWithTitle:@"Loading"
+    noticeToast = [[SWBufferedToast alloc] initNoticeToastWithTitle:@"Loading"
                                                                             subtitle:@"Please wait while loading data!"
                                                                        timeToDisplay:120
                                                                     backgroundColour:nil
@@ -82,7 +88,13 @@
     [noticeToast beginLoading];
 
     _objects = [[NSMutableArray alloc] init];
-    
+    [self loadRankings];
+    NSLog(@"Hello");
+
+}
+
+
+-(void)loadRankings {
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/objects"];
     _refHandle = [ref observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
         [_objects addObject:snapshot];
@@ -91,82 +103,79 @@
         NSString *viewValues = object[@"views"];
         NSString *imageString = object[@"imageUrl"];
         
-    // ******************************************************VIEWS****************************************************************
+        // ******************************************************VIEWS****************************************************************
         
         
         
         if (viewValues.intValue > viewValue1) {
             if (self.trendingLabelTwo.text == nil) {
                 self.trendingLabelTwo.text = self.trendingLabelOne.text;
-                self.trendingImageViewTwo.image = self.trendingImageViewOne.image;
+                //self.trendingImageViewTwo.image = self.trendingImageViewOne.image;
                 viewValue2 = viewValue1;
                 viewObject2 = viewObject1;
             } else {
                 self.trendingLabelThree.text = self.trendingLabelTwo.text;
-                self.trendingImageViewThree.image = self.trendingImageViewTwo.image;
+                //self.trendingImageViewThree.image = self.trendingImageViewTwo.image;
                 viewValue3 = viewValue2;
                 viewObject3 = viewObject2;
                 self.trendingLabelTwo.text = self.trendingLabelOne.text;
-                self.trendingImageViewTwo.image = self.trendingImageViewOne.image;
+                //self.trendingImageViewTwo.image = self.trendingImageViewOne.image;
                 viewValue2 = viewValue1;
                 viewObject2 = viewObject1;
             }
             
             NSString *title = object[@"title"];
             self.trendingLabelOne.text = title;
+            FIRStorage *storage = [FIRStorage storage];
+            // Create a storage reference from our storage service
+            FIRStorageReference *storageRef = [storage referenceForURL:object[@"imageUrl"]];
             
-//            if (imageString == nil) {
-//            } else {
-//                dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-//                FIRStorage *storage = [FIRStorage storage];
-//                // Create a storage reference from our storage service
-//                FIRStorageReference *storageRef = [storage referenceForURL:imageString];
-//
-//                [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
-//                    if (error != nil) {
-//                        // Uh-oh, an error occurred!
-//                        NSLog(@"Error Downloading: %@", error);
-//                    } else {
-//                        theImage = [UIImage imageWithData:data];
-//                        self.trendingImageViewOne.image = theImage;
-//                        dispatch_semaphore_signal(sema);
-//
-//                    }
-//                }];
-//                dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-//            }
+            [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+                if (error != nil) {
+                    // Uh-oh, an error occurred!
+                    NSLog(@"Error Downloading: %@", error);
+                } else {
+                    if (viewValues.intValue > viewValue1) {
+                        self.trendingImageViewTwo.image = self.trendingImageViewOne.image;
+                        theImage2 = theImage1;
+                    } else {
+                        self.trendingImageViewThree.image = self.trendingImageViewTwo.image;
+                        theImage3 = theImage2;
+                        self.trendingImageViewTwo.image = self.trendingImageViewOne.image;
+                        theImage2 = theImage1;
+                    }
+                    theImage1 = [UIImage imageWithData:data];
+                    self.trendingImageViewOne.image = theImage1;
+                }
+            }];
             viewValue1 = viewValues.intValue;
             viewObject1 = _objects.count -1;
             
             
-            
         } else if (viewValues.intValue > viewValue2) {
             self.trendingLabelThree.text = self.trendingLabelTwo.text;
-            self.trendingImageViewThree.image = self.trendingImageViewTwo.image;
+            //self.trendingImageViewThree.image = self.trendingImageViewTwo.image;
             viewValue3 = viewValue2;
             viewObject3 = viewObject2;
             NSString *title = object[@"title"];
             self.trendingLabelTwo.text = title;
             
-//            if (imageString == nil) {
-//            } else {
-//                dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-//                FIRStorage *storage = [FIRStorage storage];
-//                // Create a storage reference from our storage service
-//                FIRStorageReference *storageRef = [storage referenceForURL:imageString];
-//                
-//                [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
-//                    if (error != nil) {
-//                        // Uh-oh, an error occurred!
-//                        NSLog(@"Error Downloading: %@", error);
-//                    } else {
-//                        theImage = [UIImage imageWithData:data];
-//                        self.trendingImageViewTwo.image = theImage;
-//                        dispatch_semaphore_signal(sema);
-//                    }
-//                }];
-//                dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-//            }
+            FIRStorage *storage = [FIRStorage storage];
+            // Create a storage reference from our storage service
+            FIRStorageReference *storageRef = [storage referenceForURL:object[@"imageUrl"]];
+            
+            [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+                if (error != nil) {
+                    // Uh-oh, an error occurred!
+                    NSLog(@"Error Downloading: %@", error);
+                } else {
+                    self.trendingImageViewThree.image = self.trendingImageViewTwo.image;
+                    theImage2 = [UIImage imageWithData:data];
+                    self.trendingImageViewTwo.image = theImage2;
+                    [noticeToast dismiss];
+                    
+                }
+            }];
             viewValue2 = viewValues.intValue;
             viewObject2 = _objects.count -1;
             
@@ -175,30 +184,25 @@
             self.trendingLabelThree.text = title;
             
             
-//            if (imageString == nil) {
-//            } else {
-//                dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-//                FIRStorage *storage = [FIRStorage storage];
-//                // Create a storage reference from our storage service
-//                FIRStorageReference *storageRef = [storage referenceForURL:imageString];
-//                
-//                [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
-//                    if (error != nil) {
-//                        // Uh-oh, an error occurred!
-//                        NSLog(@"Error Downloading: %@", error);
-//                    } else {
-//                        theImage = [UIImage imageWithData:data];
-//                        self.trendingImageViewThree.image = theImage;
-//                        dispatch_semaphore_signal(sema);
-//                    }
-//                }];
-//                dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-//            }
+            FIRStorage *storage = [FIRStorage storage];
+            // Create a storage reference from our storage service
+            FIRStorageReference *storageRef = [storage referenceForURL:object[@"imageUrl"]];
+            
+            [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+                if (error != nil) {
+                    // Uh-oh, an error occurred!
+                    NSLog(@"Error Downloading: %@", error);
+                } else {
+                    theImage3 = [UIImage imageWithData:data];
+                    self.trendingImageViewThree.image = theImage3;
+                    [noticeToast dismiss];
+                    
+                }
+            }];
             viewValue3 = viewValues.intValue;
             viewObject3 = _objects.count -1;
             
         }
-        [noticeToast dismiss];
     }];
     
     
@@ -213,7 +217,7 @@
         float feedbackFloat = (feedbackPositive.intValue + feedbackNegative.intValue);
         float feedbackPercent = ((feedbackPositive.intValue)/feedbackFloat)*100;
         
-// ******************************************************FEEDBACK!!****************************************************************
+        // ******************************************************FEEDBACK!!****************************************************************
         
         
         if (feedbackPercent > feedbackValue1) {
@@ -263,7 +267,7 @@
         }
         
         
-    // ******************************************************TOKENS****************************************************************
+        // ******************************************************TOKENS****************************************************************
         
         
         
@@ -313,8 +317,9 @@
             
         }
     }];
-
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -386,34 +391,10 @@
     viewController.locationLat = pointCoordinates.latitude;
     viewController.locationLon = pointCoordinates.longitude;
     viewController.ishidden = true;
-    
-    if (object[@"imageUrl"] == nil) {
-        [[NSUserDefaults standardUserDefaults] setObject:@"MainViewController"
-                                                  forKey:@"last_view"];
-        [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
-                                                                 withSlideOutAnimation:NO
-                                                                         andCompletion:nil];
-    } else {
-        FIRStorage *storage = [FIRStorage storage];
-        // Create a storage reference from our storage service
-        FIRStorageReference *storageRef = [storage referenceForURL:object[@"imageUrl"]];
-
-        [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
-            if (error != nil) {
-                // Uh-oh, an error occurred!
-                NSLog(@"Error Downloading: %@", error);
-            } else {
-                theImage = [UIImage imageWithData:data];
-                viewController.itemImage = theImage;
-                [[NSUserDefaults standardUserDefaults] setObject:@"MainViewController"
-                                                          forKey:@"last_view"];
-                [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
-                                                                         withSlideOutAnimation:NO
-                                                                                 andCompletion:nil];
-            }
-        }];
-    }
-
+    viewController.itemImage = theImage1;
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
+                                                             withSlideOutAnimation:NO
+                                                                     andCompletion:nil];
 
 }
 
@@ -435,29 +416,10 @@
     viewController.locationLat = pointCoordinates.latitude;
     viewController.locationLon = pointCoordinates.longitude;
     viewController.ishidden = true;
-    
-    if (object[@"imageUrl"] == nil) {
-        [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
-                                                                 withSlideOutAnimation:NO
-                                                                         andCompletion:nil];
-    } else {
-        FIRStorage *storage = [FIRStorage storage];
-        // Create a storage reference from our storage service
-        FIRStorageReference *storageRef = [storage referenceForURL:object[@"imageUrl"]];
-        
-        [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
-            if (error != nil) {
-                // Uh-oh, an error occurred!
-                NSLog(@"Error Downloading: %@", error);
-            } else {
-                theImage = [UIImage imageWithData:data];
-                viewController.itemImage = theImage;
-                [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
-                                                                         withSlideOutAnimation:NO
-                                                                                 andCompletion:nil];
-            }
-        }];
-    }
+    viewController.itemImage = theImage2;
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
+                                                             withSlideOutAnimation:NO
+                                                                     andCompletion:nil];
 }
 
 - (IBAction)trendingActionThree:(id)sender {
@@ -478,29 +440,10 @@
     viewController.locationLat = pointCoordinates.latitude;
     viewController.locationLon = pointCoordinates.longitude;
     viewController.ishidden = true;
-    
-    if (object[@"imageUrl"] == nil) {
-        [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
-                                                                 withSlideOutAnimation:NO
-                                                                         andCompletion:nil];
-    } else {
-        FIRStorage *storage = [FIRStorage storage];
-        // Create a storage reference from our storage service
-        FIRStorageReference *storageRef = [storage referenceForURL:object[@"imageUrl"]];
-        
-        [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
-            if (error != nil) {
-                // Uh-oh, an error occurred!
-                NSLog(@"Error Downloading: %@", error);
-            } else {
-                theImage = [UIImage imageWithData:data];
-                viewController.itemImage = theImage;
-                [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
-                                                                         withSlideOutAnimation:NO
-                                                                                 andCompletion:nil];
-            }
-        }];
-    }
+    viewController.itemImage = theImage3;
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:viewController
+                                                             withSlideOutAnimation:NO
+                                                                     andCompletion:nil];
 }
 - (IBAction)feedbackActionOne:(id)sender {
 }

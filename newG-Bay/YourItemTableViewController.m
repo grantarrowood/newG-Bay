@@ -8,10 +8,12 @@
 
 #import "YourItemTableViewController.h"
 #import "DetailsViewController.h"
+#import "AllItemsTableViewCell.h"
 
 @interface YourItemTableViewController ()
 {
     FIRDatabaseHandle _refHandle;
+    UIImage *itemImage;
 }
 
 @end
@@ -28,7 +30,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.navigationController setNavigationBarHidden:NO];
     _objects = [[NSMutableArray alloc] init];
-    [_clientTable registerClass:UITableViewCell.self forCellReuseIdentifier:@"tableViewCell"];
+    //[_clientTable registerClass:UITableViewCell.self forCellReuseIdentifier:@"tableViewCell"];
     [self configureDatabase];
 }
 
@@ -65,14 +67,32 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Dequeue cell
-    UITableViewCell *cell = [_clientTable dequeueReusableCellWithIdentifier:@"tableViewCell" forIndexPath:indexPath];
+    //UITableViewCell *cell = [_clientTable dequeueReusableCellWithIdentifier:@"tableViewCell" forIndexPath:indexPath];
+    AllItemsTableViewCell *cell = [_clientTable dequeueReusableCellWithIdentifier:@"tableViewCell" forIndexPath:indexPath];
     // Unpack message from Firebase DataSnapshot
     FIRDataSnapshot *objectSnapshot = _objects[indexPath.row];
     NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
     NSString *name = object[@"title"];
     NSString *price = object[@"price"];
-    cell.textLabel.text = name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", price];
+    FIRStorage *storage = [FIRStorage storage];
+    // Create a storage reference from our storage service
+    FIRStorageReference *storageRef = [storage referenceForURL:object[@"imageUrl"]];
+    
+    [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+        if (error != nil) {
+            // Uh-oh, an error occurred!
+            NSLog(@"Error Downloading: %@", error);
+        } else {
+            cell.itemImage.image = [UIImage imageWithData:data];
+            itemImage = [UIImage imageWithData:data];
+            
+        }
+    }];
+    
+    
+    cell.itemNameLabel.text = name;
+    cell.itemPriceLabel.text = [NSString stringWithFormat:@"$%@", price];
+    cell.itemShippingLabel.text = @"$1 Shipping";
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,6 +101,7 @@
     NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     DetailsViewController *destViewController = (DetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
+    destViewController.itemImage = itemImage;
     destViewController.titled = object[@"title"];
     destViewController.dataDescription = object[@"description"];
     destViewController.condition = object[@"condition"];
