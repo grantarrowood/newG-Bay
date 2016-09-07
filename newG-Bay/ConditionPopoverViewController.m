@@ -21,6 +21,8 @@
     self.pickerData = @[@"New", @"Like New", @"Verry Good", @"Good", @"Horrible"];
     self.conditionPickerView.delegate = self;
     self.conditionPickerView.dataSource = self;
+    self.conditionString = self.pickerData[0];
+
     
 }
 

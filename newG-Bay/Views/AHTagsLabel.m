@@ -96,6 +96,7 @@
         AHTagView *view = [AHTagView new];
         view.label.attributedText = [AHTagsLabel attributedString:title];
         view.label.backgroundColor = color;
+        view.label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
         
         CGSize size = [view systemLayoutSizeFittingSize:view.frame.size
                           withHorizontalFittingPriority:UILayoutPriorityFittingSizeLevel
@@ -128,7 +129,7 @@
     style.tailIndent = 10.0f;
     NSDictionary *attributes = @{
                                  NSParagraphStyleAttributeName  : style,
-                                 NSFontAttributeName            : [UIFont boldSystemFontOfSize:14.0]
+                                 NSFontAttributeName            : [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f]
                                  };
     NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:string
                                                                          attributes:attributes];

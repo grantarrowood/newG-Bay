@@ -66,6 +66,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"leftMenuCell"];
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0f];
     if ([FIRAuth auth].currentUser.uid != nil) {
         switch (indexPath.row)
         {
@@ -163,7 +164,7 @@
                 break;
                 
             case 5:
-                vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"ItemNew"];
+                vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"NewItem"];
                 break;
             
             case 6:

@@ -17,13 +17,16 @@
 #import "TGAnnotation.h"
 #import "MainViewController.h"
 #import "SlideNavigationController.h"
+#import "BraintreeCore.h"
+#import "BraintreeUI.h"
 #import "SWBufferedToast.h"
 
-@interface DetailsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MKMapViewDelegate,TGFoursquareLocationDetailDelegate, KIImagePagerDelegate, KIImagePagerDataSource, CLLocationManagerDelegate>
+@interface DetailsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MKMapViewDelegate,TGFoursquareLocationDetailDelegate, KIImagePagerDelegate, KIImagePagerDataSource, CLLocationManagerDelegate, BTDropInViewControllerDelegate>
 
 
 @property (nonatomic, strong) SWBufferedToast *noticeToast;
 
+@property (nonatomic, strong) BTAPIClient *braintreeClient;
 
 @property(nonatomic) NSString* titled;
 @property(nonatomic) NSMutableString* dataDescription;

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '351992A59AC62181B0C7C590A4426AE9'
+               BlueprintIdentifier = '8139C212A2DE2536F505EB05955C9AFF'
                BlueprintName = 'SWBufferedToast-SWBufferedToast'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SWBufferedToast.bundle'>
