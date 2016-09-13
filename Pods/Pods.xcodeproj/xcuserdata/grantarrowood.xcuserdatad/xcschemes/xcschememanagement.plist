@@ -29,6 +29,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JVMenuPopover-JVMenuPopover.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JVMenuPopover.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-newG-Bay.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,17 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45F90701FA91A66A438103654995D3DE</key>
+		<key>810151C4ED7FBEF442A632197B4F147D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8139C212A2DE2536F505EB05955C9AFF</key>
+		<key>82810123E09385579D18B50FB470DAAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>87BA4B5AD8F1875ED6B9ED8FFB3829A4</key>
+		<key>90D010ED87FEEDA846E164605F36A0D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93A3907E9E45EFAFA3506A1412AA6E09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>974C9024505620A4A93E47C5435B01F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +107,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D677A50EA7DE17FE447419E6919214C9</key>
+		<key>B2B4E371D019FC001D6300B7D1E336B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

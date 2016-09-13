@@ -29,13 +29,13 @@
     if (self = [super initWithFrame:frame]) {
         self.textLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         self.textLabel.backgroundColor = [UIColor clearColor];
-        self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17.0f];
+        self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0f];
         self.textLabel.textColor = [UIColor blackColor];
         self.textLabel.translatesAutoresizingMaskIntoConstraints = NO;
 
         self.textView=[[UITextView alloc] initWithFrame:CGRectZero];
         self.textView.frame = CGRectMake(100, 5, 255, 120);
-        self.textView.backgroundColor = [UIColor whiteColor];
+        self.textView.backgroundColor = [UIColor clearColor];
         self.textView.delegate = self;
         self.textView.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0f];
         self.textView.editable = YES;
@@ -128,9 +128,10 @@
     } else {
         self.item.value = nil;
     }
+    
 }
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+- (BOOL)textField:(UITextField *)textField shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     return YES;
 }
 

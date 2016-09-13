@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UIImage+JVMenuCategory.h"
 
 @import UIKit;
 @import Firebase;
@@ -21,26 +22,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [FIRApp configure];
-    
+    self.window.backgroundColor = [UIColor colorWithPatternImage:[[UIImage imageNamed:@"app_bg1.jpg"] imageScaledToWidth:self.window.frame.size.width]];
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                              bundle: nil];
     
     LeftMenuViewController *leftMenu = (LeftMenuViewController*)[mainStoryboard
                                                                  instantiateViewControllerWithIdentifier: @"LeftMenuViewController"];
     
-//    RightMenuViewController *rightMenu = (RightMenuViewController*)[mainStoryboard
-//                                                                    instantiateViewControllerWithIdentifier: @"RightMenuViewController"];
+    //    RightMenuViewController *rightMenu = (RightMenuViewController*)[mainStoryboard
+    //                                                                    instantiateViewControllerWithIdentifier: @"RightMenuViewController"];
     
-   // [SlideNavigationController sharedInstance].rightMenu = rightMenu;
+    // [SlideNavigationController sharedInstance].rightMenu = rightMenu;
     [SlideNavigationController sharedInstance].leftMenu = leftMenu;
     [SlideNavigationController sharedInstance].menuRevealAnimationDuration = .18;
     
     // Creating a custom bar button for right menu
-//    UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-//    [button setImage:[UIImage imageNamed:@"gear"] forState:UIControlStateNormal];
-//    [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-//    [SlideNavigationController sharedInstance].rightBarButtonItem = rightBarButtonItem;
+    //    UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    //    [button setImage:[UIImage imageNamed:@"gear"] forState:UIControlStateNormal];
+    //    [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
+    //    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    //    [SlideNavigationController sharedInstance].rightBarButtonItem = rightBarButtonItem;
     
     [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidClose object:nil queue:nil usingBlock:^(NSNotification *note) {
         NSString *menu = note.userInfo[@"menu"];

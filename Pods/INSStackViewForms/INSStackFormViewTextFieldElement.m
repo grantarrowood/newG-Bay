@@ -29,13 +29,13 @@
     if (self = [super initWithFrame:frame]) {
         self.textLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         self.textLabel.backgroundColor = [UIColor clearColor];
-        self.textLabel.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+        self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0f];
         self.textLabel.textColor = [UIColor blackColor];
         self.textLabel.translatesAutoresizingMaskIntoConstraints = NO;
 
         self.textField = [[UITextField alloc] initWithFrame:CGRectZero];
         self.textField.backgroundColor = [UIColor clearColor];
-        self.textField.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+        self.textField.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0f];
         self.textField.textColor = [UIColor blackColor];
         self.textField.delegate = self;
         self.textField.translatesAutoresizingMaskIntoConstraints = NO;

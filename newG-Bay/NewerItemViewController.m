@@ -8,20 +8,33 @@
 
 #import "NewerItemViewController.h"
 #import "ConditionPopoverViewController.h"
+#import "LeftMenuViewController.h"
+#import "UIImage+JVMenuCategory.h"
+
 
 @interface NewerItemViewController () <subViewDelegate> {
     NSURL *imageFile;
     NSString *filePath;
     NSData* pictureData;
     
+    NSArray* conditionArray;
+    NSArray* stateArray;
+    NSArray* paymentMethodArray;
+    NSArray* handlingTimeArray;
+    NSArray* returnsArray;
+    NSArray* deliveryTypeArray;
+    NSArray* shippingServiceArray;
+    NSString* popoverIdentifier;
+    
 }
 
 @end
 
-@implementation NewerItemViewController 
+@implementation NewerItemViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[[UIImage imageNamed:@"app_bg1.jpg"] imageScaledToWidth:self.view.frame.size.width]];
     _objects = [[NSMutableArray alloc] init];
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/objects"];
     [ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
@@ -30,13 +43,17 @@
         NSLog(@"%@", error.localizedDescription);
     }];
     self.storageRef = [[FIRStorage storage] referenceForURL:@"gs://g-bay-70b9c.appspot.com"];
-
     [self.stackFormView addSections:[self sectionsForStackFormView:self.stackFormView]];
+    conditionArray = [[NSArray alloc] initWithObjects:@"New", @"Like New", @"Very Good", @"Good", @"Acceptable", nil];
+    stateArray = [[NSArray alloc] initWithObjects:@"Alabama", @"Alaska", @"Arizona", @"Arkansas", @"California", @"Colorado", @"Connecticut", @"Delaware", @"Florida", @"Georgia", @"Hawaii", @"Idaho", @"Illinois", @"Indiana", @"Iowa", @"Kansas", @"Kentucky", @"Louisiana", @"Maine", @"Maryland", @"Massachusetts", @"Michigan", @"Minnesota", @"Mississippi", @"Missouri", @"Montana", @"Nebraska", @"Nevada", @"New Hampshire", @"New Jersey", @"New Mexico", @"New York", @"North Carolina", @"North Dakota", @"Ohio", @"Oklahoma", @"Oregon", @"Pennsylvania", @"Rhode Island", @"South Carolina", @"South Dakota", @"Tennessee", @"Texas", @"Utah", @"Vermont", @"Virginia", @"Washington", @"West Virginia", @"Wisconsin", @"Wyoming", nil];
     
-    //[self.stackFormView insertItems:@[item] toSection:self.stackFormView.sections[0] atIndex:2];
+    paymentMethodArray = [[NSArray alloc] initWithObjects:@"PayPal", @"Visa/MasterCard", @"Discover", @"American Express", @"Cash", nil];
+    handlingTimeArray = [[NSArray alloc] initWithObjects:@"1 Buisness Day", @"2 Buisness Days", @"3 Buisness Days", @"5 Buisness Days", @"7 Buisness Days", @"10 Buisness Days", @"15 Buisness Days", @"20 Buisness Days", @"30 Buisness Days", nil];
     
-
-
+    returnsArray = [[NSArray alloc] initWithObjects:@"Accepted", @"Denied", nil];
+    deliveryTypeArray = [[NSArray alloc] initWithObjects:@"Shipping", @"Local Pickup", nil];
+    shippingServiceArray = [[NSArray alloc] initWithObjects:@"Expedited (1 to 4 Buisness Days)", @"Standard (2 to 6 Buisness Days)", @"Economy (2 to 9 Buisness Days)", nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,13 +70,16 @@
         sectionBuilder.showItemSeparators = YES;
         sectionBuilder.separatorInset = UIEdgeInsetsMake(0, 12, 0, 0);
         sectionBuilder.identifier = @"ItemDetails";
-
+        
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
             builder.itemClass = [INSStackFormViewLabelElement class];
             builder.title = @"Item Details";
             builder.height = @56;
             builder.actionBlock = nil;
+            builder.identifier = @"Details";
+            builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
+            };
         }];
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
@@ -99,15 +119,35 @@
         }];
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
-            builder.itemClass = [INSStackFormViewTextFieldElement class];
+            builder.itemClass = [INSStackFormViewLabelElement class];
+            builder.title = @"Condition:";
             builder.identifier = @"Condition";
-            builder.title = @"Condition";
-            builder.subtitle = nil;
-            builder.height = @50;
-            builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
-                view.textField.placeholder = @"Condition";
+            builder.height = @56;
+            builder.configurationBlock = ^(INSStackFormViewLabelElement *view) {
+                [view.contentView addConstraint:[NSLayoutConstraint constraintWithItem:view.textLabel
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:view.contentView
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                            multiplier:1.f constant:10.f]];
+            };
+            builder.actionBlock = ^(INSStackFormViewTextFieldElement *view) {
+                NSLog(@"Action");
+                popoverIdentifier = @"Condition";
+                [SlideNavigationController sharedInstance].leftMenu.view.alpha = 0;
+                [self.navigationController setNavigationBarHidden:YES animated:YES];
+                [self.view addSubview:self.containerView];
+                
+                // creating menu
+                self.menuPopover = [self menuPopover:conditionArray];
+                
+                [self addObservers];
+                
+                [self showMenu];
+                
             };
         }];
+        
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
             builder.itemClass = [INSStackFormViewBaseElement class];
@@ -134,7 +174,7 @@
     
     
     
-//********************************************************************************************************************************
+    //********************************************************************************************************************************
     
     
     
@@ -143,7 +183,7 @@
         sectionBuilder.showItemSeparators = YES;
         sectionBuilder.separatorInset = UIEdgeInsetsMake(0, 12, 0, 0);
         sectionBuilder.identifier = @"Address";
-
+        
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
             builder.itemClass = [INSStackFormViewLabelElement class];
@@ -172,25 +212,42 @@
             builder.height = @50;
             builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
                 view.textField.placeholder = @"City";
-                view.textField.keyboardType = UIKeyboardTypeNumberPad;
             };
         }];
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
-            builder.itemClass = [INSStackFormViewTextFieldElement class];
+            builder.itemClass = [INSStackFormViewLabelElement class];
+            builder.title = @"State:";
             builder.identifier = @"State";
-            builder.title = @"State";
-            builder.subtitle = nil;
-            builder.height = @50;
-            builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
-                view.textField.placeholder = @"State";
+            builder.height = @56;
+            builder.configurationBlock = ^(INSStackFormViewLabelElement *view) {
+                [view.contentView addConstraint:[NSLayoutConstraint constraintWithItem:view.textLabel
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:view.contentView
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                            multiplier:1.f constant:10.f]];
+            };
+            builder.actionBlock = ^(INSStackFormViewTextFieldElement *view) {
+                NSLog(@"Action");
+                popoverIdentifier = @"State";
+                [SlideNavigationController sharedInstance].leftMenu.view.alpha = 0;
+                [self.navigationController setNavigationBarHidden:YES animated:YES];
+                [self.view addSubview:self.containerView];
+                
+                // creating menu
+                self.menuPopover = [self menuPopover:stateArray];
+                
+                [self addObservers];
+                
+                [self showMenu];
             };
         }];
         
     }]];
     
     
-//********************************************************************************************************************************
+    //********************************************************************************************************************************
     
     
     
@@ -207,47 +264,97 @@
             builder.userInteractionEnabled = NO;
             builder.actionBlock = nil;
         }];
-        
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
-            builder.itemClass = [INSStackFormViewTextFieldElement class];
-            //Drop Down
-            builder.title = @"Payment Method";
+            builder.itemClass = [INSStackFormViewLabelElement class];
+            builder.title = @"Payment Method:";
             builder.identifier = @"PaymentMethod";
-            builder.subtitle = nil;
-            builder.height = @50;
-            builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
-                view.textField.placeholder = @"Payment Method";
+            builder.height = @56;
+            builder.configurationBlock = ^(INSStackFormViewLabelElement *view) {
+                [view.contentView addConstraint:[NSLayoutConstraint constraintWithItem:view.textLabel
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:view.contentView
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                            multiplier:1.f constant:10.f]];
+            };
+            builder.actionBlock = ^(INSStackFormViewTextFieldElement *view) {
+                NSLog(@"Action");
+                popoverIdentifier = @"PaymentMethod";
+                [SlideNavigationController sharedInstance].leftMenu.view.alpha = 0;
+                [self.navigationController setNavigationBarHidden:YES animated:YES];
+                [self.view addSubview:self.containerView];
+                
+                // creating menu
+                self.menuPopover = [self menuPopover:paymentMethodArray];
+                
+                [self addObservers];
+                
+                [self showMenu];
             };
         }];
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
-            builder.itemClass = [INSStackFormViewTextFieldElement class];
-            //Drop Down
+            builder.itemClass = [INSStackFormViewLabelElement class];
+            builder.title = @"Handling Time:";
             builder.identifier = @"HandlingTime";
-            builder.title = @"Handling Time";
-            builder.subtitle = nil;
-            builder.height = @50;
-            builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
-                view.textField.placeholder = @"Handling Time";
+            builder.height = @56;
+            builder.configurationBlock = ^(INSStackFormViewLabelElement *view) {
+                [view.contentView addConstraint:[NSLayoutConstraint constraintWithItem:view.textLabel
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:view.contentView
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                            multiplier:1.f constant:10.f]];
+            };
+            builder.actionBlock = ^(INSStackFormViewTextFieldElement *view) {
+                NSLog(@"Action");
+                popoverIdentifier = @"HandlingTime";
+                [SlideNavigationController sharedInstance].leftMenu.view.alpha = 0;
+                [self.navigationController setNavigationBarHidden:YES animated:YES];
+                [self.view addSubview:self.containerView];
+                
+                // creating menu
+                self.menuPopover = [self menuPopover:handlingTimeArray];
+                
+                [self addObservers];
+                
+                [self showMenu];
             };
         }];
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
-            builder.itemClass = [INSStackFormViewTextFieldElement class];
-            //Drop Down
+            builder.itemClass = [INSStackFormViewLabelElement class];
+            builder.title = @"Returns:";
             builder.identifier = @"Returns";
-            builder.title = @"Returns";
-            builder.subtitle = nil;
-            builder.height = @50;
-            builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
-                view.textField.placeholder = @"Returns";
+            builder.height = @56;
+            builder.configurationBlock = ^(INSStackFormViewLabelElement *view) {
+                [view.contentView addConstraint:[NSLayoutConstraint constraintWithItem:view.textLabel
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:view.contentView
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                            multiplier:1.f constant:10.f]];
+            };
+            builder.actionBlock = ^(INSStackFormViewTextFieldElement *view) {
+                NSLog(@"Action");
+                popoverIdentifier = @"Returns";
+                [SlideNavigationController sharedInstance].leftMenu.view.alpha = 0;
+                [self.navigationController setNavigationBarHidden:YES animated:YES];
+                [self.view addSubview:self.containerView];
+                
+                // creating menu
+                self.menuPopover = [self menuPopover:returnsArray];
+                
+                [self addObservers];
+                
+                [self showMenu];
             };
         }];
         
     }]];
-
     
-//********************************************************************************************************************************
+    
+    //********************************************************************************************************************************
     
     
     
@@ -259,23 +366,44 @@
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
             builder.itemClass = [INSStackFormViewLabelElement class];
-            builder.title = @"Shipping or Pickup";
+            builder.title = @"Delivery Type";
             builder.height = @56;
             builder.userInteractionEnabled = NO;
             builder.actionBlock = nil;
         }];
         
+        
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
-            builder.itemClass = [INSStackFormViewTextFieldElement class];
-            //Drop Down
-            builder.title = @"Type of Delivery";
+            builder.itemClass = [INSStackFormViewLabelElement class];
+            builder.title = @"Type of Delivery:";
             builder.identifier = @"DeliveryType";
-            builder.subtitle = nil;
-            builder.height = @50;
-            builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
-                view.textField.placeholder = @"Type of Delivery";
+            builder.height = @56;
+            builder.configurationBlock = ^(INSStackFormViewLabelElement *view) {
+                [view.contentView addConstraint:[NSLayoutConstraint constraintWithItem:view.textLabel
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:view.contentView
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                            multiplier:1.f constant:10.f]];
+            };
+            builder.actionBlock = ^(INSStackFormViewTextFieldElement *view) {
+                NSLog(@"Action");
+                popoverIdentifier = @"DeliveryType";
+                [SlideNavigationController sharedInstance].leftMenu.view.alpha = 0;
+                [self.navigationController setNavigationBarHidden:YES animated:YES];
+                [self.view addSubview:self.containerView];
+                
+                // creating menu
+                self.menuPopover = [self menuPopover:deliveryTypeArray];
+                
+                [self addObservers];
+                
+                [self showMenu];
             };
         }];
+        
+        
+        
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
             builder.itemClass = [INSStackFormViewTextFieldElement class];
@@ -289,15 +417,44 @@
             };
         }];
         
+        //        [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
+        //            builder.itemClass = [INSStackFormViewTextFieldElement class];
+        //            //Drop Down
+        //            builder.identifier = @"ShippingService";
+        //            builder.title = @"Shipping Service";
+        //            builder.subtitle = nil;
+        //            builder.height = @50;
+        //            builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
+        //                view.textField.placeholder = @"Shipping Time";
+        //            };
+        //        }];
+        
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
-            builder.itemClass = [INSStackFormViewTextFieldElement class];
-            //Drop Down
-            builder.identifier = @"Time";
-            builder.title = @"Shipping Time";
-            builder.subtitle = nil;
-            builder.height = @50;
-            builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
-                view.textField.placeholder = @"Shipping Time";
+            builder.itemClass = [INSStackFormViewLabelElement class];
+            builder.title = @"Shipping Service:";
+            builder.identifier = @"ShippingService";
+            builder.height = @56;
+            builder.configurationBlock = ^(INSStackFormViewLabelElement *view) {
+                [view.contentView addConstraint:[NSLayoutConstraint constraintWithItem:view.textLabel
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:view.contentView
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                            multiplier:1.f constant:10.f]];
+            };
+            builder.actionBlock = ^(INSStackFormViewTextFieldElement *view) {
+                NSLog(@"Action");
+                popoverIdentifier = @"ShippingService";
+                [SlideNavigationController sharedInstance].leftMenu.view.alpha = 0;
+                [self.navigationController setNavigationBarHidden:YES animated:YES];
+                [self.view addSubview:self.containerView];
+                
+                // creating menu
+                self.menuPopover = [self menuPopover:shippingServiceArray];
+                
+                [self addObservers];
+                
+                [self showMenu];
             };
         }];
         
@@ -336,42 +493,42 @@
                                          NSMutableDictionary *object = objectSnapshot.value;
                                          NSString *objectId = [NSString stringWithFormat:@"%lu", (unsigned long)object.count];
                                          if (metadataPath == nil) {
-                                             [self addObject:@{@"userId": [FIRAuth auth].currentUser.uid, @"title": [view.stackFormView firstItemWithIdentifier:@"ItemName"].value, @"description": [view.stackFormView firstItemWithIdentifier:@"Description"].value, @"condition": [view.stackFormView itemWithIdentifier:@"Condition" inSection:[view.stackFormView sectionWithIdentifier:@"ItemDetails"]].value, @"price": [view.stackFormView firstItemWithIdentifier:@"Price"].value, @"category": self.categoryString, @"latitude": [NSString stringWithFormat:@"%f", loc.coordinate.latitude], @"longitude": [NSString stringWithFormat:@"%f", loc.coordinate.longitude], @"objectId": objectId} withObjectId:objectId];
+                                             [self addObject:@{@"userId": [FIRAuth auth].currentUser.uid, @"title": [view.stackFormView firstItemWithIdentifier:@"ItemName"].value, @"description": [view.stackFormView firstItemWithIdentifier:@"Description"].value, @"condition": [view.stackFormView firstItemWithIdentifier:@"Condition"].value, @"price": [view.stackFormView firstItemWithIdentifier:@"Price"].value, @"category": self.categoryString, @"latitude": [NSString stringWithFormat:@"%f", loc.coordinate.latitude], @"longitude": [NSString stringWithFormat:@"%f", loc.coordinate.longitude], @"objectId": objectId} withObjectId:objectId];
                                          } else {
                                              [self addObject:@{@"userId": [FIRAuth auth].currentUser.uid, @"title": [view.stackFormView firstItemWithIdentifier:@"ItemName"].value, @"description": [view.stackFormView firstItemWithIdentifier:@"Description"].value, @"condition": [view.stackFormView firstItemWithIdentifier:@"Condition"].value, @"price": [view.stackFormView firstItemWithIdentifier:@"Price"].value, @"category": self.categoryString, @"latitude": [NSString stringWithFormat:@"%f", loc.coordinate.latitude], @"longitude": [NSString stringWithFormat:@"%f", loc.coordinate.longitude], @"objectId": objectId, @"imageUrl": metadataPath} withObjectId:objectId];
                                          }
                                      }
                                  }];
-
+                    
                     
                     
                 }
             };
             builder.validationBlock = ^BOOL(__kindof INSStackFormViewBaseElement *view, INSStackFormItem *item, NSString **errorMessage) {
-//                if (![view.stackFormView firstItemWithIdentifier:@"DeliveryType"].value) {
-//                    *errorMessage = @"Delivery Type can't be nil.";
-//                    return NO;
-//                }
-                if (![view.stackFormView firstItemWithIdentifier:@"ShippingCosts"].value) {
+                if (![view.stackFormView firstItemWithIdentifier:@"DeliveryType"].value) {
+                    *errorMessage = @"Delivery Type can't be nil.";
+                    return NO;
+                }
+                else if (![view.stackFormView firstItemWithIdentifier:@"ShippingCosts"].value) {
                     *errorMessage = @"Shipping Costs can't be nil";
                     return NO;
                 }
-//                else if (![view.stackFormView firstItemWithIdentifier:@"Time"].value) {
-//                    *errorMessage = @"Time can't be nil";
-//                    return NO;
-//                }
-//                else if (![view.stackFormView firstItemWithIdentifier:@"PaymentMethod"].value) {
-//                    *errorMessage = @"Payment Method can't be nil.";
-//                    return NO;
-//                }
-//                else if (![view.stackFormView firstItemWithIdentifier:@"HandlingTime"].value) {
-//                    *errorMessage = @"Handling Time can't be nil";
-//                    return NO;
-//                }
-//                else if (![view.stackFormView firstItemWithIdentifier:@"Returns"].value) {
-//                    *errorMessage = @"Returns can't be nil";
-//                    return NO;
-//                }
+                else if (![view.stackFormView firstItemWithIdentifier:@"ShippingService"].value) {
+                    *errorMessage = @"Shipping Service can't be nil";
+                    return NO;
+                }
+                else if (![view.stackFormView firstItemWithIdentifier:@"PaymentMethod"].value) {
+                    *errorMessage = @"Payment Method can't be nil.";
+                    return NO;
+                }
+                else if (![view.stackFormView firstItemWithIdentifier:@"HandlingTime"].value) {
+                    *errorMessage = @"Handling Time can't be nil";
+                    return NO;
+                }
+                else if (![view.stackFormView firstItemWithIdentifier:@"Returns"].value) {
+                    *errorMessage = @"Returns can't be nil";
+                    return NO;
+                }
                 else if (![view.stackFormView firstItemWithIdentifier:@"Street"].value) {
                     *errorMessage = @"Street can't be nil.";
                     return NO;
@@ -392,29 +549,27 @@
                     *errorMessage = @"Price can't be nil";
                     return NO;
                 }
-                //                else if (![view.stackFormView firstItemWithIdentifier:@"Condition"].value) {
-                //                    *errorMessage = @"Condition can't be nil";
-                //                    return NO;
-                //                }
+                else if (![view.stackFormView firstItemWithIdentifier:@"Condition"].value) {
+                    *errorMessage = @"Condition can't be nil";
+                    return NO;
+                }
                 else if (![view.stackFormView firstItemWithIdentifier:@"Description"].value) {
                     *errorMessage = @"Description can't be nil";
                     return NO;
                 }
-                //                else if (![view.stackFormView firstItemWithIdentifier:@"Category"].value) {
-                //                    *errorMessage = @"Category can't be nil";
-                //                    return NO;
-                //                }
-
-
+                else if (!self.categoryString) {
+                    *errorMessage = @"Category can't be nil";
+                    return NO;
+                }
+                
+                
                 return YES;
             };
         }];
         
         
     }]];
-
-    
-    
+        
     return sections;
 }
 
@@ -428,6 +583,171 @@
 -(void)stringFromSubview:(id)sender {
     NSLog(@"Hello");
     self.categoryString = sender;
+}
+
+
+
+
+
+
+
+
+- (NewerItemViewController *)rootController
+{
+    if (!_rootController)
+    {
+        _rootController = [[NewerItemViewController alloc] init];
+    }
+    
+    return _rootController;
+}
+
+
+- (JVMenuItems *)menuItems:(NSArray *)menuTitles
+{
+    if(!_menuItems)
+    {
+        _menuItems = [[JVMenuItems alloc] initWithMenuImages:nil
+                                                  menuTitles:menuTitles
+                                        menuCloseButtonImage:[UIImage imageNamed:@"cancel_filled-50"]];
+        _menuItems.menuSlideInAnimation = YES;
+    }
+    
+    return _menuItems;
+}
+
+
+- (JVMenuPopoverView *)menuPopover:(NSArray *)menuTitles
+{
+    if(!_menuPopover)
+    {
+        _menuPopover = [[JVMenuPopoverView alloc] initWithFrame:self.view.frame menuItems:[self menuItems:menuTitles]];
+        _menuPopover.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+        _menuPopover.delegate = self;
+    }
+    
+    return _menuPopover;
+}
+
+
+- (UIView *)containerView
+{
+    if (!_containerView)
+    {
+        _containerView = [[UIView alloc] initWithFrame:self.containerViewFrame];
+    }
+    
+    return _containerView;
+}
+
+
+- (CGRect)containerViewFrame
+{
+    return CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+}
+
+
+#pragma mark - Menu Helper Functions
+
+- (void)showMenu
+{
+    [self.menuPopover showMenuWithController:self];
+}
+
+
+#pragma mark - Menu Delegate
+
+- (void)menuPopoverDidSelectViewControllerAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [SlideNavigationController sharedInstance].leftMenu.view.alpha = 1;
+    [self.containerView removeFromSuperview];
+    self.menuPopover = nil;
+    self.menuItems = nil;
+    if ([popoverIdentifier isEqualToString:@"Condition"]) {
+        [self.stackFormView firstItemWithIdentifier:@"Condition"].value = conditionArray[indexPath.row];
+        [self.stackFormView firstItemWithIdentifier:@"Condition"].title = [NSString stringWithFormat:@"Condition: %@",conditionArray[indexPath.row]];
+        [self.stackFormView refreshItems:@[[self.stackFormView firstItemWithIdentifier:@"Condition"]]];
+    } else if ([popoverIdentifier isEqualToString:@"State"]) {
+        [self.stackFormView firstItemWithIdentifier:@"State"].value = stateArray[indexPath.row];
+        [self.stackFormView firstItemWithIdentifier:@"State"].title = [NSString stringWithFormat:@"State: %@",stateArray[indexPath.row]];
+        [self.stackFormView refreshItems:@[[self.stackFormView firstItemWithIdentifier:@"State"]]];
+    } else if ([popoverIdentifier isEqualToString:@"PaymentMethod"]) {
+        [self.stackFormView firstItemWithIdentifier:@"PaymentMethod"].value = paymentMethodArray[indexPath.row];
+        [self.stackFormView firstItemWithIdentifier:@"PaymentMethod"].title = [NSString stringWithFormat:@"Payment Method: %@",paymentMethodArray[indexPath.row]];
+        [self.stackFormView refreshItems:@[[self.stackFormView firstItemWithIdentifier:@"PaymentMethod"]]];
+    } else if ([popoverIdentifier isEqualToString:@"HandlingTime"]) {
+        [self.stackFormView firstItemWithIdentifier:@"HandlingTime"].value = handlingTimeArray[indexPath.row];
+        [self.stackFormView firstItemWithIdentifier:@"HandlingTime"].title = [NSString stringWithFormat:@"Handling Time: %@",handlingTimeArray[indexPath.row]];
+        [self.stackFormView refreshItems:@[[self.stackFormView firstItemWithIdentifier:@"HandlingTime"]]];
+    } else if ([popoverIdentifier isEqualToString:@"Returns"]) {
+        [self.stackFormView firstItemWithIdentifier:@"Returns"].value = returnsArray[indexPath.row];
+        [self.stackFormView firstItemWithIdentifier:@"Returns"].title = [NSString stringWithFormat:@"Returns: %@", returnsArray[indexPath.row]];
+        [self.stackFormView refreshItems:@[[self.stackFormView firstItemWithIdentifier:@"Returns"]]];
+    } else if ([popoverIdentifier isEqualToString:@"DeliveryType"]) {
+        [self.stackFormView firstItemWithIdentifier:@"DeliveryType"].value = deliveryTypeArray[indexPath.row];
+        [self.stackFormView firstItemWithIdentifier:@"DeliveryType"].title = [NSString stringWithFormat:@"Type of Delivery: %@", deliveryTypeArray[indexPath.row]];
+        [self.stackFormView refreshItems:@[[self.stackFormView firstItemWithIdentifier:@"DeliveryType"]]];
+    } else if ([popoverIdentifier isEqualToString:@"ShippingService"]) {
+        [self.stackFormView firstItemWithIdentifier:@"ShippingService"].value = shippingServiceArray[indexPath.row];
+        [self.stackFormView firstItemWithIdentifier:@"ShippingService"].title = [NSString stringWithFormat:@"Shipping Service: %@", shippingServiceArray[indexPath.row]];
+        [self.stackFormView refreshItems:@[[self.stackFormView firstItemWithIdentifier:@"ShippingService"]]];
+    }
+    
+}
+
+
+- (void)menuPopoverViewWillShow
+{
+    // hiding the navigation item
+    //[self hideNavigationItem];
+}
+
+
+- (void)menuPopoverViewWillHide
+{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [SlideNavigationController sharedInstance].leftMenu.view.alpha = 1;
+    [self.containerView removeFromSuperview];
+    self.menuItems = nil;
+    self.menuPopover = nil;
+}
+
+
+#pragma mark - Observers
+
+- (void)addObservers
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didDeviceOrientationChange:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+}
+
+
+- (void)didDeviceOrientationChange:(NSNotification *)notification
+{
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    self.view.frame = CGRectMake(0, 0, screenSize.width, screenSize.height);
+    
+    self.containerView.frame = self.containerViewFrame;
+    UIColor *firstColor = [UIColor colorWithHexString:@"52EDC7"];
+    UIColor *secondColor = [UIColor colorWithHexString:@"5AC8FB"];
+    [self.containerView gradientEffectWithFirstColor:firstColor secondColor:secondColor];
+    
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    if (!self.menuPopover.isHidden)
+    {
+        [self.menuPopover closeMenu];
+    }
+}
+
+
+-(void)aAction {
+    NSLog(@"Hello");
 }
 
 

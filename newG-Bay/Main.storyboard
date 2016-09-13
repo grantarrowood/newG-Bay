@@ -1403,17 +1403,25 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7G0-wJ-a5j" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="536" translatesAutoresizingMaskIntoConstraints="NO" id="swk-ID-hc6" customClass="INSStackFormView">
+                                    <view alpha="0.75" contentMode="scaleToFill" misplaced="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JH1-oV-hkT">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="536" translatesAutoresizingMaskIntoConstraints="NO" id="swk-ID-hc6" customClass="INSStackFormView">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="swk-ID-hc6" firstAttribute="top" secondItem="7G0-wJ-a5j" secondAttribute="top" id="6Iv-H8-zac"/>
+                                    <constraint firstAttribute="trailing" secondItem="JH1-oV-hkT" secondAttribute="trailing" id="8OQ-r0-d5p"/>
                                     <constraint firstAttribute="trailing" secondItem="swk-ID-hc6" secondAttribute="trailing" id="T6G-aT-MdK"/>
+                                    <constraint firstItem="JH1-oV-hkT" firstAttribute="leading" secondItem="7G0-wJ-a5j" secondAttribute="leading" id="aO6-bO-6o0"/>
+                                    <constraint firstAttribute="bottom" secondItem="JH1-oV-hkT" secondAttribute="bottom" id="ch0-Ab-7d0"/>
                                     <constraint firstAttribute="bottom" secondItem="swk-ID-hc6" secondAttribute="bottom" id="d9X-cN-BvZ"/>
                                     <constraint firstItem="swk-ID-hc6" firstAttribute="width" secondItem="7G0-wJ-a5j" secondAttribute="width" id="ruG-zH-HrB"/>
                                     <constraint firstItem="swk-ID-hc6" firstAttribute="leading" secondItem="7G0-wJ-a5j" secondAttribute="leading" id="tGR-cC-Ttq"/>
+                                    <constraint firstItem="JH1-oV-hkT" firstAttribute="top" secondItem="7G0-wJ-a5j" secondAttribute="top" id="xER-fl-QGy"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -1427,6 +1435,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RWw-nw-q2y"/>
                     <connections>
+                        <outlet property="alphaView" destination="JH1-oV-hkT" id="RpA-mp-0J4"/>
                         <outlet property="stackFormView" destination="swk-ID-hc6" id="sUY-BY-Izs"/>
                     </connections>
                 </viewController>
