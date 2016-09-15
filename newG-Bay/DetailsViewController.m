@@ -9,6 +9,7 @@
 #import "DetailsViewController.h"
 #import "AHTagTableViewCell.h"
 #import "TagGroups.h"
+#import <Social/Social.h>
 
 @interface DetailsViewController (){
     NSArray<NSArray<AHTag *> *> *_dataSource;
@@ -129,13 +130,16 @@
             return 100.0;
         }
     }
+    else if(indexPath.row == 4 || indexPath.row == 5) {
+        return 175.0f;
+    }
     else
         return 100.0f; //cell for comments, in reality the height has to be adjustable
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 7;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -234,16 +238,39 @@
         }
         return cell;
     }
-//    else if(indexPath.row == 4){
-//        TipCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tipCell"];
-//        
-//        if(cell == nil){
-//            cell = [TipCell tipCell];
-//            cell.titleLbl.text = @"Brian B. says:";
-//            cell.contentLbl.text = @"Awesome City and Country, great people...";
-//        }
-//        return cell;
-//    }
+    else if(indexPath.row == 4){
+        TipCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tipCell"];
+        
+        if(cell == nil){
+            cell = [TipCell tipCell];
+            cell.titleLbl.text = @"Prefrences:";
+            cell.contentLbl.text = [NSString stringWithFormat:@"Payment Method: %@\n\nHandling Time: %@\n\nReturns: %@", self.paymentMethod,self.handlingTime,self.returns];
+            cell.contentLbl.frame = CGRectMake(cell.contentLbl.frame.origin.x, cell.contentLbl.frame.origin.y, cell.contentLbl.frame.size.width, 120);
+        }
+        return cell;
+    }
+    else if(indexPath.row == 5){
+        TipCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tipCell"];
+        
+        if(cell == nil){
+            cell = [TipCell tipCell];
+            cell.titleLbl.text = @"Shipping/Handling:";
+            cell.contentLbl.text = [NSString stringWithFormat:@"Type of Delivery: %@\n\nShipping/Handling Cost: %@\n\nShipping Service: %@", self.deliveryType,self.shippingCosts,self.shippingService];
+            cell.contentLbl.frame = CGRectMake(cell.contentLbl.frame.origin.x, cell.contentLbl.frame.origin.y, cell.contentLbl.frame.size.width, 120);
+        }
+        return cell;
+    }
+    else if(indexPath.row == 6){
+        MediaCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell"];
+        
+        if(cell == nil){
+            cell = [MediaCell mediaCell];
+            cell.titleLbl.text = @"Share on Social Media:";
+            [cell.twitterButton addTarget:self action:@selector(twitterAction) forControlEvents:UIControlEventTouchUpInside];
+            [cell.faceBookButton addTarget:self action:@selector(facebookAction) forControlEvents:UIControlEventTouchUpInside];
+        }
+        return cell;
+    }
     else{
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reusable"];
         if (!cell) {
@@ -288,9 +315,12 @@
     imagePager.slideshowShouldCallScrollToDelegate = YES;
     
     //self.locationDetail.nbImages = [self.locationDetail.imagePager.dataSource.arrayWithImages count];
-    self.locationDetail.nbImages = 1;
+    if (_itemImage.count == 0) {
+        self.locationDetail.nbImages = 1;
+    } else {
+        self.locationDetail.nbImages = _itemImage.count;
+    }
     self.locationDetail.currentImage = 0;
-    //[imagePager updateCaptionLabelForImageAtIndex:self.locationDetail.currentImage];
 }
 
 - (void)locationDetail:(TGFoursquareLocationDetail *)locationDetail tableViewDidLoad:(UITableView *)tableView
@@ -344,10 +374,10 @@
 #pragma mark - KIImagePager DataSource
 - (NSArray *) arrayWithImages
 {
-    if (_itemImage == nil) {
+    if (_itemImage.count == 0) {
         return @[@"https://irs2.4sqi.net/img/general/500x500/2514_BvEN_Q6lG50xZQ9TIG0XY8eYXzF3USSMdtTmxHCmqnE.jpg"];
     }
-    return @[_itemImage];
+    return _itemImage;
 }
 
 - (UIViewContentMode) contentModeForImage:(NSUInteger)image
@@ -494,5 +524,26 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)twitterAction {
+    SLComposeViewController *tweetSheet = [SLComposeViewController
+                                           composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [tweetSheet setInitialText:[NSString stringWithFormat:@"Check out %@ on G-Bay!", self.titled]];
+    if (self.itemImage.count == 0) {
+        [tweetSheet addImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://irs2.4sqi.net/img/general/500x500/2514_BvEN_Q6lG50xZQ9TIG0XY8eYXzF3USSMdtTmxHCmqnE.jpg"]]]];
+    } else {
+        [tweetSheet addImage:self.itemImage[0]];
+    }
+    [self presentViewController:tweetSheet animated:YES completion:nil];
+}
+-(void)facebookAction {
+    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [controller setInitialText:[NSString stringWithFormat:@"Check out %@ on G-Bay!", self.titled]];
+    if (self.itemImage.count == 0) {
+        [controller addImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://irs2.4sqi.net/img/general/500x500/2514_BvEN_Q6lG50xZQ9TIG0XY8eYXzF3USSMdtTmxHCmqnE.jpg"]]]];
+    } else {
+        [controller addImage:self.itemImage[0]];
+    }
+    [self presentViewController:controller animated:YES completion:Nil];
+}
 
 @end

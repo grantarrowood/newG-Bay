@@ -13,7 +13,8 @@
 @interface AllItemsTableViewController ()
 {
     FIRDatabaseHandle _refHandle;
-    UIImage *itemImage;
+    NSArray *itemImage;
+    BOOL firstItem;
 }
 
 @end
@@ -48,35 +49,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.navigationController setNavigationBarHidden:NO];
     _objects = [[NSMutableArray alloc] init];
-    //[_clientTable registerClass:AllItemsTableViewCell.self forCellReuseIdentifier:@"tableViewCell"];
+    //[_clientTable registerClass:UITableViewCell.self forCellReuseIdentifier:@"tableViewCell"];
     [self configureDatabase];
+    itemImage = [[NSArray alloc] init];
 }
-//-(void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//    self.noticeToast = [[SWBufferedToast alloc] initNoticeToastWithTitle:@"Loading"
-//                                                                subtitle:@"Please wait while loading data!"
-//                                                           timeToDisplay:120
-//                                                        backgroundColour:nil
-//                                                              toastColor:self.candyCaneRed
-//                                                     animationImageNames:nil
-//                                                                  onView:self.view];
-//    [self.noticeToast appear];
-//    [self.noticeToast beginLoading];
-//
-//}
-
 - (void)configureDatabase {
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/objects"];
-    [ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapshot) {
+    _refHandle = [ref observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
         [_objects addObject:snapshot];
         [_clientTable insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:_objects.count-1 inSection:0]] withRowAnimation: UITableViewRowAnimationAutomatic];
     }];
@@ -86,6 +67,18 @@
 //    }];
     
 }
+
+//- (void)configureDatabase {
+//    _refHandle = [ref observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
+//        NSDictionary<NSString *, NSString *> *object = snapshot.value;
+//        NSString *isUserId = object[@"userId"];
+//        NSString *realUserId = [FIRAuth auth].currentUser.uid;
+//        if ([isUserId isEqualToString:realUserId]) {
+//            [_objects addObject:snapshot];
+//            [_clientTable insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:_objects.count-1 inSection:0]] withRowAnimation: UITableViewRowAnimationAutomatic];
+//        }
+//    }];
+//}
 
 
 - (void)didReceiveMemoryWarning {
@@ -113,25 +106,33 @@
     NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
     NSString *name = object[@"title"];
     NSString *price = object[@"price"];
+    NSString *shippingCost = object[@"shippingCosts"];
     FIRStorage *storage = [FIRStorage storage];
     // Create a storage reference from our storage service
-    FIRStorageReference *storageRef = [storage referenceForURL:object[@"imageUrl"]];
+    NSArray *items = [object[@"imageUrl"] componentsSeparatedByString:@","];
+    firstItem = true;
+    for (int i = 0; i <= items.count-1; i++) {
+        FIRStorageReference *storageRef = [storage referenceForURL:items[i]];
+        
+        [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+            if (error != nil) {
+                // Uh-oh, an error occurred!
+                NSLog(@"Error Downloading: %@", error);
+            } else {
+                if (firstItem) {
+                    cell.itemImage.image = [UIImage imageWithData:data];
+                    firstItem = false;
+                }
+                itemImage = [itemImage arrayByAddingObject:[UIImage imageWithData:data]];
+            }
+        }];
+    }
     
-    [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
-        if (error != nil) {
-            // Uh-oh, an error occurred!
-            NSLog(@"Error Downloading: %@", error);
-        } else {
-            cell.itemImage.image = [UIImage imageWithData:data];
-            itemImage = [UIImage imageWithData:data];
-            
-        }
-    }];
     
 
     cell.itemNameLabel.text = name;
     cell.itemPriceLabel.text = [NSString stringWithFormat:@"$%@", price];
-    cell.itemShippingLabel.text = @"$1 Shipping";
+    cell.itemShippingLabel.text = [NSString stringWithFormat:@"$%@ Shipping", shippingCost];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -146,6 +147,12 @@
     destViewController.condition = object[@"condition"];
     destViewController.price = object[@"price"];
     destViewController.category = object[@"category"];
+    destViewController.paymentMethod = object[@"paymentMethod"];
+    destViewController.handlingTime = object[@"handlingTime"];
+    destViewController.returns = object[@"returns"];
+    destViewController.deliveryType = object[@"deliveryType"];
+    destViewController.shippingCosts = object[@"shippingCosts"];
+    destViewController.shippingService = object[@"shippingService"];
     double lat = object[@"latitude"].doubleValue;
     double lon = object[@"longitude"].doubleValue;
     CLLocationCoordinate2D pointCoordinates;

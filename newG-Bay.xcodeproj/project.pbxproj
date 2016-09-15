@@ -22,10 +22,11 @@
 		9C113D531D76925F009FA8F2 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C113D521D76925F009FA8F2 /* LeftMenuViewController.m */; };
 		9C51C7251D88C28B000F485B /* app_bg1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C51C7241D88C28B000F485B /* app_bg1@2x.jpg */; };
 		9C51C7271D88C2BC000F485B /* cancel_filled-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C51C7261D88C2BC000F485B /* cancel_filled-50@2x.png */; };
-		9C81E16F1D7C716200DAC9E0 /* NewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C81E16E1D7C716200DAC9E0 /* NewItemTableViewController.m */; };
-		9C81E1721D7C753700DAC9E0 /* ConditionPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C81E1711D7C753700DAC9E0 /* ConditionPopoverViewController.m */; };
 		9C81E1971D7DCDF700DAC9E0 /* NewerItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C81E1961D7DCDF700DAC9E0 /* NewerItemViewController.m */; };
 		9C81E19C1D7E681700DAC9E0 /* ANTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C81E19B1D7E681700DAC9E0 /* ANTagsView.m */; };
+		9C96A6E51D8A3052002C1E06 /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C96A6E41D8A3052002C1E06 /* MediaCell.xib */; };
+		9C96A6E71D8A305E002C1E06 /* MediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C96A6E61D8A305E002C1E06 /* MediaCell.m */; };
+		9C96A6EA1D8A3229002C1E06 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C96A6E91D8A3229002C1E06 /* Social.framework */; };
 		9C97E4321D70DA1C00C74DD6 /* AllItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C97E4311D70DA1C00C74DD6 /* AllItemsTableViewController.m */; };
 		9C97E4361D70DC1D00C74DD6 /* ItemMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C97E4351D70DC1D00C74DD6 /* ItemMapViewController.m */; };
 		9C97E47E1D726C6C00C74DD6 /* newG-Bay.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 9C97E47D1D726C6C00C74DD6 /* newG-Bay.entitlements */; };
@@ -33,7 +34,6 @@
 		9C9EA0691D6A7BB700D76334 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0681D6A7BB700D76334 /* MainViewController.m */; };
 		9C9EA06D1D6B1EC800D76334 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */; };
 		9C9EA0701D6B983300D76334 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA06F1D6B983300D76334 /* Constants.m */; };
-		9C9EA0731D6BAE8A00D76334 /* NewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0721D6BAE8A00D76334 /* NewItemViewController.m */; };
 		9C9EA0951D6D185100D76334 /* YourItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9EA0941D6D185100D76334 /* YourItemTableViewController.m */; };
 		9C9EA0981D6FAC9900D76334 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9EA0971D6FAC9900D76334 /* Photos.framework */; };
 		9CA60ACE1D693CA30081A5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA60ACD1D693CA30081A5B5 /* main.m */; };
@@ -149,14 +149,14 @@
 		9C113D521D76925F009FA8F2 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		9C51C7241D88C28B000F485B /* app_bg1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app_bg1@2x.jpg"; sourceTree = "<group>"; };
 		9C51C7261D88C2BC000F485B /* cancel_filled-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel_filled-50@2x.png"; sourceTree = "<group>"; };
-		9C81E16D1D7C716200DAC9E0 /* NewItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewItemTableViewController.h; sourceTree = "<group>"; };
-		9C81E16E1D7C716200DAC9E0 /* NewItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewItemTableViewController.m; sourceTree = "<group>"; };
-		9C81E1701D7C753700DAC9E0 /* ConditionPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionPopoverViewController.h; sourceTree = "<group>"; };
-		9C81E1711D7C753700DAC9E0 /* ConditionPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionPopoverViewController.m; sourceTree = "<group>"; };
 		9C81E1951D7DCDF700DAC9E0 /* NewerItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewerItemViewController.h; sourceTree = "<group>"; };
 		9C81E1961D7DCDF700DAC9E0 /* NewerItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewerItemViewController.m; sourceTree = "<group>"; };
 		9C81E19A1D7E681700DAC9E0 /* ANTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTagsView.h; sourceTree = "<group>"; };
 		9C81E19B1D7E681700DAC9E0 /* ANTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTagsView.m; sourceTree = "<group>"; };
+		9C96A6E41D8A3052002C1E06 /* MediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaCell.xib; sourceTree = "<group>"; };
+		9C96A6E61D8A305E002C1E06 /* MediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaCell.m; sourceTree = "<group>"; };
+		9C96A6E81D8A3068002C1E06 /* MediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaCell.h; sourceTree = "<group>"; };
+		9C96A6E91D8A3229002C1E06 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		9C97E4311D70DA1C00C74DD6 /* AllItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllItemsTableViewController.m; sourceTree = "<group>"; };
 		9C97E4331D70DA3B00C74DD6 /* AllItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllItemsTableViewController.h; sourceTree = "<group>"; };
 		9C97E4341D70DC1D00C74DD6 /* ItemMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemMapViewController.h; sourceTree = "<group>"; };
@@ -169,8 +169,6 @@
 		9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C9EA06E1D6B983300D76334 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9C9EA06F1D6B983300D76334 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		9C9EA0711D6BAE8A00D76334 /* NewItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewItemViewController.h; sourceTree = "<group>"; };
-		9C9EA0721D6BAE8A00D76334 /* NewItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewItemViewController.m; sourceTree = "<group>"; };
 		9C9EA0931D6D185100D76334 /* YourItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourItemTableViewController.h; sourceTree = "<group>"; };
 		9C9EA0941D6D185100D76334 /* YourItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourItemTableViewController.m; sourceTree = "<group>"; };
 		9C9EA0971D6FAC9900D76334 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -272,6 +270,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C96A6EA1D8A3229002C1E06 /* Social.framework in Frameworks */,
 				9C9EA0981D6FAC9900D76334 /* Photos.framework in Frameworks */,
 				9CA60B341D693E640081A5B5 /* AVFoundation.framework in Frameworks */,
 				9C97E4801D726CBD00C74DD6 /* MapKit.framework in Frameworks */,
@@ -305,6 +304,7 @@
 		5253D968B8921061990CFFDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C96A6E91D8A3229002C1E06 /* Social.framework */,
 				9C97E47F1D726CBD00C74DD6 /* MapKit.framework */,
 				9C9EA0971D6FAC9900D76334 /* Photos.framework */,
 				027B56D3FA2FBD8E524860D0 /* libPods-newG-Bay.a */,
@@ -472,12 +472,6 @@
 				9C9EA0681D6A7BB700D76334 /* MainViewController.m */,
 				9CD1CD461D7A43F30090E496 /* ProfileViewController.h */,
 				9CD1CD471D7A43F30090E496 /* ProfileViewController.m */,
-				9C9EA0711D6BAE8A00D76334 /* NewItemViewController.h */,
-				9C9EA0721D6BAE8A00D76334 /* NewItemViewController.m */,
-				9C81E16D1D7C716200DAC9E0 /* NewItemTableViewController.h */,
-				9C81E16E1D7C716200DAC9E0 /* NewItemTableViewController.m */,
-				9C81E1701D7C753700DAC9E0 /* ConditionPopoverViewController.h */,
-				9C81E1711D7C753700DAC9E0 /* ConditionPopoverViewController.m */,
 				9CA60B051D693CE20081A5B5 /* Main.storyboard */,
 				9CA60ADA1D693CA30081A5B5 /* LaunchScreen.storyboard */,
 				9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */,
@@ -599,6 +593,9 @@
 				9CBDCA691D78ECBC00690927 /* TipCells.h */,
 				9CBDCA6A1D78ECBC00690927 /* TipCells.m */,
 				9CBDCA6B1D78ECBC00690927 /* TipCells.xib */,
+				9C96A6E81D8A3068002C1E06 /* MediaCell.h */,
+				9C96A6E61D8A305E002C1E06 /* MediaCell.m */,
+				9C96A6E41D8A3052002C1E06 /* MediaCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -769,6 +766,7 @@
 			files = (
 				9C113C2F1D74E4C6009FA8F2 /* pinAnnotation.png in Resources */,
 				9CBDCAAB1D79472700690927 /* pin_map_blue.png in Resources */,
+				9C96A6E51D8A3052002C1E06 /* MediaCell.xib in Resources */,
 				9CBDCA5C1D78E98700690927 /* AddressLocationCell.xib in Resources */,
 				9CBDCAAC1D79472700690927 /* pin_map_blue@2x.png in Resources */,
 				9CBDCA5F1D78E98700690927 /* DetailLocationCell.xib in Resources */,
@@ -883,7 +881,6 @@
 				9C81E19C1D7E681700DAC9E0 /* ANTagsView.m in Sources */,
 				9CD1CD4B1D7B9BB60090E496 /* AllItemsTableViewCell.m in Sources */,
 				9C113D491D768DCE009FA8F2 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
-				9C81E16F1D7C716200DAC9E0 /* NewItemTableViewController.m in Sources */,
 				9CA60B1F1D693DB60081A5B5 /* ARController.m in Sources */,
 				9CBDCA7B1D7927DF00690927 /* TagGroups.m in Sources */,
 				9CA60B271D693DB60081A5B5 /* ARRadar.m in Sources */,
@@ -895,13 +892,13 @@
 				9CBDCA5B1D78E98700690927 /* AddressLocationCell.m in Sources */,
 				9CA60B281D693DB60081A5B5 /* LocationMath.m in Sources */,
 				9C113D4B1D768DCE009FA8F2 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
+				9C96A6E71D8A305E002C1E06 /* MediaCell.m in Sources */,
 				9CA60AD41D693CA30081A5B5 /* ViewController.m in Sources */,
 				9C113C2B1D73E132009FA8F2 /* MyCustomAnnotation.m in Sources */,
 				9C97E4321D70DA1C00C74DD6 /* AllItemsTableViewController.m in Sources */,
 				9C113D531D76925F009FA8F2 /* LeftMenuViewController.m in Sources */,
 				9C9EA0691D6A7BB700D76334 /* MainViewController.m in Sources */,
 				9C9EA0701D6B983300D76334 /* Constants.m in Sources */,
-				9C9EA0731D6BAE8A00D76334 /* NewItemViewController.m in Sources */,
 				9CBDCA7A1D7927DF00690927 /* AHTag.m in Sources */,
 				9CA60B291D693DB60081A5B5 /* PRARManager.m in Sources */,
 				9CA60B201D693DB60081A5B5 /* ARObject.m in Sources */,
@@ -910,7 +907,6 @@
 				9CBDCA871D7927E400690927 /* AHTagView.m in Sources */,
 				9CA60AD11D693CA30081A5B5 /* AppDelegate.m in Sources */,
 				9CBDCA841D7927E400690927 /* AHTagsLabel.m in Sources */,
-				9C81E1721D7C753700DAC9E0 /* ConditionPopoverViewController.m in Sources */,
 				9C113D501D768DCE009FA8F2 /* SlideNavigationController.m in Sources */,
 				9CA60B031D693CBC0081A5B5 /* ARCameraViewController.m in Sources */,
 				9C9EA0951D6D185100D76334 /* YourItemTableViewController.m in Sources */,

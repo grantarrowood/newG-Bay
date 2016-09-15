@@ -14,6 +14,7 @@
 #import "AddressLocationCell.h"
 #import "TipCell.h"
 #import "TipCells.h"
+#import "MediaCell.h"
 #import "TGAnnotation.h"
 #import "MainViewController.h"
 #import "SlideNavigationController.h"
@@ -34,8 +35,14 @@
 @property(nonatomic) NSString* condition;
 @property(nonatomic) NSNumber* price;
 @property(nonatomic) NSString* category;
+@property(nonatomic) NSString* paymentMethod;
+@property(nonatomic) NSString* handlingTime;
+@property(nonatomic) NSString* returns;
+@property(nonatomic) NSString* deliveryType;
+@property(nonatomic) NSString* shippingCosts;
+@property(nonatomic) NSString* shippingService;
 @property(nonatomic) NSString* GBalanceText;
-@property(nonatomic) UIImage* itemImage;
+@property(nonatomic) NSArray* itemImage;
 @property(nonatomic) int theid;
 @property(nonatomic) double locationLat;
 @property(nonatomic) double locationLon;

@@ -13,7 +13,8 @@
 @interface YourItemTableViewController ()
 {
     FIRDatabaseHandle _refHandle;
-    UIImage *itemImage;
+    NSArray *itemImage;
+    BOOL firstItem;
 }
 
 @end
@@ -32,6 +33,7 @@
     _objects = [[NSMutableArray alloc] init];
     //[_clientTable registerClass:UITableViewCell.self forCellReuseIdentifier:@"tableViewCell"];
     [self configureDatabase];
+    itemImage = [[NSArray alloc] init];
 }
 
 - (void)configureDatabase {
@@ -74,25 +76,32 @@
     NSDictionary<NSString *, NSString *> *object = objectSnapshot.value;
     NSString *name = object[@"title"];
     NSString *price = object[@"price"];
+    NSString *shippingCost = object[@"shippingCosts"];
     FIRStorage *storage = [FIRStorage storage];
     // Create a storage reference from our storage service
-    FIRStorageReference *storageRef = [storage referenceForURL:object[@"imageUrl"]];
-    
-    [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
-        if (error != nil) {
-            // Uh-oh, an error occurred!
-            NSLog(@"Error Downloading: %@", error);
-        } else {
-            cell.itemImage.image = [UIImage imageWithData:data];
-            itemImage = [UIImage imageWithData:data];
-            
-        }
-    }];
+    NSArray *items = [object[@"imageUrl"] componentsSeparatedByString:@","];
+    firstItem = true;
+    for (int i = 0; i <= items.count-1; i++) {
+        FIRStorageReference *storageRef = [storage referenceForURL:items[i]];
+        
+        [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+            if (error != nil) {
+                // Uh-oh, an error occurred!
+                NSLog(@"Error Downloading: %@", error);
+            } else {
+                if (firstItem) {
+                    cell.itemImage.image = [UIImage imageWithData:data];
+                    firstItem = false;
+                }
+                itemImage = [itemImage arrayByAddingObject:[UIImage imageWithData:data]];
+            }
+        }];
+    }
     
     
     cell.itemNameLabel.text = name;
     cell.itemPriceLabel.text = [NSString stringWithFormat:@"$%@", price];
-    cell.itemShippingLabel.text = @"$1 Shipping";
+    cell.itemShippingLabel.text = [NSString stringWithFormat:@"$%@ Shipping", shippingCost];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -107,6 +116,12 @@
     destViewController.condition = object[@"condition"];
     destViewController.price = object[@"price"];
     destViewController.category = object[@"category"];
+    destViewController.paymentMethod = object[@"paymentMethod"];
+    destViewController.handlingTime = object[@"handlingTime"];
+    destViewController.returns = object[@"returns"];
+    destViewController.deliveryType = object[@"deliveryType"];
+    destViewController.shippingCosts = object[@"shippingCosts"];
+    destViewController.shippingService = object[@"shippingService"];
     double lat = object[@"latitude"].doubleValue;
     double lon = object[@"longitude"].doubleValue;
     CLLocationCoordinate2D pointCoordinates;

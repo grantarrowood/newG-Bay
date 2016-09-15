@@ -7,16 +7,16 @@
 //
 
 #import "NewerItemViewController.h"
-#import "ConditionPopoverViewController.h"
 #import "LeftMenuViewController.h"
 #import "UIImage+JVMenuCategory.h"
+#import <Social/Social.h>
 
 
 @interface NewerItemViewController () <subViewDelegate> {
     NSURL *imageFile;
     NSString *filePath;
     NSData* pictureData;
-    
+    NSArray* photoArray;
     NSArray* conditionArray;
     NSArray* stateArray;
     NSArray* paymentMethodArray;
@@ -25,7 +25,8 @@
     NSArray* deliveryTypeArray;
     NSArray* shippingServiceArray;
     NSString* popoverIdentifier;
-    
+    BOOL didAdd;
+    int photoLines;
 }
 
 @end
@@ -34,8 +35,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Create New Item";
     self.view.backgroundColor = [UIColor colorWithPatternImage:[[UIImage imageNamed:@"app_bg1.jpg"] imageScaledToWidth:self.view.frame.size.width]];
     _objects = [[NSMutableArray alloc] init];
+    photoArray = [[NSArray alloc] init];
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/objects"];
     [ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         [_objects addObject:snapshot];
@@ -52,7 +55,7 @@
     
     returnsArray = [[NSArray alloc] initWithObjects:@"Accepted", @"Denied", nil];
     deliveryTypeArray = [[NSArray alloc] initWithObjects:@"Shipping", @"Local Pickup", nil];
-    shippingServiceArray = [[NSArray alloc] initWithObjects:@"Expedited (1 to 4 Buisness Days)", @"Standard (2 to 6 Buisness Days)", @"Economy (2 to 9 Buisness Days)", nil];
+    shippingServiceArray = [[NSArray alloc] initWithObjects:@"Expedited (1 to 4 Buisness Days)", @"Standard (2 to 6 Buisness Days)", @"Economy (2 to 9 Buisness Days)", @"None", nil];
     
 }
 
@@ -137,7 +140,6 @@
                 [SlideNavigationController sharedInstance].leftMenu.view.alpha = 0;
                 [self.navigationController setNavigationBarHidden:YES animated:YES];
                 [self.view addSubview:self.containerView];
-                
                 // creating menu
                 self.menuPopover = [self menuPopover:conditionArray];
                 
@@ -167,6 +169,26 @@
             };
             builder.actionBlock = nil;
         }];
+        
+        
+        
+        [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
+            builder.itemClass = [INSStackFormViewLabelElement class];
+            builder.title = @"ADD PHOTOS";
+            builder.identifier = @"AddPhotos";
+            builder.height = @56;
+            builder.configurationBlock = ^(INSStackFormViewLabelElement *view) {
+            };
+            builder.actionBlock = ^(INSStackFormViewTextFieldElement *view) {
+                NSLog(@"Action");
+                didAdd = false;
+                self.imagePicker = [[UIImagePickerController alloc] init];
+                self.imagePicker.delegate = self;
+                self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                [self presentViewController:self.imagePicker animated:YES completion:nil];
+            };
+        }];
+        
         
         
     }]];
@@ -416,19 +438,6 @@
                 view.textField.keyboardType = UIKeyboardTypeNumberPad;
             };
         }];
-        
-        //        [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
-        //            builder.itemClass = [INSStackFormViewTextFieldElement class];
-        //            //Drop Down
-        //            builder.identifier = @"ShippingService";
-        //            builder.title = @"Shipping Service";
-        //            builder.subtitle = nil;
-        //            builder.height = @50;
-        //            builder.configurationBlock = ^(INSStackFormViewTextFieldElement *view) {
-        //                view.textField.placeholder = @"Shipping Time";
-        //            };
-        //        }];
-        
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
             builder.itemClass = [INSStackFormViewLabelElement class];
             builder.title = @"Shipping Service:";
@@ -457,6 +466,52 @@
                 [self showMenu];
             };
         }];
+        
+        
+        [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
+            builder.itemClass = [INSStackFormViewLabelElement class];
+            builder.title = @"Post to Facebook";
+            builder.identifier = @"Facebook";
+            builder.height = @56;
+            builder.configurationBlock = ^(INSStackFormViewLabelElement *view) {
+            };
+            builder.actionBlock = ^(INSStackFormViewTextFieldElement *view) {
+                NSLog(@"Action");
+                [self.view endEditing:YES];
+                SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+                [controller setInitialText:[NSString stringWithFormat:@"Check out %@ on G-Bay!", [view.stackFormView firstItemWithIdentifier:@"ItemName"].value]];
+                if (photoArray.count == 0) {
+                    [controller addImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://irs2.4sqi.net/img/general/500x500/2514_BvEN_Q6lG50xZQ9TIG0XY8eYXzF3USSMdtTmxHCmqnE.jpg"]]]];
+                } else {
+                    [controller addImage:photoArray[0]];
+                }
+                [self presentViewController:controller animated:YES completion:Nil];
+            };
+        }];
+
+        
+        [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
+            builder.itemClass = [INSStackFormViewLabelElement class];
+            builder.title = @"Post to Twitter";
+            builder.identifier = @"Twitter";
+            builder.height = @56;
+            builder.configurationBlock = ^(INSStackFormViewLabelElement *view) {
+            };
+            builder.actionBlock = ^(INSStackFormViewTextFieldElement *view) {
+                NSLog(@"Action");
+                [self.view endEditing:YES];
+                SLComposeViewController *tweetSheet = [SLComposeViewController
+                                                       composeViewControllerForServiceType:SLServiceTypeTwitter];
+                [tweetSheet setInitialText:[NSString stringWithFormat:@"Check out %@ on G-Bay!", [view.stackFormView firstItemWithIdentifier:@"ItemName"].value]];
+                if (photoArray.count == 0) {
+                    [tweetSheet addImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://irs2.4sqi.net/img/general/500x500/2514_BvEN_Q6lG50xZQ9TIG0XY8eYXzF3USSMdtTmxHCmqnE.jpg"]]]];
+                } else {
+                    [tweetSheet addImage:photoArray[0]];
+                }
+                [self presentViewController:tweetSheet animated:YES completion:nil];
+            };
+        }];
+
         
         [sectionBuilder addItemWithBuilder:^(INSStackFormItem *builder) {
             builder.itemClass = [INSStackFormViewLabelElement class];
@@ -493,9 +548,9 @@
                                          NSMutableDictionary *object = objectSnapshot.value;
                                          NSString *objectId = [NSString stringWithFormat:@"%lu", (unsigned long)object.count];
                                          if (metadataPath == nil) {
-                                             [self addObject:@{@"userId": [FIRAuth auth].currentUser.uid, @"title": [view.stackFormView firstItemWithIdentifier:@"ItemName"].value, @"description": [view.stackFormView firstItemWithIdentifier:@"Description"].value, @"condition": [view.stackFormView firstItemWithIdentifier:@"Condition"].value, @"price": [view.stackFormView firstItemWithIdentifier:@"Price"].value, @"category": self.categoryString, @"latitude": [NSString stringWithFormat:@"%f", loc.coordinate.latitude], @"longitude": [NSString stringWithFormat:@"%f", loc.coordinate.longitude], @"objectId": objectId} withObjectId:objectId];
+                                             [self addObject:@{@"userId": [FIRAuth auth].currentUser.uid, @"title": [view.stackFormView firstItemWithIdentifier:@"ItemName"].value, @"description": [view.stackFormView firstItemWithIdentifier:@"Description"].value, @"condition": [view.stackFormView firstItemWithIdentifier:@"Condition"].value, @"price": [view.stackFormView firstItemWithIdentifier:@"Price"].value, @"category": self.categoryString, @"latitude": [NSString stringWithFormat:@"%f", loc.coordinate.latitude], @"longitude": [NSString stringWithFormat:@"%f", loc.coordinate.longitude], @"objectId": objectId, @"paymentMethod": [view.stackFormView firstItemWithIdentifier:@"PaymentMethod"].value, @"handlingTime": [view.stackFormView firstItemWithIdentifier:@"HandlingTime"].value, @"returns": [view.stackFormView firstItemWithIdentifier:@"Returns"].value, @"deliveryType": [view.stackFormView firstItemWithIdentifier:@"DeliveryType"].value, @"shippingCosts": [view.stackFormView firstItemWithIdentifier:@"ShippingCosts"].value, @"shippingService": [view.stackFormView firstItemWithIdentifier:@"ShippingService"].value} withObjectId:objectId];
                                          } else {
-                                             [self addObject:@{@"userId": [FIRAuth auth].currentUser.uid, @"title": [view.stackFormView firstItemWithIdentifier:@"ItemName"].value, @"description": [view.stackFormView firstItemWithIdentifier:@"Description"].value, @"condition": [view.stackFormView firstItemWithIdentifier:@"Condition"].value, @"price": [view.stackFormView firstItemWithIdentifier:@"Price"].value, @"category": self.categoryString, @"latitude": [NSString stringWithFormat:@"%f", loc.coordinate.latitude], @"longitude": [NSString stringWithFormat:@"%f", loc.coordinate.longitude], @"objectId": objectId, @"imageUrl": metadataPath} withObjectId:objectId];
+                                             [self addObject:@{@"userId": [FIRAuth auth].currentUser.uid, @"title": [view.stackFormView firstItemWithIdentifier:@"ItemName"].value, @"description": [view.stackFormView firstItemWithIdentifier:@"Description"].value, @"condition": [view.stackFormView firstItemWithIdentifier:@"Condition"].value, @"price": [view.stackFormView firstItemWithIdentifier:@"Price"].value, @"category": self.categoryString, @"latitude": [NSString stringWithFormat:@"%f", loc.coordinate.latitude], @"longitude": [NSString stringWithFormat:@"%f", loc.coordinate.longitude], @"objectId": objectId, @"imageUrl": metadataPath, @"paymentMethod": [view.stackFormView firstItemWithIdentifier:@"PaymentMethod"].value, @"handlingTime": [view.stackFormView firstItemWithIdentifier:@"HandlingTime"].value, @"returns": [view.stackFormView firstItemWithIdentifier:@"Returns"].value, @"deliveryType": [view.stackFormView firstItemWithIdentifier:@"DeliveryType"].value, @"shippingCosts": [view.stackFormView firstItemWithIdentifier:@"ShippingCosts"].value, @"shippingService": [view.stackFormView firstItemWithIdentifier:@"ShippingService"].value} withObjectId:objectId];
                                          }
                                      }
                                  }];
@@ -561,7 +616,10 @@
                     *errorMessage = @"Category can't be nil";
                     return NO;
                 }
-                
+//                else if (!metadataPath) {
+//                    *errorMessage = @"Photos can't be nil";
+//                    return NO;
+//                }
                 
                 return YES;
             };
@@ -569,7 +627,7 @@
         
         
     }]];
-        
+    
     return sections;
 }
 
@@ -580,13 +638,79 @@
 }
 
 
--(void)stringFromSubview:(id)sender {
-    NSLog(@"Hello");
-    self.categoryString = sender;
+
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<NSString *,id> *)editingInfo
+{
+    pictureData = UIImagePNGRepresentation(image);
+    
+    [[_storageRef child:[NSString stringWithFormat:@"%@/%lld/asset.JPG", [FIRAuth auth].currentUser.uid, (long long)([[NSDate date] timeIntervalSince1970] * 1000.0)]]
+     putData:pictureData metadata:nil
+     completion:^(FIRStorageMetadata *metadata, NSError *error) {
+         if (error) {
+             NSLog(@"Error uploading: %@", error);
+             FIRStorage *storage = [FIRStorage storage];
+             FIRStorageReference *storageRef = [storage referenceForURL:@"gs://g-bay-70b9c.appspot.com"];
+             //[self addObject:@{@"image":[storageRef child:metadata.path].description} withObjectId:@"20"];
+             //metadataPath = [NSString stringWithFormat:@"%@,%@", metadataPath, [storageRef child:metadata.path].description];
+             return;
+         }
+         FIRStorage *storage = [FIRStorage storage];
+         FIRStorageReference *storageRef = [storage referenceForURL:@"gs://g-bay-70b9c.appspot.com"];
+         metadataPath = [NSString stringWithFormat:@"%@,%@", metadataPath, [storageRef child:metadata.path].description];
+;     }
+     ];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    if (photoArray.count == 0) {
+        // Create new Item
+        INSStackFormItem *item = [[INSStackFormItem alloc] init];
+        item.itemClass = [INSStackFormViewBaseElement class];
+        item.height = @240;
+        item.identifier = @"photosView";
+        item.configurationBlock = ^(INSStackFormViewBaseElement *view) {
+            view.backgroundColor = [UIColor clearColor];
+            UIImageView *theImage = [[UIImageView alloc] initWithImage:image];
+            [view addSubview:theImage];
+            theImage.frame = CGRectMake(13, 5, 110, 110);
+            didAdd = true;
+            photoLines = 1;
+        };
+        photoArray = @[image];
+        [self.stackFormView insertItems:@[item] toSection:self.stackFormView.sections[0] atIndex:7];
+    }else if(photoArray.count%3 == 0) {
+        //[self.stackFormView deleteItems:@[[self.stackFormView firstItemWithIdentifier:@"photosView"]]];
+        INSStackFormItem *item = [self.stackFormView firstItemWithIdentifier:@"photosView"];
+        item.height = [NSNumber numberWithInteger:120*(photoLines +1)];
+        item.configurationBlock = ^(INSStackFormViewBaseElement *view){
+            if (!didAdd) {
+                UIImageView *theImage = [[UIImageView alloc] initWithImage:image];
+                [view addSubview:theImage];
+                theImage.frame = CGRectMake(13, 125, 110, 110);
+                photoArray = [photoArray arrayByAddingObject:image];
+                didAdd = true;
+                photoLines += 1;
+            }
+        };
+        [self.stackFormView refreshItems:@[item]];
+    } else {
+        //[self.stackFormView deleteItems:@[[self.stackFormView firstItemWithIdentifier:@"photosView"]]];
+        INSStackFormItem *item = [self.stackFormView firstItemWithIdentifier:@"photosView"];
+        item.configurationBlock = ^(INSStackFormViewBaseElement *view){
+            if (!didAdd) {
+                UIImageView *theImage = [[UIImageView alloc] initWithImage:image];
+                [view addSubview:theImage];
+                theImage.frame = CGRectMake(photoArray.count*120+13, 5, 110, 110);
+                photoArray = [photoArray arrayByAddingObject:image];
+                didAdd = true;
+            }
+        };
+        [self.stackFormView refreshItems:@[item]];
+    }
 }
 
-
-
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
 
 
 
@@ -699,8 +823,7 @@
 
 - (void)menuPopoverViewWillShow
 {
-    // hiding the navigation item
-    //[self hideNavigationItem];
+    [self.view endEditing:YES];
 }
 
 
@@ -746,9 +869,13 @@
 }
 
 
--(void)aAction {
-    NSLog(@"Hello");
+-(void)stringFromSubview:(id)sender {
+    self.categoryString = sender;
 }
+
+
+
+
 
 
 @end
