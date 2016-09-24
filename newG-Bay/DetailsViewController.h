@@ -22,7 +22,6 @@
 #import "BraintreeUI.h"
 #import "SWBufferedToast.h"
 
-
 @interface DetailsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MKMapViewDelegate,TGFoursquareLocationDetailDelegate, KIImagePagerDelegate, KIImagePagerDataSource, CLLocationManagerDelegate, BTDropInViewControllerDelegate>
 
 

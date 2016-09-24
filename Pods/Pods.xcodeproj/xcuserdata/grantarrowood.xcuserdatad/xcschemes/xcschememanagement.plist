@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Atlas-AtlasResource.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Atlas.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Braintree-Braintree-Drop-In-Localization.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -15,6 +25,11 @@
 			<false/>
 		</dict>
 		<key>Braintree.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CCHMapClusterController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -35,6 +50,11 @@
 			<false/>
 		</dict>
 		<key>JVMenuPopover.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LYRCountDownLatch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -62,7 +82,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>09D7D2D799AC4B00D0C4B8DDDD9D1DF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A931110D670DB8896AC0E2D4A182737</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>102B2D6B19DEEBE119BDFD1E51638F96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>183377B427DA52EE0067F07C8B2E9E61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B0C57415639B5A3C87AC222FF6373C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,22 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>810151C4ED7FBEF442A632197B4F147D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>82810123E09385579D18B50FB470DAAF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>90D010ED87FEEDA846E164605F36A0D0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>93A3907E9E45EFAFA3506A1412AA6E09</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,12 +132,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2B4E371D019FC001D6300B7D1E336B0</key>
+		<key>D17BC7FD7F2343986AC62B1AFF937D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1BA27C438825F8EBD3651E714FCBBB7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5F41BFA03C996C7701B8122067E862E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F04399C6CE52086E1404325FFE855BC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F649E2EF46D67607DE443E3CD3F9CFDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

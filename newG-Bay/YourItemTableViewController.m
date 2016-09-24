@@ -42,10 +42,16 @@
     _refHandle = [ref observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
         NSDictionary<NSString *, NSString *> *object = snapshot.value;
         NSString *isUserId = object[@"userId"];
+        NSString *isSold = object[@"sold"];
+        NSString *sold = @"sold";
         NSString *realUserId = [FIRAuth auth].currentUser.uid;
         if ([isUserId isEqualToString:realUserId]) {
-            [_objects addObject:snapshot];
-            [_clientTable insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:_objects.count-1 inSection:0]] withRowAnimation: UITableViewRowAnimationAutomatic];
+            if ([isSold isEqualToString:sold]) {
+                
+            } else {
+                [_objects addObject:snapshot];
+                [_clientTable insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:_objects.count-1 inSection:0]] withRowAnimation: UITableViewRowAnimationAutomatic];
+            }
         }
     }];
 }

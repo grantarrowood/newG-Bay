@@ -158,6 +158,8 @@
             cell.lblTitle.text = self.titled;
             cell.lblRate.text = [NSString stringWithFormat:@"$%@", self.price];
             cell.lblDescription.text = [NSString stringWithFormat:@"Condition: %@", self.condition];
+            [cell.btnSave addTarget:self action:@selector(buyNow) forControlEvents:UIControlEventTouchUpInside];
+            [cell.btnCheckin addTarget:self action:@selector(watchForLater) forControlEvents:UIControlEventTouchUpInside];
         }
         return cell;
     }
@@ -440,7 +442,7 @@
 //    NSArray *items = @[item1, item2, item3];
 //    NSDecimalNumber *subtotal = [PayPalItem totalPriceForItems:items];
     
-    // Optional: include payment details
+//     Optional: include payment details
 //    NSDecimalNumber *shipping = [[NSDecimalNumber alloc] initWithString:@"5.99"];
 //    NSDecimalNumber *tax = [[NSDecimalNumber alloc] initWithString:@"2.50"];
 //    PayPalPaymentDetails *paymentDetails = [PayPalPaymentDetails paymentDetailsWithSubtotal:subtotal
@@ -545,5 +547,15 @@
     }
     [self presentViewController:controller animated:YES completion:Nil];
 }
+
+
+-(void)buyNow { 
+    NSLog(@"Buy Now");
+}
+-(void)watchForLater {
+    NSLog(@"Watch for Later");
+}
+
+
 
 @end

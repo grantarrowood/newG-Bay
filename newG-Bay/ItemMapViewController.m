@@ -24,45 +24,51 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationController setNavigationBarHidden:NO];
-    self.mappedView.delegate = self;
+    self.mapView.delegate = self;
     _objects = [[NSMutableArray alloc] init];
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/objects"];
     _refHandle = [ref observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
-        [_objects addObject:snapshot];
-        NSDictionary<NSString *, NSString *> *object = snapshot.value;
-        NSString *latitudeString  = object[@"latitude"];
-        NSString *longitudeString  = object[@"longitude"];
-
-        double lat = latitudeString.floatValue;
-        double lon = longitudeString.floatValue;
-        CLLocationCoordinate2D pointCoordinates;
-        pointCoordinates.latitude = lat;
-        pointCoordinates.longitude = lon;
-        NSString *title = object[@"title"];
-        NSNumber *price = object[@"price"];
-        NSUInteger tagInteger = [_objects count] -1;
-        NSString *imageString = object[@"imageUrl"];
-        if (imageString == nil) {
-            MyCustomAnnotation *annotationView = [[MyCustomAnnotation alloc] initWithTitle:title location:pointCoordinates andSubTitle:(long)price WithTag:tagInteger andImage:[UIImage imageNamed:@"pinAnnotation"] withBool:false];
-            [self.mappedView addAnnotation:annotationView];
+        if ([snapshot.value[@"sold"] isEqualToString:@"sold"]) {
             
         } else {
-            FIRStorage *storage = [FIRStorage storage];
-            // Create a storage reference from our storage service
-            FIRStorageReference *storageRef = [storage referenceForURL:imageString];
+            [_objects addObject:snapshot];
+            NSDictionary<NSString *, NSString *> *object = snapshot.value;
             
-            [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
-                if (error != nil) {
-                    // Uh-oh, an error occurred!
-                    NSLog(@"Error Downloading: %@", error);
-                } else {
-                    theImage = [UIImage imageWithData:data];
-                    MyCustomAnnotation *annotationView = [[MyCustomAnnotation alloc] initWithTitle:title location:pointCoordinates andSubTitle:(long)price WithTag:tagInteger andImage:theImage  withBool:true];
-                    [annotationView annotationView];
-                    [self.mappedView addAnnotation:annotationView];
-                }
-            }];
+            NSString *latitudeString  = object[@"latitude"];
+            NSString *longitudeString  = object[@"longitude"];
+            
+            double lat = latitudeString.floatValue;
+            double lon = longitudeString.floatValue;
+            CLLocationCoordinate2D pointCoordinates;
+            pointCoordinates.latitude = lat;
+            pointCoordinates.longitude = lon;
+            NSString *title = object[@"title"];
+            NSNumber *price = object[@"price"];
+            NSUInteger tagInteger = [_objects count] -1;
+            NSString *imageString = object[@"imageUrl"];
+            if (imageString == nil) {
+                MyCustomAnnotation *annotationView = [[MyCustomAnnotation alloc] initWithTitle:title location:pointCoordinates andSubTitle:(long)price WithTag:tagInteger andImage:[UIImage imageNamed:@"pinAnnotation"] withBool:false];
+                [self.mapView addAnnotation:annotationView];
+                
+            } else {
+                FIRStorage *storage = [FIRStorage storage];
+                // Create a storage reference from our storage service
+                FIRStorageReference *storageRef = [storage referenceForURL:imageString];
+                
+                [storageRef dataWithMaxSize:100 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+                    if (error != nil) {
+                        // Uh-oh, an error occurred!
+                        NSLog(@"Error Downloading: %@", error);
+                    } else {
+                        theImage = [UIImage imageWithData:data];
+                        MyCustomAnnotation *annotationView = [[MyCustomAnnotation alloc] initWithTitle:title location:pointCoordinates andSubTitle:(long)price WithTag:tagInteger andImage:theImage  withBool:true];
+                        [annotationView annotationView];
+                        [self.mapView addAnnotation:annotationView];
+                    }
+                }];
+            }
         }
+
         
         
     }];
@@ -78,7 +84,7 @@
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
-    [self.mappedView setRegion:[self.mappedView regionThatFits:region] animated:YES];
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation

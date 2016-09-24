@@ -36,7 +36,11 @@
     FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/objects"];
     FIRDatabaseReference  *ref2 = [[FIRDatabase database] referenceWithPath:@"/tokens"];
     [ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        [_objects addObject:snapshot];
+        if ([snapshot.value[@"sold"] isEqualToString:@"sold"]) {
+            
+        } else {
+            [_objects addObject:snapshot];
+        }
         [ref2 observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
             [_tokens addObject:snapshot];
             [PRARManager sharedManagerWithSize:self.view.frame.size andDelegate:self];

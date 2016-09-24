@@ -29,6 +29,9 @@
 
 
 @interface ARObject ()
+{
+    FIRDatabaseHandle _refHandle;
+}
 @property (strong, nonatomic) NSMutableArray<FIRDataSnapshot *> *users;
 
 
@@ -46,14 +49,16 @@
         
         //User database add .25 to their balance
         FIRDatabaseReference  *ref = [[FIRDatabase database] referenceWithPath:@"/users"];
-        [[ref child:[FIRAuth auth].currentUser.uid] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-            NSMutableDictionary *user = snapshot.value;
-            NSString *balance = user[@"Gbalance"];
-            NSString *firstName = user[@"firstName"];
+        _refHandle = [[ref child:[FIRAuth auth].currentUser.uid] observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
+            NSDictionary<NSString *, NSString *> *object = snapshot.value;
+            NSString *balance = object[@"Gbalance"];
+            NSString *firstName = object[@"firstName"];
             double balanceNum = balance.doubleValue + .25;
             viewController.GBalanceText = [NSString stringWithFormat:@"Your total G-Money Balance is now $%.2f.", balanceNum];
             viewController.ishidden = false;
-            [self addObject:@{@"Gbalance": [NSString stringWithFormat:@"%.2f", balanceNum], @"firstName": firstName} withUserId:[FIRAuth auth].currentUser];
+            int tokenCount = object[@"tokenFound"].intValue + 1;
+            int tokenAvaliable = object[@"tokenAvaliable"].intValue - 1;
+            [self addObject:@{@"Gbalance": [NSString stringWithFormat:@"%.2f", balanceNum], @"firstName": firstName, @"tokenFound": [NSString stringWithFormat:@"%i", tokenCount], @"tokenAvaliable": [NSString stringWithFormat:@"%i", tokenAvaliable]} withUserId:[FIRAuth auth].currentUser];
             [self addObject:@{}];
             [[NSUserDefaults standardUserDefaults] setObject:@"OpenCameraViewController"
                                                       forKey:@"last_view"];

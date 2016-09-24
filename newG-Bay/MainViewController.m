@@ -212,6 +212,7 @@
         NSDictionary<NSString *, NSString *> *object = snapshot.value;
         NSString *feedbackPositive = object[@"feedbackPositive"];
         NSString *feedbackNegative = object[@"feedbackNegative"];
+// Change from Token count to token found!!!
         NSString *tokenCount = object[@"tokenCount"];
         
         float feedbackFloat = (feedbackPositive.intValue + feedbackNegative.intValue);

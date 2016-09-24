@@ -44,7 +44,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if ([FIRAuth auth].currentUser.uid != nil) {
-        return 8;
+        return 9;
     } else {
         return 5;
     }
@@ -97,8 +97,12 @@
             case 6:
                 cell.textLabel.text = @"Profile";
                 break;
-                
+            
             case 7:
+                cell.textLabel.text = @"My Messages";
+                break;
+                
+            case 8:
                 cell.textLabel.text = @"Sign Out";
                 break;
         }
@@ -170,8 +174,12 @@
             case 6:
                 vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"ProfileViewController"];
                 break;
-                
+
             case 7:
+                vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"MessagesTableViewController"];
+                break;
+                
+            case 8:
                 [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
                 [[SlideNavigationController sharedInstance] popToRootViewControllerAnimated:YES];
                 NSError *error;
