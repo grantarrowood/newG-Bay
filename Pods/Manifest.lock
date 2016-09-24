@@ -1,0 +1,140 @@
+PODS:
+  - Braintree (4.5.0):
+    - Braintree/Card (= 4.5.0)
+    - Braintree/Core (= 4.5.0)
+    - Braintree/PayPal (= 4.5.0)
+    - Braintree/UI (= 4.5.0)
+  - Braintree/Apple-Pay (4.5.0):
+    - Braintree/Core
+  - Braintree/Card (4.5.0):
+    - Braintree/Core
+  - Braintree/Core (4.5.0)
+  - Braintree/PayPal (4.5.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.5.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.5.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.5.0)
+  - Braintree/UI (4.5.0):
+    - Braintree/Card
+    - Braintree/Core
+  - CCHMapClusterController (1.7.0)
+  - Firebase/AdMob (3.4.0):
+    - Firebase/Analytics
+    - Google-Mobile-Ads-SDK (= 7.9.1)
+  - Firebase/Analytics (3.4.0):
+    - FirebaseAnalytics (~> 3.3)
+  - Firebase/Auth (3.4.0):
+    - Firebase/Analytics
+    - FirebaseAuth (= 3.0.4)
+  - Firebase/Crash (3.4.0):
+    - Firebase/Analytics
+    - FirebaseCrash (= 1.0.7)
+  - Firebase/Database (3.4.0):
+    - Firebase/Analytics
+    - FirebaseDatabase (= 3.0.2)
+  - Firebase/RemoteConfig (3.4.0):
+    - Firebase/Analytics
+    - FirebaseRemoteConfig (= 1.2.0)
+  - Firebase/Storage (3.4.0):
+    - Firebase/Analytics
+    - FirebaseStorage (= 1.0.2)
+  - FirebaseAnalytics (3.3.0):
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.2)
+  - FirebaseAuth (3.0.4):
+    - FirebaseAnalytics (~> 3.2)
+    - GoogleNetworkingUtilities (~> 1.2)
+    - GoogleParsingUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.2)
+  - FirebaseCrash (1.0.7):
+    - FirebaseAnalytics (~> 3.2)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.2)
+  - FirebaseDatabase (3.0.2):
+    - FirebaseAnalytics (~> 3.2)
+  - FirebaseInstanceID (1.0.8)
+  - FirebaseRemoteConfig (1.2.0):
+    - FirebaseAnalytics (~> 3.3)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleIPhoneUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.2)
+  - FirebaseStorage (1.0.2):
+    - FirebaseAnalytics (~> 3.2)
+    - GoogleNetworkingUtilities (~> 1.2)
+  - FTPopOverMenu (1.1.6)
+  - Google-Mobile-Ads-SDK (7.9.1)
+  - GoogleInterchangeUtilities (1.2.1):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleIPhoneUtilities (1.2.1):
+    - GoogleSymbolUtilities (~> 1.0)
+    - GoogleUtilities (~> 1.0)
+  - GoogleNetworkingUtilities (1.2.1):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleParsingUtilities (1.1.1):
+    - GoogleNetworkingUtilities (~> 1.0)
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleSymbolUtilities (1.1.1)
+  - GoogleUtilities (1.3.1):
+    - GoogleSymbolUtilities (~> 1.0)
+  - INSStackViewForms (1.2.5):
+    - INSStackViewForms/Core (= 1.2.5)
+  - INSStackViewForms/Core (1.2.5)
+  - JVMenuPopover (1.4)
+  - SWBufferedToast (0.1.5)
+  - TGFoursquareLocationDetail (1.0.1)
+
+DEPENDENCIES:
+  - Braintree
+  - Braintree/Apple-Pay
+  - CCHMapClusterController
+  - Firebase/AdMob
+  - Firebase/Auth
+  - Firebase/Crash
+  - Firebase/Database
+  - Firebase/RemoteConfig
+  - Firebase/Storage
+  - FTPopOverMenu
+  - INSStackViewForms
+  - JVMenuPopover
+  - SWBufferedToast
+  - TGFoursquareLocationDetail
+
+SPEC CHECKSUMS:
+  Braintree: 7bcebecbcfe5210ed4438a97638c230d2521b54d
+  CCHMapClusterController: d8cd12cd5682ec6cd76d911ac7198f981b6cc1b8
+  Firebase: 754562547af419cc2f4b15247fee419081924bc2
+  FirebaseAnalytics: 228be2991cb28efb96cdafc4d62f64680e615c69
+  FirebaseAuth: 26fd291c3b552fc9658420b867520d5ae080421c
+  FirebaseCrash: 2efeb3715b76ac843b841529ce413efb67e5fd4d
+  FirebaseDatabase: 59bea2e7dfd81b3b8b2f8e396caf1a52c2ced6f7
+  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
+  FirebaseRemoteConfig: c5378e689c1edb54ff62061b8f6a908263dd80ae
+  FirebaseStorage: fa2a87dee81f682f553af6839daa37a750e65f6a
+  FTPopOverMenu: 8e17feeb94dad6ae630e4a35f0d7f5aaa64fb37c
+  Google-Mobile-Ads-SDK: 575583d7eae25793bb81ad8673737d1b4ecbedc5
+  GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
+  GoogleIPhoneUtilities: 63f25e93a3ddcb66884d182aab3a660d98f1479b
+  GoogleNetworkingUtilities: 3e83269048cfb498dc7ec83ab36813360965c74f
+  GoogleParsingUtilities: 30b3896f9ee167dc78747f013d3de157ced1cadf
+  GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
+  GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
+  INSStackViewForms: 26d577b4587bdfa2d65d238a0c08c7f21d8c0e97
+  JVMenuPopover: 4dd9294326565ac036e238525dc25be2abe1b729
+  SWBufferedToast: 276c19272fc588f4c6de7218aedb39423407d7a9
+  TGFoursquareLocationDetail: e2255e26b6c12d97b34fb95d88b67ab84cba1128
+
+PODFILE CHECKSUM: 88e2d2b47387bb1234fbcf2a7df8ea62ef2b7ec5
+
+COCOAPODS: 1.0.1

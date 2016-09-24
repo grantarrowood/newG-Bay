@@ -1,0 +1,1 @@
+../../../SWBufferedToast/Pod/Classes/SWBufferedToast.h
