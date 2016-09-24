@@ -10,7 +10,6 @@
 #import <UIKit/UIKit.h>
 #import <Firebase/Firebase.h>
 #import "SWBufferedToast/SWBufferedToast.h"
-#import <LayerKit/LayerKit.h>
 
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate, SWBufferedToastDelegate>
@@ -19,7 +18,6 @@
 @property (nonatomic, strong) SWBufferedToast *registerToast;
 @property (nonatomic) bool isRegistering;
 @property (nonatomic) bool isError;
-@property (nonatomic) LYRClient *layerClient;
 
 @property (strong, nonatomic) NSMutableArray<FIRDataSnapshot *> *objects;
 

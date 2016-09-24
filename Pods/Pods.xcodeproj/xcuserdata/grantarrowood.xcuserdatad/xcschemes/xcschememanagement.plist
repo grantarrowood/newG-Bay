@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Atlas-AtlasResource.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Atlas.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Braintree-Braintree-Drop-In-Localization.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,11 +44,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>LYRCountDownLatch.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-newG-Bay.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,27 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0A931110D670DB8896AC0E2D4A182737</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>102B2D6B19DEEBE119BDFD1E51638F96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>183377B427DA52EE0067F07C8B2E9E61</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2B0C57415639B5A3C87AC222FF6373C6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>353811327CB1F969758D4A67BFE09D80</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>788DD4F43D732C2390291054F7FA72B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,27 +107,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D17BC7FD7F2343986AC62B1AFF937D1B</key>
+		<key>BD63A52489F8EB158622E29FE9D4EDA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D1BA27C438825F8EBD3651E714FCBBB7</key>
+		<key>C25D583FB64743BCD34E7186D54E5498</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D5F41BFA03C996C7701B8122067E862E</key>
+		<key>CDC5BF2CAF38079D8607FDF127109666</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F04399C6CE52086E1404325FFE855BC1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F649E2EF46D67607DE443E3CD3F9CFDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

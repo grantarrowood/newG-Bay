@@ -6,7 +6,6 @@
 //  Copyright © 2016 Grant Arrowood. All rights reserved.
 //
 
-#import "ATLParticipantTableViewController.h"
 #import <UIKit/UIKit.h>
 @import Firebase;
 

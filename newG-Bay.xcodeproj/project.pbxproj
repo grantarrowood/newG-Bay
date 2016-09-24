@@ -105,14 +105,6 @@
 		9CD3872B1D94999D00D63EF7 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3872A1D94999D00D63EF7 /* MessagesViewController.m */; };
 		9CD387341D94A02400D63EF7 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD387331D94A02400D63EF7 /* ConversationViewController.m */; };
 		9CD387371D94A08000D63EF7 /* MessagingParticipantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD387361D94A08000D63EF7 /* MessagingParticipantTableViewController.m */; };
-		9CD3873A1D94A0CF00D63EF7 /* MessagingAvatarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD387391D94A0CF00D63EF7 /* MessagingAvatarItem.m */; };
-		9CD3874B1D94A3FB00D63EF7 /* ATLUserMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3873D1D94A3FB00D63EF7 /* ATLUserMock.m */; };
-		9CD3874C1D94A3FB00D63EF7 /* LYRClientMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD387401D94A3FB00D63EF7 /* LYRClientMock.m */; };
-		9CD3874D1D94A3FB00D63EF7 /* LYRConversationMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD387421D94A3FB00D63EF7 /* LYRConversationMock.m */; };
-		9CD3874E1D94A3FB00D63EF7 /* LYRMessageMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD387441D94A3FB00D63EF7 /* LYRMessageMock.m */; };
-		9CD3874F1D94A3FB00D63EF7 /* LYRMessagePartMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD387461D94A3FB00D63EF7 /* LYRMessagePartMock.m */; };
-		9CD387501D94A3FB00D63EF7 /* LYRMockContentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD387481D94A3FB00D63EF7 /* LYRMockContentStore.m */; };
-		9CD387511D94A3FC00D63EF7 /* LYRQueryControllerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3874A1D94A3FB00D63EF7 /* LYRQueryControllerMock.m */; };
 		9CD387561D95C47B00D63EF7 /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD387551D95C47B00D63EF7 /* ContentManager.m */; };
 		9CD387591D95C48200D63EF7 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD387581D95C48200D63EF7 /* Message.m */; };
 		9CD387621D95C4CD00D63EF7 /* arturdev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CD3875A1D95C4CD00D63EF7 /* arturdev.jpg */; };
@@ -123,7 +115,6 @@
 		9CD387671D95C4CD00D63EF7 /* doggy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CD3875F1D95C4CD00D63EF7 /* doggy.jpg */; };
 		9CD387681D95C4CD00D63EF7 /* jobs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CD387601D95C4CD00D63EF7 /* jobs.jpg */; };
 		9CD387691D95C4CD00D63EF7 /* lion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CD387611D95C4CD00D63EF7 /* lion.jpg */; };
-		9CD3876C1D95C4D700D63EF7 /* Conversation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CD3876B1D95C4D700D63EF7 /* Conversation.plist */; };
 		9CD3878B1D95C5A900D63EF7 /* NSString+Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3876F1D95C5A900D63EF7 /* NSString+Calculation.m */; };
 		9CD3878C1D95C5A900D63EF7 /* attachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD387711D95C5A900D63EF7 /* attachment.png */; };
 		9CD3878D1D95C5A900D63EF7 /* attachment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD387721D95C5A900D63EF7 /* attachment@2x.png */; };
@@ -317,23 +308,6 @@
 		9CD387331D94A02400D63EF7 /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
 		9CD387351D94A08000D63EF7 /* MessagingParticipantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingParticipantTableViewController.h; sourceTree = "<group>"; };
 		9CD387361D94A08000D63EF7 /* MessagingParticipantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingParticipantTableViewController.m; sourceTree = "<group>"; };
-		9CD387381D94A0CF00D63EF7 /* MessagingAvatarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingAvatarItem.h; sourceTree = "<group>"; };
-		9CD387391D94A0CF00D63EF7 /* MessagingAvatarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingAvatarItem.m; sourceTree = "<group>"; };
-		9CD3873C1D94A3FB00D63EF7 /* ATLUserMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLUserMock.h; sourceTree = "<group>"; };
-		9CD3873D1D94A3FB00D63EF7 /* ATLUserMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLUserMock.m; sourceTree = "<group>"; };
-		9CD3873E1D94A3FB00D63EF7 /* LayerKitMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerKitMock.h; sourceTree = "<group>"; };
-		9CD3873F1D94A3FB00D63EF7 /* LYRClientMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRClientMock.h; sourceTree = "<group>"; };
-		9CD387401D94A3FB00D63EF7 /* LYRClientMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRClientMock.m; sourceTree = "<group>"; };
-		9CD387411D94A3FB00D63EF7 /* LYRConversationMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRConversationMock.h; sourceTree = "<group>"; };
-		9CD387421D94A3FB00D63EF7 /* LYRConversationMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRConversationMock.m; sourceTree = "<group>"; };
-		9CD387431D94A3FB00D63EF7 /* LYRMessageMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRMessageMock.h; sourceTree = "<group>"; };
-		9CD387441D94A3FB00D63EF7 /* LYRMessageMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRMessageMock.m; sourceTree = "<group>"; };
-		9CD387451D94A3FB00D63EF7 /* LYRMessagePartMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRMessagePartMock.h; sourceTree = "<group>"; };
-		9CD387461D94A3FB00D63EF7 /* LYRMessagePartMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRMessagePartMock.m; sourceTree = "<group>"; };
-		9CD387471D94A3FB00D63EF7 /* LYRMockContentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRMockContentStore.h; sourceTree = "<group>"; };
-		9CD387481D94A3FB00D63EF7 /* LYRMockContentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRMockContentStore.m; sourceTree = "<group>"; };
-		9CD387491D94A3FB00D63EF7 /* LYRQueryControllerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRQueryControllerMock.h; sourceTree = "<group>"; };
-		9CD3874A1D94A3FB00D63EF7 /* LYRQueryControllerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRQueryControllerMock.m; sourceTree = "<group>"; };
 		9CD387541D95C47B00D63EF7 /* ContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentManager.h; sourceTree = "<group>"; };
 		9CD387551D95C47B00D63EF7 /* ContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentManager.m; sourceTree = "<group>"; };
 		9CD387571D95C48200D63EF7 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
@@ -347,7 +321,6 @@
 		9CD387601D95C4CD00D63EF7 /* jobs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jobs.jpg; sourceTree = "<group>"; };
 		9CD387611D95C4CD00D63EF7 /* lion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lion.jpg; sourceTree = "<group>"; };
 		9CD3876A1D95C4D400D63EF7 /* lion.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lion.mp4; sourceTree = "<group>"; };
-		9CD3876B1D95C4D700D63EF7 /* Conversation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Conversation.plist; sourceTree = "<group>"; };
 		9CD3876E1D95C5A900D63EF7 /* NSString+Calculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Calculation.h"; sourceTree = "<group>"; };
 		9CD3876F1D95C5A900D63EF7 /* NSString+Calculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Calculation.m"; sourceTree = "<group>"; };
 		9CD387711D95C5A900D63EF7 /* attachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attachment.png; sourceTree = "<group>"; };
@@ -579,7 +552,8 @@
 		9CA60ACB1D693CA30081A5B5 /* newG-Bay */ = {
 			isa = PBXGroup;
 			children = (
-				9CD3876D1D95C5A900D63EF7 /* SOMessaging */,
+				9CD387A91D96D7D800D63EF7 /* Profile */,
+				9CD387A81D96D7BB00D63EF7 /* Messaging */,
 				9C81E1731D7DB90200DAC9E0 /* NewItemTableView */,
 				9C81E16C1D7BD9AF00DAC9E0 /* Maps */,
 				9C81E16B1D7BD99300DAC9E0 /* Camera */,
@@ -587,33 +561,10 @@
 				9C81E1691D7BD93100DAC9E0 /* ItemsTableView */,
 				9C81E1681D7BD8D000DAC9E0 /* Entire App */,
 				9C97E47D1D726C6C00C74DD6 /* newG-Bay.entitlements */,
-				9CC080581D907F9900C6CFCA /* YourProfileViewController.h */,
-				9CC080591D907F9900C6CFCA /* YourProfileViewController.m */,
 				9CA60AD21D693CA30081A5B5 /* ViewController.h */,
 				9CA60AD31D693CA30081A5B5 /* ViewController.m */,
 				9C9EA0671D6A7BB700D76334 /* MainViewController.h */,
 				9C9EA0681D6A7BB700D76334 /* MainViewController.m */,
-				9CD387231D933C0400D63EF7 /* BoughtItemsTableViewController.h */,
-				9CD387241D933C0400D63EF7 /* BoughtItemsTableViewController.m */,
-				9CD387261D937F8200D63EF7 /* SoldItemsTableViewController.h */,
-				9CD387271D937F8200D63EF7 /* SoldItemsTableViewController.m */,
-				9CD387291D94999D00D63EF7 /* MessagesViewController.h */,
-				9CD3872A1D94999D00D63EF7 /* MessagesViewController.m */,
-				9CD387A01D95F39600D63EF7 /* MessagesTableViewController.h */,
-				9CD387A11D95F39600D63EF7 /* MessagesTableViewController.m */,
-				9CD387A31D9619F300D63EF7 /* ConversationTableViewCell.h */,
-				9CD387A41D9619F300D63EF7 /* ConversationTableViewCell.m */,
-				9CD387321D94A02400D63EF7 /* ConversationViewController.h */,
-				9CD387331D94A02400D63EF7 /* ConversationViewController.m */,
-				9CD387351D94A08000D63EF7 /* MessagingParticipantTableViewController.h */,
-				9CD387361D94A08000D63EF7 /* MessagingParticipantTableViewController.m */,
-				9CD387381D94A0CF00D63EF7 /* MessagingAvatarItem.h */,
-				9CD387391D94A0CF00D63EF7 /* MessagingAvatarItem.m */,
-				9CD387541D95C47B00D63EF7 /* ContentManager.h */,
-				9CD387551D95C47B00D63EF7 /* ContentManager.m */,
-				9CD387571D95C48200D63EF7 /* Message.h */,
-				9CD387581D95C48200D63EF7 /* Message.m */,
-				9CD3873B1D94A3FB00D63EF7 /* Mocks */,
 				9CA60B051D693CE20081A5B5 /* Main.storyboard */,
 				9CA60ADA1D693CA30081A5B5 /* LaunchScreen.storyboard */,
 				9C9EA06C1D6B1EC800D76334 /* GoogleService-Info.plist */,
@@ -627,7 +578,6 @@
 		9CA60ACC1D693CA30081A5B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9CD3876B1D95C4D700D63EF7 /* Conversation.plist */,
 				9CD3876A1D95C4D400D63EF7 /* lion.mp4 */,
 				9CD3875A1D95C4CD00D63EF7 /* arturdev.jpg */,
 				9CD3875B1D95C4CD00D63EF7 /* bubble_rect_receiving.png */,
@@ -801,28 +751,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		9CD3873B1D94A3FB00D63EF7 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				9CD3873C1D94A3FB00D63EF7 /* ATLUserMock.h */,
-				9CD3873D1D94A3FB00D63EF7 /* ATLUserMock.m */,
-				9CD3873E1D94A3FB00D63EF7 /* LayerKitMock.h */,
-				9CD3873F1D94A3FB00D63EF7 /* LYRClientMock.h */,
-				9CD387401D94A3FB00D63EF7 /* LYRClientMock.m */,
-				9CD387411D94A3FB00D63EF7 /* LYRConversationMock.h */,
-				9CD387421D94A3FB00D63EF7 /* LYRConversationMock.m */,
-				9CD387431D94A3FB00D63EF7 /* LYRMessageMock.h */,
-				9CD387441D94A3FB00D63EF7 /* LYRMessageMock.m */,
-				9CD387451D94A3FB00D63EF7 /* LYRMessagePartMock.h */,
-				9CD387461D94A3FB00D63EF7 /* LYRMessagePartMock.m */,
-				9CD387471D94A3FB00D63EF7 /* LYRMockContentStore.h */,
-				9CD387481D94A3FB00D63EF7 /* LYRMockContentStore.m */,
-				9CD387491D94A3FB00D63EF7 /* LYRQueryControllerMock.h */,
-				9CD3874A1D94A3FB00D63EF7 /* LYRQueryControllerMock.m */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
 		9CD3876D1D95C5A900D63EF7 /* SOMessaging */ = {
 			isa = PBXGroup;
 			children = (
@@ -864,6 +792,41 @@
 				9CD3877A1D95C5A900D63EF7 /* play_button@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9CD387A81D96D7BB00D63EF7 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				9CD3876D1D95C5A900D63EF7 /* SOMessaging */,
+				9CD387291D94999D00D63EF7 /* MessagesViewController.h */,
+				9CD3872A1D94999D00D63EF7 /* MessagesViewController.m */,
+				9CD387A01D95F39600D63EF7 /* MessagesTableViewController.h */,
+				9CD387A11D95F39600D63EF7 /* MessagesTableViewController.m */,
+				9CD387A31D9619F300D63EF7 /* ConversationTableViewCell.h */,
+				9CD387A41D9619F300D63EF7 /* ConversationTableViewCell.m */,
+				9CD387321D94A02400D63EF7 /* ConversationViewController.h */,
+				9CD387331D94A02400D63EF7 /* ConversationViewController.m */,
+				9CD387351D94A08000D63EF7 /* MessagingParticipantTableViewController.h */,
+				9CD387361D94A08000D63EF7 /* MessagingParticipantTableViewController.m */,
+				9CD387541D95C47B00D63EF7 /* ContentManager.h */,
+				9CD387551D95C47B00D63EF7 /* ContentManager.m */,
+				9CD387571D95C48200D63EF7 /* Message.h */,
+				9CD387581D95C48200D63EF7 /* Message.m */,
+			);
+			name = Messaging;
+			sourceTree = "<group>";
+		};
+		9CD387A91D96D7D800D63EF7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9CC080581D907F9900C6CFCA /* YourProfileViewController.h */,
+				9CC080591D907F9900C6CFCA /* YourProfileViewController.m */,
+				9CD387231D933C0400D63EF7 /* BoughtItemsTableViewController.h */,
+				9CD387241D933C0400D63EF7 /* BoughtItemsTableViewController.m */,
+				9CD387261D937F8200D63EF7 /* SoldItemsTableViewController.h */,
+				9CD387271D937F8200D63EF7 /* SoldItemsTableViewController.m */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -987,7 +950,6 @@
 				9CD387651D95C4CD00D63EF7 /* bubble_rect_sending.png in Resources */,
 				9CD387951D95C5A900D63EF7 /* play_button@2x.png in Resources */,
 				9C96A6E51D8A3052002C1E06 /* MediaCell.xib in Resources */,
-				9CD3876C1D95C4D700D63EF7 /* Conversation.plist in Resources */,
 				9CBDCA5C1D78E98700690927 /* AddressLocationCell.xib in Resources */,
 				9CD387941D95C5A900D63EF7 /* play_button.png in Resources */,
 				9CD387621D95C4CD00D63EF7 /* arturdev.jpg in Resources */,
@@ -1117,7 +1079,6 @@
 				9CD3872B1D94999D00D63EF7 /* MessagesViewController.m in Sources */,
 				9CD3879B1D95C5A900D63EF7 /* UINavigationController+Rotation.m in Sources */,
 				9C81E19C1D7E681700DAC9E0 /* ANTagsView.m in Sources */,
-				9CD387511D94A3FC00D63EF7 /* LYRQueryControllerMock.m in Sources */,
 				9CD1CD4B1D7B9BB60090E496 /* AllItemsTableViewCell.m in Sources */,
 				9C113D491D768DCE009FA8F2 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				9CD387A51D9619F300D63EF7 /* ConversationTableViewCell.m in Sources */,
@@ -1127,7 +1088,6 @@
 				9CD387A21D95F39600D63EF7 /* MessagesTableViewController.m in Sources */,
 				9CC0805A1D907F9900C6CFCA /* YourProfileViewController.m in Sources */,
 				9CD387371D94A08000D63EF7 /* MessagingParticipantTableViewController.m in Sources */,
-				9CD387501D94A3FB00D63EF7 /* LYRMockContentStore.m in Sources */,
 				9CD387961D95C5A900D63EF7 /* SOImageBrowserView.m in Sources */,
 				9CA60B271D693DB60081A5B5 /* ARRadar.m in Sources */,
 				9C97E4361D70DC1D00C74DD6 /* ItemMapViewController.m in Sources */,
@@ -1149,33 +1109,27 @@
 				9CD387561D95C47B00D63EF7 /* ContentManager.m in Sources */,
 				9CBDCA7A1D7927DF00690927 /* AHTag.m in Sources */,
 				9CD387991D95C5A900D63EF7 /* SOMessagingViewController.m in Sources */,
-				9CD3873A1D94A0CF00D63EF7 /* MessagingAvatarItem.m in Sources */,
 				9CA60B291D693DB60081A5B5 /* PRARManager.m in Sources */,
 				9CD3879A1D95C5A900D63EF7 /* SOPlaceholderedTextView.m in Sources */,
 				9CA60B201D693DB60081A5B5 /* ARObject.m in Sources */,
 				9CA60B041D693CBC0081A5B5 /* DetailsViewController.m in Sources */,
 				9CD387971D95C5A900D63EF7 /* SOMessageCell.m in Sources */,
-				9CD3874B1D94A3FB00D63EF7 /* ATLUserMock.m in Sources */,
 				9CD387981D95C5A900D63EF7 /* SOMessageInputView.m in Sources */,
 				9C113D4A1D768DCE009FA8F2 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				9CBDCA871D7927E400690927 /* AHTagView.m in Sources */,
 				9CA60AD11D693CA30081A5B5 /* AppDelegate.m in Sources */,
-				9CD3874F1D94A3FB00D63EF7 /* LYRMessagePartMock.m in Sources */,
 				9CBDCA841D7927E400690927 /* AHTagsLabel.m in Sources */,
 				9C113D501D768DCE009FA8F2 /* SlideNavigationController.m in Sources */,
 				9CD387341D94A02400D63EF7 /* ConversationViewController.m in Sources */,
 				9CA60B031D693CBC0081A5B5 /* ARCameraViewController.m in Sources */,
-				9CD3874C1D94A3FB00D63EF7 /* LYRClientMock.m in Sources */,
 				9CD387591D95C48200D63EF7 /* Message.m in Sources */,
 				9C9EA0951D6D185100D76334 /* YourItemTableViewController.m in Sources */,
 				9CBDCA5E1D78E98700690927 /* DetailLocationCell.m in Sources */,
 				9CBDCA701D78F0ED00690927 /* TGAnnotation.m in Sources */,
 				9CBDCA851D7927E400690927 /* AHTagTableViewCell.m in Sources */,
 				9CBDCA601D78E98700690927 /* TipCell.m in Sources */,
-				9CD3874D1D94A3FB00D63EF7 /* LYRConversationMock.m in Sources */,
 				9C0934941D7F753E00405427 /* INSStackFormViewTextViewElement.m in Sources */,
 				9CA60ACE1D693CA30081A5B5 /* main.m in Sources */,
-				9CD3874E1D94A3FB00D63EF7 /* LYRMessageMock.m in Sources */,
 				9C113D4C1D768DCE009FA8F2 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
